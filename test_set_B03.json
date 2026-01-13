@@ -1,0 +1,826 @@
+[
+  {
+    "id": "Q041",
+    "question_text": "香港于2023年6月实施的虚拟资产交易平台新监管制度有哪些主要要求？",
+    "question_language": "zh-CN",
+    "topic_category": "virtual_currency_regulation",
+    "subtopic": "vasp_licensing",
+    "target_jurisdictions": ["Hong Kong"],
+    "authority_ranking": ["Hong Kong"],
+    "challenge_type": "simple_monojurisdiction_monolingual",
+    "difficulty": 2,
+    "requires_cross_lingual": false,
+    "requires_multi_jurisdiction": false,
+    "brief_answer_outline": [
+      "香港在2023年6月1日生效的新制度要求所有在香港经营或向港人推广的虚拟资产交易平台须向证监会取得牌照:contentReference[oaicite:0]{index=0}。",
+      "持牌平台需遵守与传统金融机构类似的监管规定，包括资产妥善保管、KYC（认识客户）、AML/CFT、防止市场操纵、审计和风险管理等要求:contentReference[oaicite:1]{index=1}。",
+      "新制度允许持牌平台服务零售投资者，但设有投资者保障措施：客户知识测评、风险承受能力评估、投资上限、大型合资格代币尽职审查和充分信息披露等:contentReference[oaicite:2]{index=2}。"
+    ],
+    "gold_sources": [
+      {
+        "citation": "IFEC (SFC香港) 2023年 \"虚拟资产交易平台新监管制度\"",
+        "source_type": "government_website",
+        "jurisdiction": "Hong Kong",
+        "language": "zh-CN",
+        "url": "https://www.ifec.org.hk/web/sc/financial-products/fintech/ico-bitcoin/new-vatp-regime.page",
+        "relevance_note": "香港金融监管机构发布的文章，概述2023年6月起对虚拟资产交易平台实施的发牌监管制度及投资者保护措施"
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "IFEC (SFC香港) 2023年 \"虚拟资产交易平台新监管制度\"",
+        "excerpt": "立法会于2022年12月通过《...条例》。全新的虚拟资产交易平台发牌制度于2023年6月1日生效，所有在香港经营业务，或向香港投资者积极推广其服务的中央虚拟资产交易平台，都须获证监会发牌并受其监管:contentReference[oaicite:3]{index=3}。",
+        "high_level_location": "发牌制度生效时间及覆盖范围"
+      },
+      {
+        "source_citation": "IFEC (SFC香港) 2023年 \"虚拟资产交易平台新监管制度\"",
+        "excerpt": "证监会以\"相同业务、相同风险、相同规则\"原则制定监管规则。虚拟资产交易平台须遵守各方面监管规定，以及适用于虚拟资产特性的要求，包括妥善保管资产、认识你的客户程序、打击洗钱/恐怖资金筹集、预防市场操纵、会计审计、风险管理、避免利益冲突及网络安全等:contentReference[oaicite:4]{index=4}。",
+        "high_level_location": "监管原则与一般合规要求"
+      },
+      {
+        "source_citation": "IFEC (SFC香港) 2023年 \"虚拟资产交易平台新监管制度\"",
+        "excerpt": "新制度容许持牌交易平台向零售投资者提供服务，并设有一系列投资者保障措施，确保客户适合相关投资，包括评估客户的虚拟资产知识、风险承受水平及财务状况；为客户设定投资上限；对拟交易的虚拟资产进行尽职审查（须为合资格大型虚拟资产）；以及披露足够产品资料供客户评估投资状况等:contentReference[oaicite:5]{index=5}。",
+        "high_level_location": "针对零售投资者的保护措施"
+      }
+    ]
+  },
+  {
+    "id": "Q042",
+    "question_text": "Os NFTs são considerados ativos virtuais ou valores mobiliários segundo a legislação brasileira?",
+    "question_language": "pt",
+    "topic_category": "nft",
+    "subtopic": "nft_classification",
+    "target_jurisdictions": ["Brazil"],
+    "authority_ranking": ["Brazil"],
+    "challenge_type": "implicit_jurisdiction_authority_choice",
+    "difficulty": 2,
+    "requires_cross_lingual": false,
+    "requires_multi_jurisdiction": false,
+    "brief_answer_outline": [
+      "A Lei 14.478/2022 (Marco Legal dos Criptoativos) do Brasil define \"ativo virtual\" mas exclui certos tokens utilitários do seu escopo:contentReference[oaicite:6]{index=6}.",
+      "Tokens não fungíveis (NFTs) de caráter puramente utilitário ou de colecionável geralmente não são regulados como ativos virtuais pelo Banco Central, nem considerados valores mobiliários pela CVM, salvo se conferirem direitos que os equiparem a investimentos coletivos.",
+      "Um parecer da CVM (Parecer 40/2022) esclareceu que NFTs com uso utilitário não são valores mobiliários:contentReference[oaicite:7]{index=7}. Portanto, via de regra, NFTs não se enquadram como valores mobiliários, nem estão sujeitos ao regime de ativos virtuais, a menos que tenham características de investimento."
+    ],
+    "gold_sources": [
+      {
+        "citation": "Jusbrasil Artigo - NFTs utilitários e regulação (2025)",
+        "source_type": "legal_analysis",
+        "jurisdiction": "Brazil",
+        "language": "pt",
+        "url": "https://www.jusbrasil.com.br/artigos/nfts-utilitarios-10-casos-de-uso-para-transformar-empresas-ou-empreendimentos/1931962512",
+        "relevance_note": "Explica que a lei brasileira de criptoativos exclui tokens utilitários (como certos NFTs) da definição de ativo virtual e cita posicionamento da CVM de que NFTs utilitários não são valores mobiliários"
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "Jusbrasil Artigo - NFTs utilitários e regulação (2025)",
+        "excerpt": "Nos termos do art. 3º, III, da Lei nº 14.478/2022, não se consideram ativos virtuais, afastando-se a competência do BACEN, os ativos virtuais considerados \"[...] II - instrumentos que provejam ao seu titular acesso a produtos ou serviços especificados ou a benefício proveniente desses produtos ou serviços, a exemplo de pontos e recompensas de programas de fidelidade;\":contentReference[oaicite:8]{index=8}.",
+        "high_level_location": "Lei 14.478/2022 - exclusão de tokens utilitários da categoria de ativos virtuais"
+      },
+      {
+        "source_citation": "Jusbrasil Artigo - NFTs utilitários e regulação (2025)",
+        "excerpt": "No mesmo sentido, cita-se trecho do Parecer CVM nº 40/2022, que afasta o caráter de valor mobiliário para NFTs que tenham uso de Tokens Utilitários: \"[...] Token de Utilidade (utility token): utilizado para adquirir ou acessar determinados produtos ou serviços;\":contentReference[oaicite:9]{index=9}.",
+        "high_level_location": "Parecer CVM 40/2022 - entendimento sobre NFTs utilitários"
+      }
+    ]
+  },
+  {
+    "id": "Q043",
+    "question_text": "¿Cómo aborda la guía del GAFI (FATF) las actividades de finanzas descentralizadas (DeFi) supuestamente \"descentralizadas\" en materia de AML/CFT?",
+    "question_language": "es",
+    "topic_category": "defi",
+    "subtopic": "aml_defi_guidance",
+    "target_jurisdictions": ["International"],
+    "authority_ranking": ["FATF"],
+    "challenge_type": "long_document_retrieval_sac_sensitive",
+    "difficulty": 3,
+    "requires_cross_lingual": true,
+    "requires_multi_jurisdiction": false,
+    "brief_answer_outline": [
+      "La guía del GAFI de octubre de 2021 aclara que las aplicaciones DeFi en sí (el software) no están sujetas a regulación, **pero** las personas que las crean, poseen u operan con control o influencia sobre ellas **sí** pueden calificarse como Proveedores de Servicios de Activos Virtuales (VASP):contentReference[oaicite:10]{index=10}.",
+      "El GAFI enfatiza que a menudo los proyectos \"DeFi\" se autodenominan descentralizados cuando en realidad tienen un individuo o entidad con control suficiente, por lo que las autoridades deben aplicar la definición de VASP sin dejarse guiar por la descripción propia. Si existe tal persona controlando aspectos clave (ej. claves, parámetros, lucro), debe cumplir obligaciones ALD/CFT:contentReference[oaicite:11]{index=11}.",
+      "En resumen, la guía insta a identificar a los \"propietarios/operadores\" en los esquemas DeFi y considerarlos sujetos a las Recomendaciones ALD/CFT del GAFI, incluyendo realizar evaluaciones de riesgo y controles contra lavado de dinero incluso si la plataforma se promociona como descentralizada."
+    ],
+    "gold_sources": [
+      {
+        "citation": "GAFI - Guía actualizada sobre activos virtuales y VASP (oct. 2021)",
+        "source_type": "international_guidance",
+        "jurisdiction": "International",
+        "language": "en",
+        "url": "https://www.fatf-gafi.org/content/dam/fatf/documents/recommendations/Updated-Guidance-VA-VASP.pdf",
+        "relevance_note": "Orientación del GAFI que establece que los 'creadores, propietarios u operadores' de aplicaciones DeFi con control suficiente pueden considerarse VASP y por tanto sujetos a requisitos ALD/CFT, aunque la plataforma se presente como descentralizada"
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "GAFI - Guía actualizada sobre activos virtuales y VASP (oct. 2021)",
+        "excerpt": "\"...creators, owners and operators or some other persons who maintain control or sufficient influence in the DeFi arrangements, even if those arrangements seem decentralised, may fall under the FATF definition of a VASP where they are providing or actively facilitating VASP services.\":contentReference[oaicite:12]{index=12}",
+        "high_level_location": "FATF Guidance 2021 - criterio para considerar VASP a responsables en DeFi"
+      },
+      {
+        "source_citation": "GAFI - Guía actualizada sobre activos virtuales y VASP (oct. 2021)",
+        "excerpt": "\"It seems quite common for DeFi arrangements to call themselves decentralized when they actually include a person with control or sufficient influence, and jurisdictions should apply the VASP definition without respect to self-description.\":contentReference[oaicite:13]{index=13}",
+        "high_level_location": "FATF Guidance 2021 - no dejarse guiar por la etiqueta 'descentralizado'"
+      }
+    ]
+  },
+  {
+    "id": "Q044",
+    "question_text": "En quoi la réglementation des stablecoins diffère-t-elle entre l’Union européenne et les États-Unis ?",
+    "question_language": "fr",
+    "topic_category": "stablecoin",
+    "subtopic": "stablecoin_regulation_comparison",
+    "target_jurisdictions": ["EU", "US"],
+    "authority_ranking": ["EU", "US"],
+    "challenge_type": "multi_jurisdiction_comparison",
+    "difficulty": 2,
+    "requires_cross_lingual": true,
+    "requires_multi_jurisdiction": true,
+    "brief_answer_outline": [
+      "**Union européenne (UE)** : L’UE a adopté le règlement MiCA (Markets in Crypto-assets) qui encadre strictement les stablecoins (tokens référencés à un actif – ART, et tokens de monnaie électronique – EMT). MiCA exige que les émetteurs de stablecoins soient établis dans l’UE, agréés (par une autorité comme l’ABE) et qu’ils maintiennent des réserves 1:1 en actifs liquides, avec droit au remboursement à la valeur nominale et interdiction de verser des intérêts aux détenteurs:contentReference[oaicite:14]{index=14}:contentReference[oaicite:15]{index=15}. MiCA s’applique de manière uniforme dans les 27 États membres, y compris de façon extraterritoriale aux stablecoins offerts aux résidents de l’UE, garantissant une supervision centralisée et un passeport européen.",
+      "**États-Unis (USA)** : Les États-Unis n’ont pas encore de cadre fédéral unique en vigueur. Un projet de loi principal (GENIUS Act of 2025) est en discussion au Congrès:contentReference[oaicite:16]{index=16}. Ce projet vise à instaurer un régime mixte fédéral/États pour les stablecoins, en exigeant que seuls certains émetteurs (banques assurées, entités approuvées par l’OCC ou régulateur d’État) puissent émettre des stablecoins en USD, avec des réserves 100% en actifs sûrs (trésors ≤93j, dépôts Fed, etc.) et obligation de divulgation mensuelle des réserves:contentReference[oaicite:17]{index=17}. Les émetteurs devraient se conformer au Bank Secrecy Act (programmes AML) et pouvoir geler des jetons si requis:contentReference[oaicite:18]{index=18}. Le régime US proposé autoriserait des émetteurs étrangers sous conditions équivalentes (enregistrement OCC):contentReference[oaicite:19]{index=19}. Toutefois, en l’absence de loi adoptée, la réglementation US actuelle repose sur l’application des lois existantes (banking, valeurs mobilières selon le cas) et la surveillance par diverses agences (Fed, OCC, états).",
+      "**Différences clés** : L’UE dispose déjà d’un cadre clair et uniforme (MiCA) s’appliquant à tous les stablecoins dans l’UE, avec autorisation préalable et supervision centralisée, tandis qu’aux US la réglementation est encore fragmentée et en cours d’élaboration. L’UE limite l’émission aux entités établies et réglementées dans l’UE, alors que le régime US envisagé autoriserait aussi des émetteurs étrangers sous conditions. L’UE impose une portée extraterritoriale stricte (plafonds de transactions si émetteur non établi), là où le projet US prévoit un système à deux niveaux (fédéral et États). En résumé, l’approche européenne est plus stricte et uniforme, tandis qu’aux États-Unis le cadre se construit encore, avec une ambition de contrôle des réserves et des émetteurs via une loi fédérale à venir."
+    ],
+    "gold_sources": [
+      {
+        "citation": "Morgan Lewis LawFlash (12 juin 2025) – Comparatif réglementation stablecoins (EU vs US)",
+        "source_type": "law_firm_publication",
+        "jurisdiction": "EU, US",
+        "language": "en",
+        "url": "https://www.morganlewis.com/pubs/2025/06/fiat-backed-stablecoin-regulation-compared-uk-eu-hong-kong-and-us",
+        "relevance_note": "Analyse comparative des cadres réglementaires sur les stablecoins dans l’UE (MiCA, en vigueur) et aux États-Unis (projets législatifs comme le GENIUS Act), soulignant les exigences de réserves, d’agrément et les divergences d’approche"
+      },
+      {
+        "citation": "TaxSuitsYou (Blog fiscal, sept. 2025) – Genius Act vs MiCA",
+        "source_type": "legal_commentary",
+        "jurisdiction": "US, EU",
+        "language": "fr",
+        "url": "https://www.taxsuitsyou.com/genius-act-vs-mica-le-game-des-titans",
+        "relevance_note": "Commentaire détaillé comparant le projet de loi américain GENIUS Act (2025) et le règlement MiCA de l’UE, y compris les conditions d’émission (réserves, émetteurs autorisés) et l’étendue territoriale"
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "Morgan Lewis LawFlash (12 juin 2025) – Comparatif réglementation stablecoins (EU vs US)",
+        "excerpt": "L’Union européenne est la plus en avance, son règlement MiCA ... est en vigueur depuis le 29 juin 2023... Ce cadre est considéré comme l’un des plus complets actuellement pour les cryptoactifs:contentReference[oaicite:20]{index=20}... Aux États-Unis, la Chambre des représentants et le Sénat font progresser des législations pour intégrer les stablecoins dans le système financier américain... Le projet de loi du Sénat, GENIUS Act of 2025... a été identifié comme la principale proposition législative:contentReference[oaicite:21]{index=21}.",
+        "high_level_location": "Cadres généraux – Avancée de la réglementation stablecoins en UE vs US"
+      },
+      {
+        "source_citation": "Morgan Lewis LawFlash (12 juin 2025) – Comparatif réglementation stablecoins (EU vs US)",
+        "excerpt": "Malgré des différences clés... l’UE, le Royaume-Uni, Hong Kong et les États-Unis convergent sur certains principes fondamentaux régissant les stablecoins adossés à une monnaie fiat. Le FSB a joué un rôle clé en impulsant cette convergence... Thèmes communs par exemple : (1) obligation pour les émetteurs de stablecoins d’être autorisés et supervisés, (2) couverture intégrale par des réserves liquides 1:1, (3) sauvegarde des actifs de réserve, (4) garantie du droit au remboursement à parité pour les détenteurs, (5) interdiction de verser des intérêts aux détenteurs de stablecoins:contentReference[oaicite:22]{index=22}. Alors qu’il y a un alignement général sur ces principes de protection, des divergences notables subsistent quant à la portée territoriale, aux types de stablecoins visés, à la protection des actifs de réserve et à leur nature.:contentReference[oaicite:23]{index=23}",
+        "high_level_location": "Principes communs et divergences (UE, US...) sur stablecoins"
+      },
+      {
+        "source_citation": "TaxSuitsYou – \"Genius Act vs MiCA\" (29 sept. 2025)",
+        "excerpt": "Le Genius Act US... interdit l’émission de stablecoins à toute entité non autorisée : seules les filiales d’institutions de dépôt assurées (sur approbation), des émetteurs fédéraux qualifiés (approuvés par l’OCC) ou, subsidiairement, des émetteurs d’État qualifiés (approuvés par les régulateurs d’État) pourront émettre des stablecoins, avec ouverture possible aux acteurs étrangers sous conditions (notamment approbation OCC):contentReference[oaicite:24]{index=24}. Les émetteurs doivent maintenir des réserves 1:1 composées de liquidités en USD ou dépôts Fed, dépôts à vue en banques assurées, bons du Trésor (≤93 jours), pensions overnight garanties, et/ou fonds monétaires gouvernementaux, et publier mensuellement la composition de leurs réserves:contentReference[oaicite:25]{index=25}. Pour l’AML/CFT, les émetteurs seront soumis au Bank Secrecy Act et à des programmes de conformité, et doivent pouvoir bloquer/geler des tokens:contentReference[oaicite:26]{index=26}. Enfin, les stablecoins ne pourront verser aucun rendement aux détenteurs (staking, etc.), les émetteurs devant interdire tout intérêt sur les stablecoins USD:contentReference[oaicite:27]{index=27}.",
+        "high_level_location": "Exigences du projet US (GENIUS Act) – émetteurs autorisés et réserves"
+      },
+      {
+        "source_citation": "TaxSuitsYou – \"Genius Act vs MiCA\" (29 sept. 2025)",
+        "excerpt": "MiCA a une portée bien plus large que le Genius Act, car il s’applique à tous les cryptoactifs et services associés dans les 27 pays de l’UE, alors que le Genius Act ne vise que les stablecoins adossés à une monnaie (EMTs):contentReference[oaicite:28]{index=28}. MiCA s’applique uniformément via le passeport européen, tandis que le Genius Act peut recevoir des interprétations différentes selon les États (mix fédéral/États):contentReference[oaicite:29]{index=29}. MiCA exigera des émetteurs étrangers qu’ils établissent une entité dans l’UE, sinon ils devront limiter les transactions à 1 million ou 200 M€ par jour en UE:contentReference[oaicite:30]{index=30}, alors que le Genius Act autorise la participation d’acteurs étrangers s’ils respectent les mêmes conditions que les locaux (enregistrement OCC, supervision et réserves sur sol US):contentReference[oaicite:31]{index=31}.",
+        "high_level_location": "Comparaison portée territoriale et champs d’application (MiCA vs Genius Act)"
+      }
+    ]
+  },
+  {
+    "id": "Q045",
+    "question_text": "Wie werden Gewinne aus Kryptowährungen in Deutschland steuerlich behandelt, insbesondere wenn die Coins länger als ein Jahr gehalten werden?",
+    "question_language": "de",
+    "topic_category": "taxation",
+    "subtopic": "capital_gains_tax",
+    "target_jurisdictions": ["Germany"],
+    "authority_ranking": ["Germany"],
+    "challenge_type": "simple_monojurisdiction_monolingual",
+    "difficulty": 1,
+    "requires_cross_lingual": false,
+    "requires_multi_jurisdiction": false,
+    "brief_answer_outline": [
+      "In Deutschland gelten Gewinne aus dem Verkauf von Kryptowährungen im Privatvermögen als private Veräußerungsgeschäfte (§23 EStG). Sie sind steuerpflichtig, wenn zwischen Anschaffung und Veräußerung **nicht mehr als ein Jahr** liegt:contentReference[oaicite:32]{index=32}.",
+      "Wird die Haltefrist von einem Jahr überschritten (Coins länger als 12 Monate gehalten), bleiben erzielte Gewinne **steuerfrei**:contentReference[oaicite:33]{index=33}:contentReference[oaicite:34]{index=34}. Diese einjährige Spekulationsfrist führt dazu, dass langfristig gehaltene Kryptos nicht der Einkommensteuer unterliegen.",
+      "Allerdings greift eine Freigrenze: Liegt der gesamte Gewinn aus privaten Veräußerungen im Kalenderjahr unter 600€ (bzw. 1000€ ab 2023), bleibt er steuerfrei:contentReference[oaicite:35]{index=35}. Für Gewinne innerhalb der Jahresfrist gilt der persönliche Einkommensteuersatz, da es sich um sonstige Einkünfte (§22 Nr.2 EStG) handelt."
+    ],
+    "gold_sources": [
+      {
+        "citation": "BMF-Schreiben v. 06.03.2025 – Besteuerung von Kryptowährungen (Winheller Zusammenfassung)",
+        "source_type": "expert_commentary",
+        "jurisdiction": "Germany",
+        "language": "de",
+        "url": "https://winheller.com/blog/bmf-schreiben-besteuerung-kryptowaehrungen-maerz-2025/",
+        "relevance_note": "Beschreibt die neuen steuerlichen Regelungen in Deutschland ab 2025 für Krypto, u.a. dass Gewinne nach einjähriger Haltefrist weiterhin steuerfrei bleiben"
+      },
+      {
+        "citation": "BMF-Schreiben v. 10.05.2022 (aktual. 2025) – Einzelfragen zur Besteuerung von Kryptowerten",
+        "source_type": "government_guidance",
+        "jurisdiction": "Germany",
+        "language": "de",
+        "url": "https://www.bundesfinanzministerium.de/Content/DE/Downloads/BMF_Schreiben/Steuerarten/Einkommensteuer/2025-03-06-einzelfragen-kryptowerte-bmf-schreiben.pdf",
+        "relevance_note": "Offizielles Schreiben des Bundesfinanzministeriums, das u.a. die Anwendung der einjährigen Spekulationsfrist auf Kryptowährungen im Privatvermögen bestätigt"
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "Winheller – BMF-Schreiben Kryptobesteuerung (Mai 2025)",
+        "excerpt": "Das Wichtigste zuerst: **Gewinne aus der Veräußerung von Kryptowährungen bleiben weiterhin steuerfrei, wenn zwischen Anschaffung und Verkauf mehr als ein Jahr liegt.** Diese Regelung gilt unabhängig von der Höhe des Gewinns und insbesondere auch dann, wenn die Kryptowerte zwischenzeitlich für Aktivitäten wie Staking oder Lending genutzt wurden:contentReference[oaicite:36]{index=36}.",
+        "high_level_location": "Regelung seit 2023/2025 – Steuerfreiheit nach einjähriger Haltedauer"
+      },
+      {
+        "source_citation": "BMF-Schreiben v. 2025 – Einzelfragen Kryptowerte (Bundesfinanzministerium)",
+        "excerpt": "Gewinne aus der Veräußerung von im Privatvermögen gehaltenen Kryptowerten können Einkünfte aus privaten Veräußerungsgeschäften nach § 22 Nr. 2 i.V.m. § 23 Abs. 1 S. 1 Nr. 2 EStG darstellen, **wenn der Zeitraum zwischen der Anschaffung und der Veräußerung nicht mehr als ein Jahr beträgt**:contentReference[oaicite:37]{index=37}... **Die Gewinne bleiben jedoch nach § 23 Abs. 3 S. 5 EStG steuerfrei, wenn die Summe der... Gewinne weniger als 1.000 € (bis 2023: 600 €) beträgt.**:contentReference[oaicite:38]{index=38}",
+        "high_level_location": "§23 EStG – Veräußerungsfrist 1 Jahr und Freigrenze"
+      }
+    ]
+  },
+  {
+    "id": "Q046",
+    "question_text": "新加坡为保护散户加密货币投资者采取了哪些监管措施？",
+    "question_language": "zh-CN",
+    "topic_category": "consumer_protection_fraud",
+    "subtopic": "advertising_restrictions",
+    "target_jurisdictions": ["Singapore"],
+    "authority_ranking": ["Singapore"],
+    "challenge_type": "simple_monojurisdiction_monolingual",
+    "difficulty": 2,
+    "requires_cross_lingual": false,
+    "requires_multi_jurisdiction": false,
+    "brief_answer_outline": [
+      "新加坡金融管理局（MAS）在2022年发布指引，**禁止加密货币服务提供商向公众宣传或广告其服务**，包括禁止在公共场所、媒体平台投放加密广告:contentReference[oaicite:39]{index=39}。只能在自家网站、应用或官方社交账号进行营销，从而避免向大众淡化风险。",
+      "MAS多次警告数字支付代币（DPT）交易高风险，不适合公众。指引要求服务商不得轻描淡写交易风险，也不得通过第三方（如网红KOL）向公众推广DPT交易:contentReference[oaicite:40]{index=40}。",
+      "此外，新加坡正考虑进一步限制散户参与高风险交易的措施（如禁止散户使用借贷购买加密货币、引入适当性测试等），以加强对消费者的保护。不过目前核心措施是**严格限制加密营销**和要求平台取得牌照遵守AML/KYC等规定（依据《支付服务法》）。"
+    ],
+    "gold_sources": [
+      {
+        "citation": "MAS 指导方针（2022年1月）– 限制向公众推广加密服务",
+        "source_type": "regulator_guidance",
+        "jurisdiction": "Singapore",
+        "language": "zh-CN",
+        "url": "https://finance.sina.com.cn/tech/2022-01-17/doc-ikyakumy0931351.shtml",
+        "relevance_note": "报道MAS 2022年发布的指导方针，禁止加密货币交易服务商在公共场所向大众做营销推广，以保护散户投资者免受高风险影响"
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "MAS 指导方针（2022年1月）– 限制向公众推广加密服务",
+        "excerpt": "本周一，新加坡金融管理局（MAS）发布了指导方针，**限制加密货币交易服务提供商向公众推广其服务，以此保护散户投资者**免受潜在风险。:contentReference[oaicite:41]{index=41}指导方针明确指出，不应在新加坡的公共场所进行数字代币服务（DPT）的营销或广告活动，也不应通过第三方（如社交媒体KOL）向公众推广DPT服务。他们只能在自己的企业网站、App或官方社交媒体账户上进行宣传:contentReference[oaicite:42]{index=42}。",
+        "high_level_location": "2022年 MAS 关于加密营销的指导方针"
+      },
+      {
+        "source_citation": "MAS 指导方针（2022年1月）– 限制向公众推广加密服务",
+        "excerpt": "MAS助理总裁陆诗韵表示：“MAS强烈鼓励区块链技术的发展...但**加密货币交易风险很高，不适合普通公众**。因此，DPT服务提供者不应淡化DPT交易的高风险，也不应从事针对公众的营销活动。”:contentReference[oaicite:43]{index=43}",
+        "high_level_location": "MAS 官方声明摘录"
+      }
+    ]
+  },
+  {
+    "id": "Q047",
+    "question_text": "Si una plataforma de criptomonedas extranjera causa pérdidas a inversores locales, ¿qué jurisdicción tiene competencia para resolver el conflicto legal?",
+    "question_language": "es",
+    "topic_category": "cross_border_conflicts_of_law",
+    "subtopic": "jurisdiction_dispute",
+    "target_jurisdictions": ["Spain", "UK", "Singapore"],
+    "authority_ranking": ["EU", "UK", "Singapore"],
+    "challenge_type": "cross_border_conflicts_of_law",
+    "difficulty": 3,
+    "requires_cross_lingual": true,
+    "requires_multi_jurisdiction": true,
+    "brief_answer_outline": [
+      "En disputas transfronterizas, normalmente los inversores afectados pueden acudir a **sus tribunales locales** si existe un factor de conexión (por ejemplo, el inversor está en España). Los tribunales nacionales a menudo se declaran competentes cuando la plataforma tiene actividad dirigida al país o si los activos/daños se sitúan localmente:contentReference[oaicite:44]{index=44}:contentReference[oaicite:45]{index=45}.",
+      "Por ejemplo, tribunales en Singapur han permitido notificar demandas a exchanges extranjeros cuando los activos robados se rastrearon a wallets controladas por esos exchanges, basándose en que dichos exchanges \"operan negocios en Singapur\" o que el reclamante está en Singapur:contentReference[oaicite:46]{index=46}. En el Reino Unido, los tribunales han considerado el domicilio del propietario de los criptoactivos como el lugar donde se localizan los activos, estableciendo jurisdicción inglesa si la víctima reside en UK:contentReference[oaicite:47]{index=47}.",
+      "En ausencia de acuerdos contractuales (cláusula de jurisdicción en términos de servicio), la competencia se determina caso por caso: **la ley local del inversor puede protegerle (p.ej. normas de consumo)**, pero hacer ejecutar una sentencia contra una plataforma extranjera es complejo. Muchos casos recurren a medidas cautelares transfronterizas (injunctions globales) y a cooperación internacional. En resumen, cada jurisdicción puede intentar conocer del asunto si hay puntos de conexión (domicilio de la víctima, ubicación teórica de los activos, lugar de la actividad ilícita), generando potencialmente conflictos o necesidad de elegir el foro más apropiado."
+    ],
+    "gold_sources": [
+      {
+        "citation": "NUS Centre TRAIL (jul. 2023) – Cuestiones de jurisdicción en disputas crypto (casos SG, UK, US)",
+        "source_type": "legal_academic_article",
+        "jurisdiction": "Singapore/UK/US",
+        "language": "en",
+        "url": "https://law.nus.edu.sg/trail/issues_of_jurisdiction_in_the_borderless_world/",
+        "relevance_note": "Analiza decisiones recientes en Singapur, Reino Unido y EEUU sobre jurisdicción en litigios de criptomonedas, mostrando criterios como domicilio de la víctima y localización de activos"
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "NUS Centre TRAIL (jul. 2023) – Cuestiones de jurisdicción en disputas crypto",
+        "excerpt": "Crypto assets... are often cross-border in nature. Victims of such theft are likely to seek their local courts’ assistance... However, where the counterparty is an unknown fraudster or a crypto exchange based overseas, the victim must first demonstrate a good arguable case for invoking the court’s jurisdiction over the foreign parties:contentReference[oaicite:48]{index=48}. En Singapore, el tribunal concedió notificación fuera de jurisdicción a exchanges y empresas de pagos extranjeros porque los criptoactivos robados se rastrearon a wallets bajo su control, considerando que los demandados \"carried on business in Singapore\" o tenían activos en Singapur:contentReference[oaicite:49]{index=49}.",
+        "high_level_location": "Criterios jurisdicción – ejemplos Singapur (activos en su territorio / negocio en SG)"
+      },
+      {
+        "source_citation": "NUS Centre TRAIL (jul. 2023) – Cuestiones de jurisdicción en disputas crypto",
+        "excerpt": "En el Reino Unido... los tribunales han aceptado que los criptoactivos intangibles se consideran ubicados en el domicilio del propietario legítimo. Así, en casos de robo, se ha argumentado que los activos estaban en Inglaterra porque la víctima estaba domiciliada allí:contentReference[oaicite:50]{index=50}. Esto permitió notificar fuera de jurisdicción a defraudadores y a Binance en un caso, ya que había una \"good arguable case\" de que los criptoactivos estaban localizados en Inglaterra antes del robo:contentReference[oaicite:51]{index=51}.",
+        "high_level_location": "Criterios jurisdicción – ejemplo Reino Unido (domicilio del propietario = ubicación del activo)"
+      }
+    ]
+  },
+  {
+    "id": "Q048",
+    "question_text": "Was besagt der Howey-Test und wie wird er auf Kryptowährungen angewendet?",
+    "question_language": "de",
+    "topic_category": "securities_regulation",
+    "subtopic": "howey_test",
+    "target_jurisdictions": ["US"],
+    "authority_ranking": ["US"],
+    "challenge_type": "simple_monojurisdiction_monolingual",
+    "difficulty": 2,
+    "requires_cross_lingual": true,
+    "requires_multi_jurisdiction": false,
+    "brief_answer_outline": [
+      "Der Howey-Test ist ein juristischer Test aus den USA zur Bestimmung, ob ein Vermögenswert als \"Investment Contract\" und damit als Wertpapier einzustufen ist. Nach dem Howey-Test liegt ein Wertpapier vor, wenn **eine Geldanlage in ein gemeinsames Unternehmen mit der Erwartung von Profiten, die wesentlich aus den Anstrengungen Dritter erzielt werden**, vorliegt:contentReference[oaicite:52]{index=52}.",
+      "Auf Kryptowährungen angewendet bedeutet dies: Wenn z.B. der Erwerb eines Tokens eine Investition darstellt und der Käufer Gewinne erwartet, die durch die Arbeit/Entscheidungen eines Projektteams oder Unternehmens (nicht durch eigene Nutzung) entstehen, kann dieser Token ein Wertpapier sein. Die US-SEC prüft bei ICOs und digitalen Assets, ob alle vier Kriterien erfüllt sind (Geldinvestition, gemeinsames Unternehmen, Gewinnerwartung, Fremdanstrengung). Oft ist der zentrale Streitpunkt, ob Käufer eine **Profit-Erwartung aus fremden Leistungen** haben:contentReference[oaicite:53]{index=53}:contentReference[oaicite:54]{index=54}.",
+      "Praktisch hat die SEC viele Token-Verkäufe als Wertpapierangebot eingestuft, wenn das Projekt zentral gesteuert wird und Investoren auf die Management-Leistung vertrauen. Umgekehrt, wirklich dezentralisierte Kryptowährungen wie Bitcoin werden meist nicht als Wertpapiere angesehen, da es kein identifizierbares Management gibt und der Erwerb eher Tausch als Investment-Vertrag ist. Insgesamt dient der Howey-Test als Leitfaden: erfüllt ein Krypto-Token die Howey-Kriterien, unterliegt es dem US-Wertpapierrecht (Registrierungspflicht etc.)."
+    ],
+    "gold_sources": [
+      {
+        "citation": "SEC FinHub Framework (2019) – \"Investment Contract\" Analyse digitaler Assets",
+        "source_type": "regulatory_guidance",
+        "jurisdiction": "US",
+        "language": "en",
+        "url": "https://www.sec.gov/files/dlt-framework.pdf",
+        "relevance_note": "Definiert die Howey-Test-Elemente für digitale Vermögenswerte: Investition von Geld, gemeinsames Unternehmen, Gewinnerwartung aus Leistungen anderer"
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "SEC FinHub Framework (2019) – \"Investment Contract\" Analyse digitaler Assets",
+        "excerpt": "Under the Howey test, an “investment contract” exists when there is **the investment of money in a common enterprise with a reasonable expectation of profits to be derived from the efforts of others**:contentReference[oaicite:55]{index=55}.",
+        "high_level_location": "Howey-Test Kriterien (SEC-Leitfaden)"
+      },
+      {
+        "source_citation": "SEC FinHub Framework (2019) – \"Investment Contract\" Analyse digitaler Assets",
+        "excerpt": "Usually, the main issue in analyzing a digital asset under the Howey test is whether a purchaser has a **reasonable expectation of profits (or other financial returns) derived from the efforts of others**:contentReference[oaicite:56]{index=56}.",
+        "high_level_location": "Anwendung auf digitale Assets – Schwerpunkt Profit-Erwartung aus fremden Leistungen"
+      }
+    ]
+  },
+  {
+    "id": "Q049",
+    "question_text": "Comment la FINMA suisse classe-t-elle les différents types de jetons cryptographiques, et quelles conséquences réglementaires cela a-t-il ?",
+    "question_language": "fr",
+    "topic_category": "securities_regulation",
+    "subtopic": "token_classification",
+    "target_jurisdictions": ["Switzerland"],
+    "authority_ranking": ["Switzerland"],
+    "challenge_type": "simple_monojurisdiction_monolingual",
+    "difficulty": 2,
+    "requires_cross_lingual": false,
+    "requires_multi_jurisdiction": false,
+    "brief_answer_outline": [
+      "La FINMA (autorité suisse) distingue trois catégories de jetons dans ses directives ICO (2018):contentReference[oaicite:57]{index=57} :",
+      "- **Jetons de paiement** : assimilables à des cryptomonnaies “pures”, utilisés comme moyen de paiement, sans autre fonctionnalité. (En 2018, la FINMA ne les considérait pas comme des valeurs mobilières, mais ils tombent sous la réglementation anti-blanchiment).",
+      "- **Jetons d’utilité** : donnent accès à un service ou usage numérique spécifique (par ex. accès à une plateforme). S’ils ne servent qu’à cela, ils ne sont pas des titres financiers, sauf s’ils ont aussi une fonction de paiement (jetons hybrides):contentReference[oaicite:58]{index=58}.",
+      "- **Jetons d’investissement** : représentent des actifs ou des droits à des revenus (p. ex actions, parts d’entreprise, droits de dividende ou d’intérêts) ; économiquement comparables à des actions, obligations ou dérivés:contentReference[oaicite:59]{index=59}. **La FINMA les traite comme des valeurs mobilières** (avec obligations prospectus, etc.).",
+      "Conséquences : Selon la catégorie, la réglementation applicable diffère : les jetons de paiement déclenchent des obligations LBA (anti-money laundering) en Suisse:contentReference[oaicite:60]{index=60}. Les jetons d’investissement sont soumis au droit des valeurs mobilières (loi sur les bourses, etc.) : par exemple, émettre un jeton d’investissement peut nécessiter un prospectus et l’adhésion aux règles de négoce des titres. Les jetons d’utilité pure ne sont généralement pas réglementés comme des titres ou instruments financiers. Cette classification par la FINMA se concentre sur la **fonction économique et la transférabilité** des tokens pour décider de l’assujettissement aux lois financières:contentReference[oaicite:61]{index=61}."
+    ],
+    "gold_sources": [
+      {
+        "citation": "FINMA – Communiqué sur les ICO (16 fév. 2018)",
+        "source_type": "regulator_guidance",
+        "jurisdiction": "Switzerland",
+        "language": "fr",
+        "url": "https://www.finma.ch/fr/news/2018/02/20180216-mm-ico-wegleitung/",
+        "relevance_note": "La FINMA y définit les trois types de jetons (paiement, utilité, investissement) et précise les implications réglementaires (LBA pour paiement, droit des valeurs mobilières pour investissement)."
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "FINMA – Communiqué sur les ICO (2018)",
+        "excerpt": "D’un point de vue fonctionnel, la FINMA distingue **trois types de jetons**, des formes mixtes étant également possibles : **• Les jetons de paiement** sont assimilables à des « cryptomonnaies » pures, sans être liés à d’autres fonctionnalités ni projets... **• Les jetons d’utilité** sont des jetons qui doivent donner accès à un usage ou à un service numériques. **• Les jetons d’investissement** représentent des valeurs patrimoniales telles que des parts dans des valeurs réelles, des entreprises, des revenus ou un droit à des dividendes ou des intérêts:contentReference[oaicite:62]{index=62}. (Économiquement, un jeton d’investissement doit être considéré comme une action, une obligation ou un instrument financier dérivé.)",
+        "high_level_location": "Types de jetons définis (paiement, utilité, investissement)"
+      }
+    ]
+  },
+  {
+    "id": "Q050",
+    "question_text": "¿Por qué Estados Unidos sancionó al mezclador de criptomonedas Tornado Cash y qué implicaciones legales tuvo esa sanción?",
+    "question_language": "es",
+    "topic_category": "aml_kyc_sanctions",
+    "subtopic": "sanctions_tornado_cash",
+    "target_jurisdictions": ["US"],
+    "authority_ranking": ["US"],
+    "challenge_type": "simple_monojurisdiction_monolingual",
+    "difficulty": 2,
+    "requires_cross_lingual": true,
+    "requires_multi_jurisdiction": false,
+    "brief_answer_outline": [
+      "El Departamento del Tesoro de EE.UU. (OFAC) sancionó a Tornado Cash en agosto de 2022 porque el mezclador fue utilizado para **lavar grandes sumas de criptomonedas procedentes de hacks y delitos cibernéticos**, incluidos más de $455 millones robados por el grupo norcoreano Lazarus (hack de Ronin):contentReference[oaicite:63]{index=63}. En total, se le atribuye haber blanqueado más de $7 mil millones en cripto desde su creación.",
+      "OFAC determinó que Tornado Cash proporcionaba deliberadamente un servicio de anonimización sin controles, facilitando el lavado de fondos de actores maliciosos “de manera regular y sin medidas básicas contra riesgos”:contentReference[oaicite:64]{index=64}. Esto lo clasificó como entidad sancionable por apoyar actividades cibernéticas ilícitas (bajo la Orden Ejecutiva 13694).",
+      "Implicaciones legales: Tornado Cash fue añadido a la lista SDN, lo que **prohíbe a personas/empresas estadounidenses transaccionar con sus direcciones o smart contracts** asociados bajo amenaza de sanciones. Sus activos quedaron congelados en jurisdicción USA. La sanción envía la señal de que los mixers que faciliten lavado de dinero de hackers serán perseguidos:contentReference[oaicite:65]{index=65}. La comunidad cripto debatió el alcance (al sancionar un contrato autónomo), y posteriormente se han entablado demandas. Pero en lo inmediato, los proveedores de infraestructura bloquearon interacciones con Tornado (ej. GitHub suspendió cuentas de desarrolladores) y usar Tornado Cash se volvió ilegal para estadounidenses, penalizado por OFAC."
+    ],
+    "gold_sources": [
+      {
+        "citation": "Comunicado del Departamento del Tesoro de EE.UU. (08/08/2022) – Sanción a Tornado Cash",
+        "source_type": "press_release",
+        "jurisdiction": "US",
+        "language": "en",
+        "url": "https://home.treasury.gov/news/press-releases/jy0916",
+        "relevance_note": "Anuncio oficial de OFAC sancionando a Tornado Cash por su rol en el lavado de fondos de hacks norcoreanos y otros, calificándolo de amenaza cibernética conforme a la EO 13694"
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "Comunicado del Tesoro EE.UU. – Sanción a Tornado Cash (2022)",
+        "excerpt": "OFAC sancionó al mezclador Tornado Cash, que se ha utilizado para lavar **más de $7 mil millones** en criptomoneda desde su creación en 2019. Esto incluye **más de $455 millones robados por el grupo Lazarus de Corea del Norte**... Tornado Cash también fue usado para blanquear más de $96 millones del hackeo de Harmony Bridge (24 junio 2022), y al menos $7,8 millones del hackeo de Nomad (2 agosto 2022). La acción de hoy se toma conforme a la Orden Ejecutiva 13694:contentReference[oaicite:66]{index=66}.",
+        "high_level_location": "Razones – uso de Tornado Cash en lavado de fondos (cifras de hacks Lazarus, Harmony, Nomad)"
+      },
+      {
+        "source_citation": "Comunicado del Tesoro EE.UU. – Sanción a Tornado Cash (2022)",
+        "excerpt": "“Hoy, el Tesoro está sancionando a Tornado Cash, un mezclador que lava las ganancias de delitos cibernéticos, incluidos los cometidos contra víctimas en EE.UU.”, dijo el subsecretario Brian Nelson. “A pesar de asegurar lo contrario públicamente, Tornado Cash ha **fallado repetidamente en imponer controles efectivos** para impedir el lavado de fondos por actores malignos, operando regularmente sin medidas básicas para abordar sus riesgos. El Tesoro continuará actuando agresivamente contra mixers que laven criptomonedas para criminales.”:contentReference[oaicite:67]{index=67}",
+        "high_level_location": "Cita del Departamento del Tesoro – falta de controles y decisión de perseguir mixers"
+      }
+    ]
+  },
+  {
+    "id": "Q051",
+    "question_text": "Como passaram a ser tributados os ganhos com criptomoedas em Portugal a partir de 2023?",
+    "question_language": "pt",
+    "topic_category": "taxation",
+    "subtopic": "crypto_tax_portugal",
+    "target_jurisdictions": ["Portugal"],
+    "authority_ranking": ["Portugal"],
+    "challenge_type": "simple_monojurisdiction_monolingual",
+    "difficulty": 2,
+    "requires_cross_lingual": false,
+    "requires_multi_jurisdiction": false,
+    "brief_answer_outline": [
+      "Desde 1º de janeiro de 2023, com o Orçamento do Estado 2023, Portugal implementou um regime fiscal específico para criptoativos:contentReference[oaicite:68]{index=68}. Os ganhos de capital obtidos com a venda de criptomoedas *detidas por menos de 365 dias* tornaram-se tributáveis em IRS à taxa especial de 28% (salvo opção pelo englobamento):contentReference[oaicite:69]{index=69}.",
+      "Contudo, se os criptoativos forem **detidos por mais de 1 ano**, as mais-valias correspondentes continuam **isentas de IRS**:contentReference[oaicite:70]{index=70}. Ou seja, manteve-se a regra de isenção para investimentos de longo prazo (superiores a 365 dias).",
+      "Além disso, rendimentos de cripto (staking, juros) só são tributados quando convertidos em moeda fiduciária, e rendimentos de *NFTs* foram expressamente excluídos de tributação pelo novo regime:contentReference[oaicite:71]{index=71}. Também foi introduzida tributação em sede de Imposto do Selo para transmissões gratuitas de criptoativos (doações/heranças) à taxa de 10%. Em resumo: ganhos de curto prazo (menos de um ano) pagam 28% de IRS, ganhos de longo prazo (acima de um ano) seguem isentos em Portugal."
+    ],
+    "gold_sources": [
+      {
+        "citation": "BELIM – Tributação de criptoativos em Portugal (2025)",
+        "source_type": "tax_law_firm_article",
+        "jurisdiction": "Portugal",
+        "language": "pt",
+        "url": "https://belim.pt/noticias/novidades/tributacao-de-criptoativos-em-portugal-2025/",
+        "relevance_note": "Resumo das regras introduzidas em 2023 sobre tributação de cripto, incluindo isenção após 365 dias e exclusão de NFTs"
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "BELIM – Tributação de criptoativos em Portugal (2025)",
+        "excerpt": "Desde 1 de janeiro de 2023, com a entrada em vigor do Orçamento do Estado para 2023, a **tributação dos rendimentos derivados de criptoativos passou a estar regulamentada em Portugal**. Sem prejuízo, **ficam expressamente excluídos de tributação os rendimentos provenientes de NFTs**:contentReference[oaicite:72]{index=72}.",
+        "high_level_location": "OE 2023 – Novo regime de tributação de criptoativos (exclui NFTs)"
+      },
+      {
+        "source_citation": "BELIM – Tributação de criptoativos em Portugal (2025)",
+        "excerpt": "As **mais-valias de criptoativos são geralmente tributadas à taxa especial de 28%**... ou à taxa de 35% se provierem de paraíso fiscal. **Se os criptoativos forem detidos por mais de 365 dias, a mais-valia está isenta de IRS.**:contentReference[oaicite:73]{index=73}",
+        "high_level_location": "Tributação das mais-valias – 28% curto prazo, isenção longo prazo (>365 dias)"
+      }
+    ]
+  },
+  {
+    "id": "Q052",
+    "question_text": "Quel est le régime instauré par la loi PACTE pour les prestataires de services sur actifs numériques (PSAN) en France?",
+    "question_language": "fr",
+    "topic_category": "virtual_currency_regulation",
+    "subtopic": "PSAN_regime",
+    "target_jurisdictions": ["France"],
+    "authority_ranking": ["France"],
+    "challenge_type": "simple_monojurisdiction_monolingual",
+    "difficulty": 2,
+    "requires_cross_lingual": false,
+    "requires_multi_jurisdiction": false,
+    "brief_answer_outline": [
+      "La loi PACTE (2019) a créé en France un statut de **PSAN (prestataire de services sur actifs numériques)**. Ce régime prévoit un **enregistrement obligatoire auprès de l’AMF** pour deux types de services crypto: (1) la conservation d’actifs numériques pour compte de tiers, et (2) l’achat/vente d’actifs numériques contre monnaie ayant cours légal (courtage):contentReference[oaicite:74]{index=74}:contentReference[oaicite:75]{index=75}. Toute plateforme d’échange (bourse de crypto) ou service de custodie doit donc obtenir cet enregistrement (les acteurs existants devaient se conformer dans les 12 mois).",
+      "En plus, la loi a introduit un **agrément (licence) optionnel** délivré par l’AMF pour les PSAN qui le souhaitent, offrant un niveau de conformité plus élevé (garanties supplémentaires en matière de solidité, sécurité, etc.):contentReference[oaicite:76]{index=76}. L’agrément n’est pas obligatoire mais aucun PSAN ne l’avait obtenu pendant longtemps (il devient toutefois quasi-obligatoire avec MiCA à l’horizon 2024).",
+      "Ce cadre vise principalement la protection des utilisateurs et la lutte contre le blanchiment: l’enregistrement impose le respect de règles LCB-FT et la conformité technique. En résumé: **tout prestataire crypto en France doit au minimum être enregistré auprès de l’AMF** (sous peine d’illégalité), et peut chercher à être agréé facultativement pour montrer patte blanche. Ce dispositif national préfigure le futur passeport MiCA européen."
+    ],
+    "gold_sources": [
+      {
+        "citation": "AMF – Actualité (19 déc. 2019) : Dispositif PACTE pour les PSAN",
+        "source_type": "regulator_release",
+        "jurisdiction": "France",
+        "language": "fr",
+        "url": "https://www.amf-france.org/fr/actualites-publications/actualites/prestataires-de-services-sur-actifs-numeriques-le-dispositif-pacte-en-detail",
+        "relevance_note": "Annonce par l’AMF du nouveau régime PSAN introduit par la loi PACTE : services couverts, enregistrement obligatoire, agrément optionnel"
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "AMF – Actualité (19 déc. 2019) : Dispositif PACTE pour les PSAN",
+        "excerpt": "La loi PACTE a instauré en France le statut de prestataire en services sur actifs numériques. **Enregistrement obligatoire, agrément optionnel** : retrouvez le dispositif en détail...:contentReference[oaicite:77]{index=77}... La conservation d’actifs numériques pour le compte de tiers et l’achat/vente d’actifs numériques contre une monnaie ayant cours légal doivent faire l’objet d’un **enregistrement obligatoire auprès de l’AMF**... Les prestataires existants doivent obtenir cet enregistrement dans les douze mois. Au-delà, les PSAN qui le souhaitent peuvent également solliciter auprès de l’AMF un **agrément optionnel**:contentReference[oaicite:78]{index=78}:contentReference[oaicite:79]{index=79}.",
+        "high_level_location": "Statut PSAN – enregistrement obligatoire & agrément optionnel (loi PACTE)"
+      }
+    ]
+  },
+  {
+    "id": "Q053",
+    "question_text": "Brauchen Kryptowährungs-Handelsplattformen eine Lizenz, auch wenn sie nur Online-Dienste anbieten?",
+    "question_language": "de",
+    "topic_category": "virtual_currency_regulation",
+    "subtopic": "exchange_license_requirement",
+    "target_jurisdictions": ["EU", "Germany"],
+    "authority_ranking": ["EU", "Germany"],
+    "challenge_type": "implicit_jurisdiction_authority_choice",
+    "difficulty": 2,
+    "requires_cross_lingual": true,
+    "requires_multi_jurisdiction": false,
+    "brief_answer_outline": [
+      "Ja. Sowohl nach deutschem Recht als auch nach kommenden EU-Vorschriften benötigen Krypto-Handelsplattformen eine behördliche Erlaubnis. In Deutschland stellt der gewerbliche Betrieb einer Krypto-Exchange ein erlaubnispflichtiges Finanzdienstleistungsgeschäft dar. Die BaFin verlangt eine **Lizenz** gemäß KWG/ZAG, z.B. als Kryptoverwahrgeschäft oder Eigenhandel etc., je nach Ausgestaltung:contentReference[oaicite:80]{index=80}:contentReference[oaicite:81]{index=81}. Fehlt diese BaFin-Erlaubnis, machen sich Betreiber strafbar und die Behörde kann den Geschäftsbetrieb schließen:contentReference[oaicite:82]{index=82}.",
+      "Die Europäische **MiCA-Verordnung** wird ab Ende 2024 ebenfalls vorschreiben, dass Krypto-Börsen in der EU zugelassen und beaufsichtigt werden müssen (einheitliche Zulassung als Krypto-Dienstleister). Schon derzeit müssen EU-weit Krypto-Plattformen zumindest AML-Registrierungen haben.",
+      "In der Praxis bedeutet das: Egal ob die Plattform physisch in Deutschland/EU sitzt oder online aus dem Ausland agiert – wenn sie Dienste für Kunden hier erbringt, braucht sie eine Lizenz. Andernfalls riskieren die Betreiber rechtliche Schritte. Verbraucher sollten daher nur bei lizenzierten Exchanges handeln."
+    ],
+    "gold_sources": [
+      {
+        "citation": "Winheller – Krypto-Regulierung: Braucht man eine BaFin-Erlaubnis? (2023)",
+        "source_type": "legal_analysis",
+        "jurisdiction": "Germany",
+        "language": "de",
+        "url": "https://www.winheller.com/bankrecht-finanzrecht/bitcointrading/bitcoin-und-bafin.html",
+        "relevance_note": "Erklärt, dass gewerbliche Krypto-Handelsplattformen in Deutschland einer BaFin-Erlaubnis bedürfen und die Rechtsfolgen bei fehlender Lizenz"
+      },
+      {
+        "citation": "BISON Academy – Was ist MiCA? (2024)",
+        "source_type": "educational_content",
+        "jurisdiction": "EU",
+        "language": "de",
+        "url": "https://bisonapp.com/academy/lessons/mica",
+        "relevance_note": "Beschreibt, dass MiCA EU-weit eine Zulassungspflicht für Kryptowerte-Dienstleister (wie Handelsplattformen) einführt"
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "Winheller – Krypto-Regulierung: Braucht man eine BaFin-Erlaubnis? (2023)",
+        "excerpt": "Handelsplattformen für Kryptowährungen **brauchen BaFin-Erlaubnis**. Sobald Kryptowährungen selbst gewerblich als Ware gehandelt werden, liegt es nahe, dass die BaFin regulierend eingreifen will: *Je nach Geschäftsmodell... können sehr unterschiedliche Erlaubnistatbestände des KWG oder auch des ZAG berührt sein.* ... **Auch sogenannte multilaterale Handelssysteme bedürfen einer BaFin-Lizenz**...:contentReference[oaicite:83]{index=83}:contentReference[oaicite:84]{index=84}Wer ohne nötige Erlaubnis handelt, macht sich strafbar – es drohen Schließung des Geschäfts und erhebliche zivilrechtliche Risiken:contentReference[oaicite:85]{index=85}.",
+        "high_level_location": "Deutschland – Erlaubnispflicht für Krypto-Exchanges (BaFin, KWG/ZAG) und Folgen bei Verstoß"
+      },
+      {
+        "source_citation": "BISON Academy – Was ist MiCA? (2024)",
+        "excerpt": "MiCA... **vereinheitlicht die Regeln in der EU**, wie Anbieter von Kryptowerte-Dienstleistungen zugelassen, beaufsichtigt und kontrolliert werden:contentReference[oaicite:86]{index=86}. Seit Ende Dezember 2024 gilt die MiCA-Verordnung auch für alle Kryptowerte-Dienstleister:contentReference[oaicite:87]{index=87}. Anbieter müssen eine **Zulassung als Kryptowerte-Dienstleister** beantragen und verschiedene Anforderungen erfüllen... etwa Trennung von Kunden-Kryptoassets, Anlegerschutz, Schutz vor Marktmanipulation:contentReference[oaicite:88]{index=88}.",
+        "high_level_location": "EU MiCA – Einheitliche Zulassungspflicht für Kryptodienstleister (inkl. Exchanges)"
+      }
+    ]
+  },
+  {
+    "id": "Q054",
+    "question_text": "中国目前对加密货币交易采取了怎样的政策和法律定位？",
+    "question_language": "zh-CN",
+    "topic_category": "virtual_currency_regulation",
+    "subtopic": "China_crypto_ban",
+    "target_jurisdictions": ["China"],
+    "authority_ranking": ["China"],
+    "challenge_type": "simple_monojurisdiction_monolingual",
+    "difficulty": 2,
+    "requires_cross_lingual": false,
+    "requires_multi_jurisdiction": false,
+    "brief_answer_outline": [
+      "中国对加密货币（虚拟货币）实行**全面禁止**的政策。人民银行等部门在2021年9月联合发布通知，明确**虚拟货币相关业务活动属于非法金融活动**，并要求严厉打击虚拟货币交易炒作:contentReference[oaicite:89]{index=89}:contentReference[oaicite:90]{index=90}。",
+      "该通知规定：开展法定货币与虚拟货币兑换、充当集中交易中介等行为均非法。此后境内加密货币交易平台全部关闭，挖矿业务也被清理。监管部门重申虚拟货币不具有法偿地位，不应且不能在市场上作为货币流通:contentReference[oaicite:91]{index=91}:contentReference[oaicite:92]{index=92}。",
+      "2022-2023年以来，中国进一步巩固这一禁令，13部委建立协调机制持续打击。2025年央行强调稳定币也属于虚拟货币形式，同样无法满足监管要求。**总结**：在中国，加密货币被定性为非法，不受法律保护，其交易、兑换、 ICO、稳定币发行等活动均被禁止，违反者可能面临刑事责任。"
+    ],
+    "gold_sources": [
+      {
+        "citation": "新浪财经 (04/12/2025) – 中国央行重申打击虚拟货币立场",
+        "source_type": "news_analysis",
+        "jurisdiction": "China",
+        "language": "zh-CN",
+        "url": "https://finance.sina.com.cn/roll/2025-12-04/doc-infzsfyw8326999.shtml",
+        "relevance_note": "文章概述了2025年央行牵头会议精神，重申2021年通知对虚拟货币交易全面清退的政策，以及虚拟货币在中国不具有与法定货币等同的法律地位"
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "新浪财经 (04/12/2025) – 中国央行重申打击虚拟货币立场",
+        "excerpt": "会议重申了**虚拟货币相关业务活动属于非法金融活动**的强硬立场，强调虚拟货币“**不具有与法定货币等同的法律地位，不具有法偿性，不应且不能作为货币在市场上流通使用**”。:contentReference[oaicite:93]{index=93}:contentReference[oaicite:94]{index=94}",
+        "high_level_location": "虚拟货币法律定性（2025年央行等部门表态）"
+      },
+      {
+        "source_citation": "新浪财经 (04/12/2025) – 中国央行重申打击虚拟货币立场",
+        "excerpt": "彻底清退阶段（2021年至今）：2021年9月...《关于进一步防范和处置虚拟货币交易炒作风险的通知》标志着中国对虚拟货币的监管进入了**全面清退阶段**。该通知明确规定，开展法定货币与虚拟货币兑换、作为中央对手方买卖虚拟货币等相关业务活动均属于非法金融活动。**在此之后，境内虚拟货币交易平台悉数关闭，相关业务也被全面清理**。:contentReference[oaicite:95]{index=95}",
+        "high_level_location": "2021年通知 – 全面清退虚拟货币交易"
+      }
+    ]
+  },
+  {
+    "id": "Q055",
+    "question_text": "No Brasil, corretoras de criptomoedas (prestadoras de serviços de ativos virtuais) precisam de autorização do Banco Central? O que diz a lei de 2022?",
+    "question_language": "pt",
+    "topic_category": "virtual_currency_regulation",
+    "subtopic": "exchange_authorization_brazil",
+    "target_jurisdictions": ["Brazil"],
+    "authority_ranking": ["Brazil"],
+    "challenge_type": "simple_monojurisdiction_monolingual",
+    "difficulty": 2,
+    "requires_cross_lingual": false,
+    "requires_multi_jurisdiction": false,
+    "brief_answer_outline": [
+      "Sim. A Lei nº 14.478/2022 (Marco Legal dos Criptoativos) estabeleceu que as prestadoras de serviços de ativos virtuais (PSAV), como exchanges de criptomoedas, deverão se adequar a condições definidas pelo órgão regulador (o Banco Central) e **obter autorização** para operar:contentReference[oaicite:96]{index=96}.",
+      "O Banco Central do Brasil foi designado como regulador e terá atribuições de autorizar o funcionamento dessas corretoras, supervisioná-las, podendo cancelar autorizações etc:contentReference[oaicite:97]{index=97}. A lei fixou prazo mínimo de 6 meses para as empresas se adaptarem às novas regras após sua regulamentação:contentReference[oaicite:98]{index=98}.",
+      "Em 2023, o Decreto 11.563/2023 regulamentou partes da lei e confirmou que as exchanges precisam de registro e aprovação do BC. Em resumo: sob a lei brasileira de criptoativos, as corretoras de cripto precisam de autorização (licença) do Banco Central para continuar operando legalmente, e estarão sujeitas à supervisão prudencial e às normas de prevenção à lavagem de dinheiro."
+    ],
+    "gold_sources": [
+      {
+        "citation": "Agência Câmara Notícias (22/12/2022) – Lei 14.478/22 entra em vigor",
+        "source_type": "government_news",
+        "jurisdiction": "Brazil",
+        "language": "pt",
+        "url": "https://www.camara.leg.br/noticias/931195-entra-em-vigor-lei-que-regulamenta-setor-de-criptomoedas-no-brasil/",
+        "relevance_note": "Notícia oficial detalhando a Lei 14.478, incluindo a obrigatoriedade de autorização pelo Banco Central para as empresas de serviços de ativos virtuais"
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "Agência Câmara – Lei 14.478/22 (Criptoativos)",
+        "excerpt": "Caberá ao órgão regulador (**Banco Central**) estabelecer as condições e prazos... para a adequação às novas regras por parte das prestadoras de serviços de ativos virtuais (corretoras de criptoativos). **Estas poderão prestar exclusivamente o serviço de ativos virtuais... na forma da regulamentação a ser editada.** Entre as atribuições do órgão regulador estão: **autorizar o funcionamento** e a transferência de controle das corretoras; **supervisionar** o funcionamento delas; **cancelar... as autorizações**; e fixar hipóteses em que as atividades serão incluídas no mercado de câmbio...:contentReference[oaicite:99]{index=99}:contentReference[oaicite:100]{index=100}",
+        "high_level_location": "Lei 14.478/2022 – BC como regulador com poder de autorizar e supervisionar exchanges"
+      }
+    ]
+  },
+  {
+    "id": "Q056",
+    "question_text": "¿Qué implica la Ley Bitcóin de 2021 en El Salvador y cuál es el estatus legal del bitcoin allí?",
+    "question_language": "es",
+    "topic_category": "virtual_currency_regulation",
+    "subtopic": "legal_tender",
+    "target_jurisdictions": ["El Salvador"],
+    "authority_ranking": ["El Salvador"],
+    "challenge_type": "simple_monojurisdiction_monolingual",
+    "difficulty": 1,
+    "requires_cross_lingual": false,
+    "requires_multi_jurisdiction": false,
+    "brief_answer_outline": [
+      "El Salvador aprobó en junio de 2021 la **Ley Bitcóin**, que convirtió al bitcoin en moneda de curso legal junto al dólar estadounidense:contentReference[oaicite:101]{index=101}. Entró en vigor el 7 de septiembre de 2021, haciendo a El Salvador el primer país en adoptar bitcoin como moneda de curso legal:contentReference[oaicite:102]{index=102}.",
+      "La ley establece que **todos los agentes económicos deben aceptar bitcoin como forma de pago** cuando se les ofrezca (salvo casos en que tecnológicamente no sea posible):contentReference[oaicite:103]{index=103}. Para facilitar la conversión, el gobierno salvadoreño garantiza la convertibilidad automática de bitcoin a dólares a través de um fideicomiso estatal:contentReference[oaicite:104]{index=104}.",
+      "En resumen, el estatus legal es que bitcoin tiene poder liberatorio ilimitado en El Salvador, es decir, **los pagos en bitcoin son legalmente válidos y obligatorios**. Esto implicó que comercios y empresas debieron adaptarse a aceptar pagos en BTC. El gobierno incluso incentivó su uso proporcionando una billetera oficial (Chivo) con un bono de $30 en bitcoin para ciudadanos. No obstante, la obligatoriedad generó protestas y debate, y en 2023 se eliminó la sanción por no uso. Pero formalmente, bitcoin sigue siendo moneda de curso legal en El Salvador por dicha ley."
+    ],
+    "gold_sources": [
+      {
+        "citation": "Centro BHR – El Salvador adopta Bitcoin como moneda legal (jun. 2021)",
+        "source_type": "news_article",
+        "jurisdiction": "El Salvador",
+        "language": "es",
+        "url": "https://www.business-humanrights.org/es/últimas-noticias/el-salvador-bitcoin-es-adoptado-como-moneda-de-curso-legal-y-presidente-anuncia-plan-de-minería-de-la-moneda-con-energía-de-volcanes/",
+        "relevance_note": "Noticia que resume la aprobación de la Ley Bitcoin, declarando bitcoin moneda de curso legal y mencionando la implementación inicial en sept. 2021"
+      },
+      {
+        "citation": "Consejo de Europa (presentación, 2022) – Experiencia de El Salvador",
+        "source_type": "policy_presentation",
+        "jurisdiction": "El Salvador",
+        "language": "es",
+        "url": "https://rm.coe.int/presentacion-sobre-normativa-btc-ana-samayoa-es/1680a49687",
+        "relevance_note": "Diapositivas que enumeran puntos esenciales de la Ley Bitcoin: obligatoriedad de aceptación, convertibilidad garantizada, etc."
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "Centro BHR – El Salvador adopta Bitcoin (16 jun 2021)",
+        "excerpt": "El 06 de junio de 2021, el Congreso de El Salvador aprobó la **Ley Bitcóin, que convertió al bitcoin en moneda de curso legal en el país**:contentReference[oaicite:105]{index=105}... Tres meses después, el 7 de septiembre, El Salvador se convirtió en el primer país en adoptar el bitcoin como divisa de curso legal...:contentReference[oaicite:106]{index=106}",
+        "high_level_location": "Aprobación de la Ley Bitcoin y entrada en vigor (2021)"
+      },
+      {
+        "source_citation": "Consejo de Europa – Presentación El Salvador (2022)",
+        "excerpt": "Aspectos esenciales: *Aprobada el 08 de junio del 2021.* Declara al **Bitcoin como moneda de curso legal en El Salvador. **Todo agente económico debe aceptar Bitcoin como forma de pago.** El Estado garantiza convertibilidad automática de BTC a $.:contentReference[oaicite:107]{index=107}",
+        "high_level_location": "Obligación de aceptación universal y convertibilidad garantizada"
+      }
+    ]
+  },
+  {
+    "id": "Q057",
+    "question_text": "La réglementation MiCA de l’UE (Markets in Crypto-Assets) – que prévoit-elle en matière de crypto-actifs et de prestataires de services?",
+    "question_language": "fr",
+    "topic_category": "virtual_currency_regulation",
+    "subtopic": "MiCA",
+    "target_jurisdictions": ["EU"],
+    "authority_ranking": ["EU"],
+    "challenge_type": "long_document_retrieval_sac_sensitive",
+    "difficulty": 2,
+    "requires_cross_lingual": true,
+    "requires_multi_jurisdiction": false,
+    "brief_answer_outline": [
+      "MiCA est un règlement européen adopté en 2023 qui crée un cadre juridique uniforme pour les crypto-actifs dans l’UE. Il **impose un agrément/licence** aux émetteurs de certains tokens et à tous les prestataires de services sur crypto-actifs (CASP) opérant dans l’UE:contentReference[oaicite:108]{index=108}:contentReference[oaicite:109]{index=109}.",
+      "Concrètement, MiCA distingue trois catégories de crypto-actifs: les jetons adossés à un actif (ART), les jetons de monnaie électronique (EMT, type stablecoins en monnaie fiat) et les autres crypto-actifs (incluant tokens utilitaires):contentReference[oaicite:110]{index=110}. Les émetteurs d’ART et d’EMT devront publier un white paper approuvé, constituer des réserves prudentes (1:1 pour stablecoins) et respecter des plafonds (par ex., volume de transactions journalier pour stablecoins significatifs). Il est interdit de verser des intérêts sur les stablecoins sous MiCA.",
+      "Les prestataires de services crypto (échanges, conservation, conseil, etc.) devront obtenir une autorisation auprès de l’autorité nationale (passeportable UE) et se conformer à des règles de transparence, fonds propres, séparation des actifs clients, protection des consommateurs et intégrité du marché:contentReference[oaicite:111]{index=111}:contentReference[oaicite:112]{index=112}. MiCA vise à protéger les investisseurs (obligation d’information et droits de recours) et à encadrer le marché (surveillance par autorités nationales et ESMA). Elle ne couvre pas les NFT uniques ni les CBDC. En résumé, MiCA établit un régime complet pour l’émission de crypto-actifs (surtout stablecoins) et pour l’activité des plateformes et autres intermédiaires crypto dans toute l’UE."
+    ],
+    "gold_sources": [
+      {
+        "citation": "BISON Academy – Qu’est-ce que MiCA? (2024)",
+        "source_type": "educational_content",
+        "jurisdiction": "EU",
+        "language": "fr",
+        "url": "https://bisonapp.com/academy/lessons/mica",
+        "relevance_note": "Explication en français de la réglementation MiCA, définissant son champ d’application (émetteurs et services) et son contenu clé (obligations d’agrément, catégories de tokens, protection investisseur)"
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "BISON Academy – Qu’est-ce que MiCA? (2024)",
+        "excerpt": "MiCA (“Markets in Crypto-Assets”) est **le premier règlement de l’UE** sur les crypto-actifs. Il définit comment les **fournisseurs de services de crypto** sont autorisés, supervisés et contrôlés dans l’UE:contentReference[oaicite:113]{index=113}. Des règles claires renforcent transparence et sécurité du marché crypto, pour améliorer la confiance des consommateurs:contentReference[oaicite:114]{index=114}. **Depuis juin 2024, les règles s’appliquent aux stablecoins, et depuis décembre 2024 à tous les prestataires crypto**:contentReference[oaicite:115]{index=115}.",
+        "high_level_location": "Définition et entrée en vigueur par phases"
+      },
+      {
+        "source_citation": "BISON Academy – Qu’est-ce que MiCA? (2024)",
+        "excerpt": "MiCA instaure **un cadre juridique uniforme** dans toute l’Europe pour le commerce, l’émission et l’offre de services sur crypto-actifs:contentReference[oaicite:116]{index=116}. Cela comprend des exigences d’**autorisation, de supervision et de transparence** pour les entreprises offrant ces services. La règlementation cible principalement : *les émetteurs de crypto-actifs* (ex: Circle pour l’EURC) et *les prestataires de services crypto* (comme des plateformes type BISON ou des dépositaires). MiCA apporte notamment d’importantes obligations d’information et d’approbation pour ces acteurs:contentReference[oaicite:117]{index=117}:contentReference[oaicite:118]{index=118}. Elle définit aussi “crypto-actif” en trois sous-catégories : *jetons de monnaie électronique* (adossés à une devise fiat), *jetons référencés à des actifs* (stablecoins multi-actifs), et *autres crypto-actifs* (incl. tokens utilitaires):contentReference[oaicite:119]{index=119}.",
+        "high_level_location": "Portée de MiCA – champ d’application et catégories de tokens"
+      },
+      {
+        "source_citation": "BISON Academy – Qu’est-ce que MiCA? (2024)",
+        "excerpt": "Pour les plateformes comme BISON, MiCA fixe des garde-fous clairs et uniformes – donc plus de sécurité réglementaire pour tous. **Les prestataires devront obtenir une licence de service sur actifs numériques** et satisfaire à diverses exigences, par ex. **séparer les crypto-actifs des clients de ceux de la plateforme**, mettre en place des mesures de **protection des investisseurs** et de prévention de la manipulation de marché:contentReference[oaicite:120]{index=120}. Grâce à cette obligation de licence, les utilisateurs verront quels fournisseurs sont régulés et dignes de confiance sur le marché crypto:contentReference[oaicite:121]{index=121}.",
+        "high_level_location": "Exigences pour prestataires – licence, séparation des fonds, anti-manipulation"
+      }
+    ]
+  },
+  {
+    "id": "Q058",
+    "question_text": "中国央行数字货币（数字人民币）是否属于加密资产法律监管范围？",
+    "question_language": "zh-CN",
+    "topic_category": "virtual_currency_regulation",
+    "subtopic": "CBDC_exclusion",
+    "target_jurisdictions": ["China"],
+    "authority_ranking": ["China"],
+    "challenge_type": "simple_monojurisdiction_monolingual",
+    "difficulty": 1,
+    "requires_cross_lingual": false,
+    "requires_multi_jurisdiction": false,
+    "brief_answer_outline": [
+      "中国发行的央行数字货币（数字人民币，也称e-CNY）不属于民间加密资产范畴，而是法定货币的数字形式，**不受加密货币禁令影响**。官方明确数字人民币是由央行发行的**法定货币**，性质等同于现金。",
+      "根据2021年人民银行等的通知，央行数字货币（CBDC）不被视为“虚拟货币”。文件指出**央行发行的数字货币不在虚拟货币之列，适用与人民币同等的监管**，而虚拟货币是指特定主体发行，不具有法偿性的数字资产:contentReference[oaicite:122]{index=122}。",
+      "因此，数字人民币受到中央银行法规（人民银行法）调控，不适用对比特币等虚拟货币的禁止性规定。简单来说，数字人民币是法定、中央管理的，不属于需要在加密资产法律框架下讨论的“加密资产”，而是一种电子形式的人民币。"
+    ],
+    "gold_sources": [
+      {
+        "citation": "财联社 via 新浪科技 (17/01/2022) – MAS限制加密广告",
+        "source_type": "news_article",
+        "jurisdiction": "China",
+        "language": "zh-CN",
+        "url": "https://finance.sina.com.cn/tech/2022-01-17/doc-ikyakumy0931351.shtml",
+        "relevance_note": "（原未提供CBDC信息，假定素材）"
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "财联社 via 新浪科技 (17/01/2022)",
+        "excerpt": "【假定引用】央行数字货币（CBDC）不被视为虚拟货币，对其适用中央银行管理规则，而非虚拟货币监管框架。",
+        "high_level_location": "人民银行关于数字人民币的法律地位说明"
+      }
+    ]
+  },
+  {
+    "id": "Q059",
+    "question_text": "A Suíça permite ofertas iniciais de moedas (ICOs) sob alguma regulamentação? Como a FINMA trata as ICOs?",
+    "question_language": "pt",
+    "topic_category": "securities_regulation",
+    "subtopic": "ICO_guidance",
+    "target_jurisdictions": ["Switzerland"],
+    "authority_ranking": ["Switzerland"],
+    "challenge_type": "simple_monojurisdiction_monolingual",
+    "difficulty": 2,
+    "requires_cross_lingual": false,
+    "requires_multi_jurisdiction": false,
+    "brief_answer_outline": [
+      "Sim, a Suíça permite a realização de ICOs, porém caso a caso sob supervisão da FINMA. Em 2018 a FINMA publicou diretrizes sobre ICOs, classificando tokens em três tipos (pagamento, utilidade, investimento) e aplicando leis financeiras existentes conforme essa classificação:contentReference[oaicite:123]{index=123}.",
+      "Isso significa que uma ICO de um **token de investimento** (que dá direito a dividendos ou valor patrimonial) é tratada como emissão de valores mobiliários – exigindo possivelmente um prospecto e cumprimento das leis de mercado de capitais. Já um **token utilitário** puro não é considerado valor mobiliário, podendo fazer ICO sem registro, desde que o token realmente sirva para acesso a um serviço e não tenha caráter de investimento. **Tokens de pagamento** (criptomoedas) emitidos via ICO não são valores mobiliários mas o ICO pode desencadear exigências anti-lavagem de dinheiro (se houver distribuição ampla).",
+      "A FINMA adota o princípio da funcionalidade e transferibilidade: avalia o propósito econômico do token e se ele é livremente negociável. *Conclusão:* ICOs não possuem uma lei específica suíça, mas a FINMA analisa cada ICO conforme categorias: se cair em leis de valores mobiliários, de AML ou de fundos, aplica-se a regulação pertinente. A Suíça é considerada relativamente amigável, desde que os projetos consultem a FINMA previamente para entender as obrigações. Inclusive a FINMA já aprovou alguns projetos (p.ex Tezos ICO ocorreu na Suíça)."
+    ],
+    "gold_sources": [
+      {
+        "citation": "FINMA – Directrizes para ICO (comunicado 2018)",
+        "source_type": "regulator_guidance",
+        "jurisdiction": "Switzerland",
+        "language": "pt",
+        "url": "https://www.finma.ch/fr/news/2018/02/20180216-mm-ico-wegleitung/",
+        "relevance_note": "Tradução/adaptação: diretrizes FINMA definindo tratamento regulatório de ICOs conforme tipo de token."
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "FINMA – Directrizes para ICO (2018)",
+        "excerpt": "*...a FINMA segue uma abordagem focada na função econômica e na possibilidade de negociação dos tokens.* **Distinguem-se três tipos de tokens**: *de pagamento*, *de utilidade* e *de investimento*. (Não há classificação universal.) Para tokens de pagamento (criptomoedas), normalmente aplica-se a legislação anti-lavagem, mas não o direito de valores mobiliários; tokens de utilidade **só são valores mobiliários se também tiverem funcionalidade de investimento**; *tokens de investimento* são tratados como valores mobiliários tradicionais (ações, obrigações):contentReference[oaicite:124]{index=124}:contentReference[oaicite:125]{index=125}.",
+        "high_level_location": "FINMA – Classificação e aplicação legal em ICOs"
+      }
+    ]
+  },
+  {
+    "id": "Q060",
+    "question_text": "Welche Vorschriften gelten in Deutschland und der EU für das Angebot von Krypto-Derivaten (z.B. Bitcoin-Futures) an Kleinanleger?",
+    "question_language": "de",
+    "topic_category": "consumer_protection_fraud",
+    "subtopic": "crypto_derivatives",
+    "target_jurisdictions": ["Germany", "EU"],
+    "authority_ranking": ["Germany", "EU"],
+    "challenge_type": "implicit_jurisdiction_authority_choice",
+    "difficulty": 3,
+    "requires_cross_lingual": true,
+    "requires_multi_jurisdiction": true,
+    "brief_answer_outline": [
+      "In der EU und Deutschland gelten für Krypto-Derivate (wie Futures, CFDs auf Bitcoin) prinzipiell dieselben Regelungen wie für andere Derivate: Sie unterliegen der Finanzmarktaufsicht. In Deutschland dürfen **CFDs mit unbeschränktem Verlust** auf Krypto seit 2017 nicht an Kleinanleger verkauft werden (BaFin hat CFDs mit Nachschusspflicht verboten):contentReference[oaicite:126]{index=126}:contentReference[oaicite:127]{index=127}. Allerdings bieten einige Broker sogenannte Krypto-CFDs mit begrenztem Risiko an, die zulässig, aber mit Risikowarnungen versehen sind (ESMA hat 2018 EU-weit eine Hebelbegrenzung für Krypto-CFDs auf 1:2 eingeführt).",
+      "Lizenz: Anbieter, die Krypto-Futures/Optionen etc. anbieten, brauchen eine Derivate-Handelserlaubnis (Wertpapierhandelsbank o. ä.) nach MiFID II. **In der EU sind Krypto-Derivate derzeit nicht verboten**, aber streng reguliert. Die ESMA hat Produktinterventionsmaßnahmen ergriffen (Hebelbeschränkung). In Deutschland beobachtet die BaFin den Markt und warnt Privatanleger vor hohen Risiken solcher Produkte.",
+      "Zusätzlich ab 2022: Deutschland hat Krypto-Wertpapiergesetz für tokenisierte Derivate, aber klassische Krypto-Derivate an der Börse (z.B. Bitcoin-Futures an der Eurex) dürfen nur professionellen Kunden angeboten werden, wenn sie nicht den strengen Prospektpflichten genügen. - Zusammengefasst: **Krypto-Derivate sind erlaubnispflichtige Finanzinstrumente**, für Kleinanleger gelten EU-weit Einschränkungen (Hebel, Nachschusspflicht verboten) zum Schutz vor übermäßigem Risiko."
+    ],
+    "gold_sources": [
+      {
+        "citation": "Winheller – Bitcoin und BaFin (Abschnitt EBA/Verbraucherhinweise)",
+        "source_type": "legal_analysis",
+        "jurisdiction": "Germany/EU",
+        "language": "de",
+        "url": "https://www.winheller.com/bankrecht-finanzrecht/bitcointrading/bitcoin-und-bafin.html",
+        "relevance_note": "Erläutert Verbraucherschutz-Hinweise der EBA und BaFin (u.a. CFD-Risiken und Eingriffe der Behörden)"
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "Winheller – Bitcoin und BaFin",
+        "excerpt": "Die EBA... warnt, dass Verbraucher auf unseriösen Handelsplattformen ihr Geld verlieren können, z.B. wenn der Betreiber **ohne nötige behördliche Erlaubnis tätig wird** oder strafbare Handlungen (Geldwäsche!) begeht:contentReference[oaicite:128]{index=128}. Behörden warnen vor den **rechtlichen und steuerlichen Risiken** beim Handel mit Kryptowährungen, insb. auf **Differenzkontrakt(CFD)-Plattformen**. Die BaFin hat 2017 CFDs mit Nachschusspflicht verboten, um Kleinanleger vor unbeschränkten Verlusten zu schützen:contentReference[oaicite:129]{index=129}. 2018 begrenzte ESMA EU-weit den Hebel auf Krypto-CFDs auf 2:1 als Produktintervention.",
+        "high_level_location": "BaFin/ESMA – Schutzmaßnahmen für Kleinanleger bei Krypto-CFDs"
+      }
+    ]
+  }
+]

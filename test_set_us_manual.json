@@ -1,0 +1,223 @@
+[
+  {
+    "id": "US_MANUAL_01",
+    "question_text": "According to the final judgment in the SEC v. Ripple Labs case, what specific civil penalty amount was the Defendant ordered to pay?",
+    "question_language": "en",
+    "target_jurisdictions": ["US"],
+    "topic_category": "enforcement",
+    "gold_sources": [
+      { "citation": "SEC_v_Ripple_2024_Final_Judgment", "jurisdiction": "US", "relevance_note": "Ordering paragraph IV sets the penalty at $125,035,150." },
+      { "citation": "SEC_v_Ripple_2025_06_26", "jurisdiction": "US", "relevance_note": "Recites the exact penalty amount." }
+    ]
+  },
+  {
+    "id": "US_MANUAL_02",
+    "question_text": "How did the court distinguish between 'Institutional Sales' and 'Programmatic Sales' regarding the application of the Howey test in the SEC v. Ripple summary judgment?",
+    "question_language": "en",
+    "target_jurisdictions": ["US"],
+    "topic_category": "securities_regulation",
+    "gold_sources": [
+      { "citation": "SEC_v_Ripple_2024_Final_Judgment", "jurisdiction": "US", "relevance_note": "Section II.B distinguishing the two." }
+    ]
+  },
+  {
+    "id": "US_MANUAL_03",
+    "question_text": "Under the GENIUS Act of 2025, what is the specific definition of a 'Payment Stablecoin' and what assets are explicitly excluded from this definition?",
+    "question_language": "en",
+    "target_jurisdictions": ["US"],
+    "topic_category": "stablecoin",
+    "gold_sources": [
+      { "citation": "US_PL119-27_GENIUS_Act_2025", "jurisdiction": "US", "relevance_note": "Section 2(22): Definition." },
+      { "citation": "US_BILL_S394_2025", "jurisdiction": "US", "relevance_note": "Identical definition." }
+    ]
+  },
+  {
+    "id": "US_MANUAL_04",
+    "question_text": "What are the specific reserve requirements regarding 'rehypothecation' for permitted payment stablecoin issuers?",
+    "question_language": "en",
+    "target_jurisdictions": ["US"],
+    "topic_category": "stablecoin",
+    "gold_sources": [
+      { "citation": "US_PL119-27_GENIUS_Act_2025", "jurisdiction": "US", "relevance_note": "Section 4(a)(2)." },
+      { "citation": "US_BILL_S394_2025", "jurisdiction": "US", "relevance_note": "Section 4(a)(2)." }
+    ]
+  },
+  {
+    "id": "US_MANUAL_05",
+    "question_text": "Which U.S. legislative proposal seeks to amend the definition of 'security' in the Securities Act of 1933 to explicitly exclude 'investment contract assets'?",
+    "question_language": "en",
+    "target_jurisdictions": ["US"],
+    "topic_category": "legislative_proposal",
+    "gold_sources": [
+      { "citation": "CLARITY_Act_2025_RCP", "jurisdiction": "US", "relevance_note": "Section 201." }
+    ]
+  },
+  {
+    "id": "US_MANUAL_06",
+    "question_text": "In the Joint Stipulation filed in February 2025 involving the SEC and Coinbase, what specific appellate rights did the Defendants agree to withdraw?",
+    "question_language": "en",
+    "target_jurisdictions": ["US"],
+    "topic_category": "enforcement",
+    "gold_sources": [
+      { "citation": "SEC_v_Ripple_2025_Stipulation_PR47", "jurisdiction": "US", "relevance_note": "Withdrawal of 1292(b) appeal." }
+    ]
+  },
+  {
+    "id": "US_MANUAL_07",
+    "question_text": "Does the GENIUS Act impose any restrictions on the use of terms like 'United States Government' or 'USG' in the marketing of payment stablecoins?",
+    "question_language": "en",
+    "target_jurisdictions": ["US"],
+    "topic_category": "consumer_protection",
+    "gold_sources": [
+      { "citation": "US_PL119-27_GENIUS_Act_2025", "jurisdiction": "US", "relevance_note": "Section 4(a)(9)." }
+    ]
+  },
+  {
+    "id": "US_MANUAL_08",
+    "question_text": "What criteria must a 'mature blockchain system' meet regarding 'decentralized governance' and 'unilateral authority' under the proposed CLARITY Act?",
+    "question_language": "en",
+    "target_jurisdictions": ["US"],
+    "topic_category": "defi",
+    "gold_sources": [
+      { "citation": "CLARITY_Act_2025_RCP", "jurisdiction": "US", "relevance_note": "Section 205." }
+    ]
+  },
+  {
+    "id": "US_MANUAL_09",
+    "question_text": "What is the definition of an 'Endogenously Collateralized Payment Stablecoin' and are they permitted?",
+    "question_language": "en",
+    "target_jurisdictions": ["US"],
+    "topic_category": "stablecoin",
+    "gold_sources": [
+      { "citation": "US_PL119-27_GENIUS_Act_2025", "jurisdiction": "US", "relevance_note": "Section 14." },
+      { "citation": "US_BILL_S394_2025", "jurisdiction": "US", "relevance_note": "Section 11." }
+    ]
+  },
+  {
+    "id": "US_MANUAL_10",
+    "question_text": "According to the 2025 Order in SEC v. Ripple, what legal standard (Federal Rule of Civil Procedure) governs the parties' request for an indicative ruling on vacating the injunction?",
+    "question_language": "en",
+    "target_jurisdictions": ["US"],
+    "topic_category": "enforcement",
+    "gold_sources": [
+      { "citation": "SEC_v_Ripple_2025_06_26", "jurisdiction": "US", "relevance_note": "Rule 62.1." }
+    ]
+  },
+  {
+    "id": "US_NEW_01",
+    "question_text": "In SEC v. Ripple Labs (S.D.N.Y., Aug. 2024), which categories of Ripple’s XRP sales were held to involve securities, and what permanent relief was imposed?",
+    "question_language": "en",
+    "target_jurisdictions": ["US"],
+    "gold_sources": [
+      { "citation": "SEC_v_Ripple_2024_Final_Judgment", "jurisdiction": "US", "relevance_note": "Institutional Sales involved securities." },
+      { "citation": "SEC_v_Ripple_2025_06_26", "jurisdiction": "US", "relevance_note": "Mentions the permanent injunction." }
+    ]
+  },
+  {
+    "id": "US_NEW_02",
+    "question_text": "What is the scope of Ripple’s permanent injunction regarding future XRP sales? Did the injunction bar all ODL (on-demand liquidity) or foreign transactions?",
+    "question_language": "en",
+    "target_jurisdictions": ["US"],
+    "gold_sources": [
+      { "citation": "SEC_v_Ripple_2024_Final_Judgment", "jurisdiction": "US", "relevance_note": "Scope of injunction." },
+      { "citation": "SEC_v_Ripple_2025_06_26", "jurisdiction": "US", "relevance_note": "Discusses injunction scope." }
+    ]
+  },
+  {
+    "id": "US_NEW_03",
+    "question_text": "In the June 26, 2025 Order on Ripple’s motion under Rule 62.1, what did the court decide and why?",
+    "question_language": "en",
+    "target_jurisdictions": ["US"],
+    "gold_sources": [
+      { "citation": "SEC_v_Ripple_2025_06_26", "jurisdiction": "US", "relevance_note": "Order denying the motion." }
+    ]
+  },
+  {
+    "id": "US_NEW_04",
+    "question_text": "How does the GENIUS Act define a 'payment stablecoin' and a 'permitted payment stablecoin issuer'?",
+    "question_language": "en",
+    "target_jurisdictions": ["US"],
+    "gold_sources": [
+      { "citation": "US_PL119-27_GENIUS_Act_2025", "jurisdiction": "US", "relevance_note": "Definitions." },
+      { "citation": "US_BILL_S394_2025", "jurisdiction": "US", "relevance_note": "Definitions." }
+    ]
+  },
+  {
+    "id": "US_NEW_05",
+    "question_text": "What reserve and redemption requirements does the GENIUS Act impose on payment stablecoins?",
+    "question_language": "en",
+    "target_jurisdictions": ["US"],
+    "gold_sources": [
+      { "citation": "US_PL119-27_GENIUS_Act_2025", "jurisdiction": "US", "relevance_note": "Reserve requirements." },
+      { "citation": "US_BILL_S394_2025", "jurisdiction": "US", "relevance_note": "Reserve requirements." }
+    ]
+  },
+  {
+    "id": "US_NEW_06",
+    "question_text": "Under the GENIUS Act, are payment stablecoin reserves allowed to be rehypothecated or reused? If so, under what conditions?",
+    "question_language": "en",
+    "target_jurisdictions": ["US"],
+    "gold_sources": [
+      { "citation": "US_PL119-27_GENIUS_Act_2025", "jurisdiction": "US", "relevance_note": "Rehypothecation rules." },
+      { "citation": "US_BILL_S394_2025", "jurisdiction": "US", "relevance_note": "Rehypothecation rules." }
+    ]
+  },
+  {
+    "id": "US_NEW_07",
+    "question_text": "What appellate rights did Coinbase agree to withdraw or waive in its joint stipulation with the SEC dismissing the enforcement action?",
+    "question_language": "en",
+    "target_jurisdictions": ["US"],
+    "gold_sources": [
+      { "citation": "SEC_v_Ripple_2025_Stipulation_PR47", "jurisdiction": "US", "relevance_note": "Withdrawal of appeal." }
+    ]
+  },
+  {
+    "id": "US_NEW_08",
+    "question_text": "How does the CLARITY Act define the terms 'permitted payment stablecoin' and 'permitted payment stablecoin issuer'?",
+    "question_language": "en",
+    "target_jurisdictions": ["US"],
+    "gold_sources": [
+      { "citation": "CLARITY_Act_2025_RCP", "jurisdiction": "US", "relevance_note": "Definitions." }
+    ]
+  },
+  {
+    "id": "US_NEW_09",
+    "question_text": "Does the GENIUS Act allow algorithmic (endogenously collateralized) stablecoins to qualify as payment stablecoins?",
+    "question_language": "en",
+    "target_jurisdictions": ["US"],
+    "gold_sources": [
+      { "citation": "US_PL119-27_GENIUS_Act_2025", "jurisdiction": "US", "relevance_note": "Algorithmic stablecoins." },
+      { "citation": "US_BILL_S394_2025", "jurisdiction": "US", "relevance_note": "Algorithmic stablecoins." }
+    ]
+  },
+  {
+    "id": "US_NEW_10",
+    "question_text": "What naming/marketing restrictions and activity limitations does the GENIUS Act impose on stablecoin issuers regarding terms like 'United States Government' or 'USG'?",
+    "question_language": "en",
+    "target_jurisdictions": ["US"],
+    "gold_sources": [
+      { "citation": "US_PL119-27_GENIUS_Act_2025", "jurisdiction": "US", "relevance_note": "Naming restrictions." },
+      { "citation": "US_BILL_S394_2025", "jurisdiction": "US", "relevance_note": "Naming restrictions." }
+    ]
+  },
+  {
+    "id": "SAC_TEST_01",
+    "question_text": "What is the specific definition of 'asset-referenced token' according to the EU MiCA regulation?",
+    "question_language": "en",
+    "topic_category": "stablecoin",
+    "target_jurisdictions": ["EU"],
+    "gold_sources": [
+      { "citation": "EU_MiCA_Citation", "jurisdiction": "EU", "relevance_note": "Article 3 definition." }
+    ]
+  },
+  {
+    "id": "SAC_TEST_03",
+    "question_text": "What are the AML/CFT requirements for Digital Payment Token service providers in Singapore according to MAS Notice PSN02?",
+    "question_language": "en",
+    "topic_category": "aml",
+    "target_jurisdictions": ["Singapore"],
+    "gold_sources": [
+      { "citation": "SG_MAS_PSN02_Citation", "jurisdiction": "Singapore", "relevance_note": "PSN02 notice." }
+    ]
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "SAC_TEST_01",
+    "question_text": "What is the specific definition of 'asset-referenced token' according to the EU MiCA regulation?",
+    "question_language": "en",
+    "topic_category": "stablecoin",
+    "target_jurisdictions": [
+      "EU"
+    ],
+    "gold_sources": [
+      {
+        "citation": "EU_MiCA_Citation",
+        "jurisdiction": "EU",
+        "relevance_note": "Directly defines ARTs in Article 3."
+      }
+    ]
+  },
+  {
+    "id": "SAC_TEST_02",
+    "question_text": "According to the final judgment in SEC v. Ripple, what specific penalty amount was imposed on Ripple Labs?",
+    "question_language": "en",
+    "topic_category": "enforcement",
+    "target_jurisdictions": [
+      "US"
+    ],
+    "gold_sources": [
+      {
+        "citation": "US_Ripple_Judgment_Citation",
+        "jurisdiction": "US",
+        "relevance_note": "Contains the final civil penalty amount."
+      }
+    ]
+  },
+  {
+    "id": "SAC_TEST_03",
+    "question_text": "What are the AML/CFT requirements for Digital Payment Token service providers in Singapore according to MAS Notice PSN02?",
+    "question_language": "en",
+    "topic_category": "aml",
+    "target_jurisdictions": [
+      "Singapore"
+    ],
+    "gold_sources": [
+      {
+        "citation": "SG_MAS_PSN02_Citation",
+        "jurisdiction": "Singapore",
+        "relevance_note": "Details the AML requirements."
+      }
+    ]
+  }
+]

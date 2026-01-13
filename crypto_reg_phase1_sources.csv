@@ -1,0 +1,39 @@
+Jurisdiction,Authority,Agency_Full_Name,Official_Portal,Regulation_Page,Enforcement_Page,Remarks
+GLOBAL,FATF,Financial Action Task Force,https://www.fatf-gafi.org/,https://www.fatf-gafi.org/en/topics/virtual-assets.html,https://www.fatf-gafi.org/en/publications/fatf-recommendations.html,虚拟资产与VASP指南/旅行规则（R.15/16）
+GLOBAL,IOSCO,International Organization of Securities Commissions,https://www.iosco.org/,https://www.iosco.org/publications/,https://www.iosco.org/news/,市场行为/稳定币原则（补充）
+GLOBAL,BIS,Bank for International Settlements,https://www.bis.org/,https://www.bis.org/cpmi/,https://www.bis.org/press/,支付/清算框架（补充）
+
+EU,EUR-LEX,European Union Law Portal,https://eur-lex.europa.eu/,https://eur-lex.europa.eu/browse/summaries.html,https://eur-lex.europa.eu/search.html?type=advanced&lang=en,欧盟法规/指令/决定官方入口
+EU,ESMA,European Securities and Markets Authority,https://www.esma.europa.eu/,https://www.esma.europa.eu/policy-activities/financial-innovation/crypto-assets,https://www.esma.europa.eu/newsroom/enforcement,MiCA 与 RTS/ITS
+EU,EBA,European Banking Authority,https://www.eba.europa.eu/,https://www.eba.europa.eu/regulation-and-policy/crypto-assets,https://www.eba.europa.eu/news-press,稳定币/加密实施细则与问答
+EU,EIOPA,European Insurance and Occupational Pensions Authority,https://www.eiopa.europa.eu/,https://www.eiopa.europa.eu/publications,https://www.eiopa.europa.eu/media/news,保险/养老金相关加密风险（补充）
+EU,ECB,European Central Bank,https://www.ecb.europa.eu/,https://www.ecb.europa.eu/pub/policy/html/index.en.html,https://www.ecb.europa.eu/press/index.en.html,支付体系与加密政策（补充）
+
+US,SEC,U.S. Securities and Exchange Commission,https://www.sec.gov/,https://www.sec.gov/spotlight/cybersecurity-and-crypto,https://www.sec.gov/enforcement,证券法口径/托管/执法
+US,CFTC,Commodity Futures Trading Commission,https://www.cftc.gov/,https://www.cftc.gov/LawRegulation/DigitalAssets/index.htm,https://www.cftc.gov/PressRoom/PressReleases,商品/衍生品与数字资产执法
+US,FinCEN,Financial Crimes Enforcement Network,https://www.fincen.gov/,https://www.fincen.gov/virtual-currency-guidance,https://www.fincen.gov/news-room/press-releases,反洗钱与旅行规则
+US,FederalReserve,Board of Governors of the Federal Reserve System,https://www.federalreserve.gov/,https://www.federalreserve.gov/supervisionreg.htm,https://www.federalreserve.gov/newsevents.htm,银行监管对加密业务（补充）
+US,OCC,Office of the Comptroller of the Currency,https://www.occ.treas.gov/,https://www.occ.treas.gov/topics/supervision-and-examination/bank-operations/fintech/index-fintech.html,https://www.occ.treas.gov/news-issuances/index-news-issuances.html,银行开展加密业务的口径（补充）
+US,FDIC,Federal Deposit Insurance Corporation,https://www.fdic.gov/,https://www.fdic.gov/resources/supervision-and-examinations/,https://www.fdic.gov/news/press-releases/,存款机构与加密风险（补充）
+US,IRS,Internal Revenue Service,https://www.irs.gov/,https://www.irs.gov/businesses/small-businesses-self-employed/virtual-currencies,https://www.irs.gov/newsroom,税务申报口径（补充）
+US,NYDFS,New York State Department of Financial Services,https://www.dfs.ny.gov/,https://www.dfs.ny.gov/industry_guidance/virtual_currency,https://www.dfs.ny.gov/reports_and_publications/press_releases,BitLicense/稳定币储备/托管
+
+UK,HMT,HM Treasury (UK),https://www.gov.uk/government/organisations/hm-treasury,https://www.gov.uk/government/collections/cryptoassets,https://www.gov.uk/government/announcements,政策路线图/咨询稿/最终声明
+UK,FCA,Financial Conduct Authority,https://www.fca.org.uk/,https://www.fca.org.uk/firms/cryptoassets,https://www.fca.org.uk/news,注册/金融推广/执法
+UK,BoE,Bank of England,https://www.bankofengland.co.uk/,https://www.bankofengland.co.uk/research/digital-currencies,https://www.bankofengland.co.uk/news,支付/稳定币（补充）
+
+SG,MAS,Monetary Authority of Singapore,https://www.mas.gov.sg/,https://www.mas.gov.sg/development/fintech/regulations-and-guidelines,https://www.mas.gov.sg/news/media-releases,PSA/DPT/TRM/AML
+
+HK,SFC,Securities and Futures Commission (Hong Kong),https://www.sfc.hk/,https://www.sfc.hk/en/Rules-and-standards/Cross-sector/Virtual-Assets,https://www.sfc.hk/en/News-and-announcements/Enforcement-News,VATP 牌照/执法/持牌名单
+HK,HKMA,Hong Kong Monetary Authority,https://www.hkma.gov.hk/,https://www.hkma.gov.hk/eng/key-functions/banking/banking-regulatory-and-supervisory-regime/crypto-assets-related/,https://www.hkma.gov.hk/eng/news-and-media/press-releases/,银行/稳定币/支付通函
+
+JP,FSA,Financial Services Agency (Japan),https://www.fsa.go.jp/,https://www.fsa.go.jp/en/policy/virtual_currency/index.html,https://www.fsa.go.jp/en/news/index.html,加密资产交换业/托管/JVCEA参照
+
+KR,FSC,Financial Services Commission (Korea),https://www.fsc.go.kr/eng/,https://www.fsc.go.kr/eng/pr010101/77815,https://www.fsc.go.kr/eng/pr010101/77814,虚拟资产用户保护法
+KR,FSS,Financial Supervisory Service (Korea),https://english.fss.or.kr/eng/main.jsp,https://english.fss.or.kr/eng/bbs/B0000061/list.do?menuNo=200005,https://english.fss.or.kr/eng/bbs/B0000060/list.do?menuNo=200004,检查/执法通报（补充）
+
+UAE,VARA,Virtual Assets Regulatory Authority (Dubai),https://vara.ae/,https://vara.ae/rulebooks,https://vara.ae/news,迪拜虚拟资产活动规则
+UAE,FSRA,Financial Services Regulatory Authority (ADGM),https://www.adgm.com/,https://www.adgm.com/operating-in-adgm/fsra/fsra-rules-and-guidance,https://www.adgm.com/media/announcements,ADGM 加密框架
+UAE,DFSA,Dubai Financial Services Authority (DIFC),https://www.dfsa.ae/,https://www.dfsa.ae/legislation/,https://www.dfsa.ae/news,DIFC 金融中心内规则
+
+CH,FINMA,Swiss Financial Market Supervisory Authority,https://www.finma.ch/en/,https://www.finma.ch/en/documentation/dossier/dlt,https://www.finma.ch/en/news/,代币分类指南/ICO/执法

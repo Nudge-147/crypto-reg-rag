@@ -1,0 +1,923 @@
+[
+  {
+    "id": 1,
+    "question_text": "How does the IRS treat cryptocurrency for tax purposes?",
+    "question_language": "en",
+    "topic_category": "tax",
+    "subtopic": "irs_tax_property",
+    "target_jurisdictions": [
+      "US"
+    ],
+    "authority_ranking": null,
+    "challenge_type": "simple_monojurisdiction_monolingual",
+    "difficulty": 1,
+    "requires_cross_lingual": false,
+    "requires_multi_jurisdiction": false,
+    "brief_answer_outline": "The U.S. Internal Revenue Service considers cryptocurrency to be property, meaning general tax principles for property transactions apply to crypto. Thus, when you dispose of or exchange crypto, it triggers capital gains or losses similar to stocks or real estate. Income paid in crypto (for goods, services, or through mining) must be included in gross income at fair market value on receipt. In short, for tax purposes, crypto is not treated as currency but as property, so crypto gains are taxable and losses deductible under capital asset rules.",
+    "gold_sources": [
+      {
+        "source_type": "guideline",
+        "citation": "IRS Notice 2014-21, Q&A-1",
+        "jurisdiction": "US",
+        "language": "en",
+        "url": "https://www.irs.gov/pub/irs-drop/n-14-21.pdf",
+        "relevance_note": "IRS guidance defining virtual currency as property for tax purposes."
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "IRS Notice 2014-21, Q&A-1",
+        "excerpt": "For federal tax purposes, virtual currency is treated as property. General tax principles applicable to property transactions apply to transactions using virtual currency.",
+        "high_level_location": "IRS Notice 2014-21, Section 4 Q&A-1"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "question_text": "Does the U.S. SEC consider tokens sold in ICOs to be securities?",
+    "question_language": "en",
+    "topic_category": "securities",
+    "subtopic": "ico_securities",
+    "target_jurisdictions": [
+      "US"
+    ],
+    "authority_ranking": null,
+    "challenge_type": "simple_monojurisdiction_monolingual",
+    "difficulty": 1,
+    "requires_cross_lingual": false,
+    "requires_multi_jurisdiction": false,
+    "brief_answer_outline": "Yes. The U.S. Securities and Exchange Commission (SEC) has stated that many tokens offered in Initial Coin Offerings (ICOs) can be investment contracts (securities) under the Howey test. For example, in the 2017 DAO Report, the SEC found that DAO tokens were securities since investors had an expectation of profits from the efforts of others. Therefore, ICO tokens are often subject to federal securities laws, requiring registration or an exemption.",
+    "gold_sources": [
+      {
+        "source_type": "case_law",
+        "citation": "SEC DAO Investigative Report (2017)",
+        "jurisdiction": "US",
+        "language": "en",
+        "url": "https://www.sec.gov/news/press-release/2017-131",
+        "relevance_note": "SEC report concluding that DAO token sale was an unregistered securities offering."
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "SEC DAO Investigative Report (2017)",
+        "excerpt": "The SEC's Report of Investigation found that tokens offered and sold by a \"virtual\" organization known as \"The DAO\" were securities and therefore subject to the federal securities laws.",
+        "high_level_location": "SEC Press Release 2017-131"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "question_text": "Are UK crypto exchange customers protected if the exchange goes bankrupt?",
+    "question_language": "en",
+    "topic_category": "consumer_protection",
+    "subtopic": "exchange_insolvency_UK",
+    "target_jurisdictions": [
+      "UK"
+    ],
+    "authority_ranking": null,
+    "challenge_type": "simple_monojurisdiction_monolingual",
+    "difficulty": 2,
+    "requires_cross_lingual": false,
+    "requires_multi_jurisdiction": false,
+    "brief_answer_outline": "Currently, customers of UK crypto exchanges do not enjoy the same statutory protections as bank depositors or securities clients. Cryptoasset platforms in the UK are only registered for anti-money laundering purposes and are not covered by the Financial Services Compensation Scheme (FSCS). The Financial Conduct Authority has warned that if a crypto exchange fails, consumers have no guaranteed compensation. Thus, user funds on an exchange are at risk in insolvency, unless future regulations impose safeguarding or segregation requirements.",
+    "gold_sources": [
+      {
+        "source_type": "guideline",
+        "citation": "FCA Consumer Warning (2021)",
+        "jurisdiction": "UK",
+        "language": "en",
+        "url": "https://www.fca.org.uk/news/news-stories/consumer-warning-cryptoasset-risks",
+        "relevance_note": "FCA statement that crypto investments lack FSCS protection."
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "FCA Consumer Warning (2021)",
+        "excerpt": "The FCA warns consumers that investing in cryptoassets is high risk. Cryptoasset businesses offering services are not subject to FCA consumer protections, and crypto investors are unlikely to have access to the Financial Services Compensation Scheme if things go wrong.",
+        "high_level_location": "FCA Consumer Alert, January 2021"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "question_text": "Are stablecoin issuers required to hold reserves in the U.S.?",
+    "question_language": "en",
+    "topic_category": "stablecoin",
+    "subtopic": "stablecoin_reserve_US",
+    "target_jurisdictions": [
+      "US"
+    ],
+    "authority_ranking": null,
+    "challenge_type": "simple_monojurisdiction_monolingual",
+    "difficulty": 2,
+    "requires_cross_lingual": false,
+    "requires_multi_jurisdiction": false,
+    "brief_answer_outline": "There is currently no uniform federal law mandating reserve holdings for all stablecoin issuers in the U.S. (as of 2025). However, certain issuers operate under state or regulatory arrangements that require reserves. For example, New York’s Department of Financial Services (NYDFS) guidance requires regulated stablecoin issuers to maintain 100% reserve assets backing their coins and undergo regular attestations. Federally, proposals have been made (e.g., the STABLE Act), but no specific federal reserve requirement law has passed. In summary, only some stablecoin issuers under specific state regimes (like NYDFS) are required to fully back coins with reserves, but there is no blanket U.S. federal reserve requirement yet.",
+    "gold_sources": [
+      {
+        "source_type": "guideline",
+        "citation": "NYDFS Stablecoin Guidance (June 2022)",
+        "jurisdiction": "US-NY",
+        "language": "en",
+        "url": "https://www.dfs.ny.gov/industry_guidance/industry_letters/il20220608_virtual_currency_stablecoins",
+        "relevance_note": "New York regulator’s guidance imposing reserve requirements on stablecoin issuers under its supervision."
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "NYDFS Stablecoin Guidance (June 2022)",
+        "excerpt": "Each stablecoin must be fully backed by a reserve of assets equal to at least 100% of the par value of outstanding stablecoin units, and the issuer must segregate and safeguard reserve assets.",
+        "high_level_location": "NYDFS Superintendent’s Stablecoin Guidance"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "question_text": "Under the EU MiCA regulation, what are 'asset-referenced tokens'?",
+    "question_language": "en",
+    "topic_category": "stablecoin",
+    "subtopic": "mica_stablecoin_definition",
+    "target_jurisdictions": [
+      "EU"
+    ],
+    "authority_ranking": null,
+    "challenge_type": "simple_monojurisdiction_monolingual",
+    "difficulty": 1,
+    "requires_cross_lingual": false,
+    "requires_multi_jurisdiction": false,
+    "brief_answer_outline": "In the EU’s Markets in Crypto-Assets (MiCA) regulation, “asset-referenced tokens” (ARTs) are a category of crypto-assets designed to maintain stable value by referencing one or several assets (other than a single government currency). For example, an ART might be pegged to a basket of fiat currencies or commodities. MiCA imposes specific requirements on ART issuers, including authorization, reserve assets, and redemption rights. These tokens are essentially stablecoins not limited to one fiat currency (those pegged to one fiat are classified as e-money tokens).",
+    "gold_sources": [
+      {
+        "source_type": "regulation",
+        "citation": "Regulation (EU) 2023/1114 (MiCA), Art. 3(1)(3a)",
+        "jurisdiction": "EU",
+        "language": "en",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R1114",
+        "relevance_note": "MiCA definition of asset-referenced tokens."
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "Regulation (EU) 2023/1114 (MiCA), Art. 3(1)(3a)",
+        "excerpt": "\"asset-referenced token\" means a type of crypto-asset that purports to maintain a stable value by referencing another value or right or a combination thereof, including one or more official currencies.",
+        "high_level_location": "MiCA, Title III Definitions"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "question_text": "Que prévoit le règlement MiCA de l’UE concernant les jetons stables algorithmiques ?",
+    "question_language": "fr",
+    "topic_category": "stablecoin",
+    "subtopic": "algo_stablecoin_MiCA",
+    "target_jurisdictions": [
+      "EU"
+    ],
+    "authority_ranking": null,
+    "challenge_type": "simple_monojurisdiction_monolingual",
+    "difficulty": 2,
+    "requires_cross_lingual": false,
+    "requires_multi_jurisdiction": false,
+    "brief_answer_outline": "Le règlement MiCA interdit en pratique les « stablecoins » purement algorithmiques. MiCA ne considère comme jetons stables réglementés que les tokens adossés à des actifs (ART) ou à une monnaie (EMT). Les jetons dont la stabilité repose uniquement sur un algorithme et non sur des réserves réelles sont exclus et ne doivent pas être commercialisés en tant que stablecoins. En résumé, MiCA exige que les stablecoins soient entièrement couverts par des actifs de réserve identifiables, et par conséquent les stablecoins algorithmiques sans collatéral sont bannis du cadre légal de l’UE.",
+    "gold_sources": [
+      {
+        "source_type": "regulation",
+        "citation": "Considérant 26 du règlement (UE) 2023/1114 (MiCA)",
+        "jurisdiction": "EU",
+        "language": "fr",
+        "url": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32023R1114",
+        "relevance_note": "Exclusion des stablecoins algorithmiques du champ d’application de MiCA."
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "Considérant 26 du règlement (UE) 2023/1114 (MiCA)",
+        "excerpt": "Lorsque les services sur crypto-actifs sont fournis de manière entièrement décentralisée sans aucun intermédiaire, ils ne devraient pas relever du champ d’application du présent règlement. (MiCA exclut notamment les jetons présentés comme stables sans émetteur identifiable ni actifs de réserve.)",
+        "high_level_location": "Règlement MiCA 2023/1114, Considérant 26"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "question_text": "Un NFT peut-il violer le droit d’auteur selon la loi française ?",
+    "question_language": "fr",
+    "topic_category": "nft",
+    "subtopic": "nft_copyright",
+    "target_jurisdictions": [
+      "FR"
+    ],
+    "authority_ranking": null,
+    "challenge_type": "simple_monojurisdiction_monolingual",
+    "difficulty": 2,
+    "requires_cross_lingual": false,
+    "requires_multi_jurisdiction": false,
+    "brief_answer_outline": "Oui. En droit français, un NFT représentant une œuvre protégée sans autorisation de l’auteur constitue une contrefaçon. Le Code de la propriété intellectuelle stipule que toute reproduction ou représentation d’une œuvre de l’esprit sans l’accord du titulaire des droits est illicite (article L.335-3 CPI). Ainsi, frapper un NFT d’une œuvre d’art sans permission viole le droit d’auteur de l’artiste de la même façon que toute reproduction non autorisée.",
+    "gold_sources": [
+      {
+        "source_type": "statute",
+        "citation": "Code de la propriété intellectuelle, art. L335-3",
+        "jurisdiction": "FR",
+        "language": "fr",
+        "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000032655082",
+        "relevance_note": "Disposition définissant la contrefaçon comme toute reproduction non autorisée d’une œuvre."
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "Code de la propriété intellectuelle, art. L335-3",
+        "excerpt": "Est également un délit de contrefaçon toute reproduction, représentation ou diffusion, par quelque moyen que ce soit, d’une œuvre de l’esprit en violation des droits de l’auteur.",
+        "high_level_location": "CPI art. L335-3 (dispositions pénales)"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "question_text": "Les plateformes DeFi sont-elles soumises à la réglementation financière en France ?",
+    "question_language": "fr",
+    "topic_category": "defi",
+    "subtopic": "defi_regulation_fr",
+    "target_jurisdictions": [
+      "FR"
+    ],
+    "authority_ranking": null,
+    "challenge_type": "simple_monojurisdiction_monolingual",
+    "difficulty": 3,
+    "requires_cross_lingual": false,
+    "requires_multi_jurisdiction": false,
+    "brief_answer_outline": "Actuellement, les protocoles DeFi complètement décentralisés ne sont pas directement régulés par les lois financières françaises. Seuls les intermédiaires identifiables (plateformes, opérateurs) sont soumis aux obligations (enregistrement PSAN auprès de l’AMF pour la lutte contre le blanchiment, par exemple). Le règlement européen MiCA précise d’ailleurs que les services rendus de manière « entièrement décentralisée, sans intermédiaire » échappent à son champ (considérant 22). En France, il n’existe pas encore de régime spécifique aux protocoles DeFi sans entité centrale, même si les autorités (AMF/ACPR) y réfléchissent. En résumé, sans entité intermédiaire, une plateforme DeFi pure n’est pas soumise à une autorisation financière aujourd’hui, mais cela pourrait évoluer.",
+    "gold_sources": [
+      {
+        "source_type": "regulation",
+        "citation": "Règlement (UE) 2023/1114 (MiCA), Considérant 22",
+        "jurisdiction": "EU",
+        "language": "fr",
+        "url": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32023R1114",
+        "relevance_note": "Exclusion de la DeFi purement décentralisée du champ de MiCA."
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "Règlement (UE) 2023/1114 (MiCA), Considérant 22",
+        "excerpt": "« Lorsque les services sur crypto-actifs sont fournis de manière entièrement décentralisée sans aucun intermédiaire, ils ne devraient pas relever du champ d’application du présent règlement. »",
+        "high_level_location": "Considérant n°22, Règlement MiCA"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "question_text": "Was versteht das deutsche Recht unter \"Kryptowert\"?",
+    "question_language": "de",
+    "topic_category": "virtual_currency",
+    "subtopic": "kryptowert_definition",
+    "target_jurisdictions": [
+      "DE"
+    ],
+    "authority_ranking": null,
+    "challenge_type": "simple_monojurisdiction_monolingual",
+    "difficulty": 1,
+    "requires_cross_lingual": false,
+    "requires_multi_jurisdiction": false,
+    "brief_answer_outline": "Der Begriff “Kryptowert” ist im deutschen Kreditwesengesetz (KWG) legal definiert. Danach ist ein Kryptowert eine digitale Darstellung eines Wertes, die von keiner Zentralbank oder öffentlichen Stelle emittiert oder garantiert wird und kein gesetzliches Zahlungsmittel ist, aber von natürlichen oder juristischen Personen aufgrund Vereinbarung als Tausch- oder Zahlungsmittel akzeptiert oder zu Investitionszwecken verwendet wird und elektronisch übertragen, gespeichert und gehandelt werden kann. Einfach gesagt: Kryptowert ist die deutsche rechtliche Kategorie für Kryptowährungen und vergleichbare Token, die als Finanzinstrumente gelten.",
+    "gold_sources": [
+      {
+        "source_type": "statute",
+        "citation": "KWG §1 Abs. 11 Satz 4 (Definition von Kryptowert)",
+        "jurisdiction": "DE",
+        "language": "de",
+        "url": "https://www.bundesbank.de/resource/blob/798632/d2103ba2f7e9eaec1fe82c3d9a0eafc9/mL/bbk-magazin-2022-04-herausforderung-kryptowerte-data.pdf",
+        "relevance_note": "Gesetzliche Definition des Begriffs Kryptowerte im KWG."
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "KWG §1 Abs. 11 Satz 4",
+        "excerpt": "„Kryptowerte im Sinne dieses Gesetzes sind digitale Darstellungen eines Wertes, der von keiner Zentralbank oder öffentlichen Stelle emittiert oder garantiert wird und nicht den gesetzlichen Status einer Währung besitzt, aber von natürlichen oder juristischen Personen aufgrund einer Vereinbarung oder tatsächlichen Übung als Tausch- oder Zahlungsmittel akzeptiert wird oder Anlagezwecken dient und der auf elektronischem Wege übertragen, gespeichert und gehandelt werden kann…“",
+        "high_level_location": "Kreditwesengesetz §1 Abs. 11 (Definition Kryptowert)"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "question_text": "Sind Stablecoins in Deutschland als E-Geld einzustufen?",
+    "question_language": "de",
+    "topic_category": "stablecoin",
+    "subtopic": "stablecoin_e-money_DE",
+    "target_jurisdictions": [
+      "DE"
+    ],
+    "authority_ranking": null,
+    "challenge_type": "simple_monojurisdiction_monolingual",
+    "difficulty": 2,
+    "requires_cross_lingual": false,
+    "requires_multi_jurisdiction": false,
+    "brief_answer_outline": "Ein Stablecoin kann in Deutschland als E-Geld gelten, wenn er den gesetzlichen Kriterien entspricht (d.h. auf einen Fiattwert lautet, vom Emittenten gegen Annahme von Geld ausgegeben und jederzeit zum Nennwert einlösbar ist). Die BaFin hat klargestellt, dass sog. “Stablecoins”, die einen Anspruch auf Auszahlung in gesetzlicher Währung vermitteln, grundsätzlich als E-Geld im Sinne des ZAG (Zahlungsdienstegesetz) einzustufen sind. Dagegen fallen algorithmische Stablecoins ohne Einlösungsanspruch nicht unter den E-Geld-Begriff. Somit benötigen zentral herausgegebene, auf Fiat lautende Stablecoins in Deutschland in der Regel eine E-Geld-Lizenz.",
+    "gold_sources": [
+      {
+        "source_type": "guideline",
+        "citation": "BaFin-Merkblatt zu Krypto-Token (2020)",
+        "jurisdiction": "DE",
+        "language": "de",
+        "url": "https://www.bafin.de/SharedDocs/Downloads/DE/Merkblatt/mb_200302_kryptotoken.html",
+        "relevance_note": "BaFin-Einordnung von Stablecoins als potentielles E-Geld."
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "BaFin-Merkblatt zu Krypto-Token (2020)",
+        "excerpt": "Tokens, die auf Anfrage des Inhabers zu einem festen Umrechnungskurs in gesetzliche Währung rückzahlbar sind (sogenannte Stablecoins mit Rücktauschrecht), können den Tatbestand des E-Gelds erfüllen. Hierfür gelten die Vorgaben des Zahlungsdiensteaufsichtsgesetzes.",
+        "high_level_location": "BaFin-Merkblatt, Abschnitt Stablecoins"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "question_text": "¿Cómo tributan las criptomonedas en España?",
+    "question_language": "es",
+    "topic_category": "tax",
+    "subtopic": "crypto_tax_spain",
+    "target_jurisdictions": [
+      "ES"
+    ],
+    "authority_ranking": null,
+    "challenge_type": "simple_monojurisdiction_monolingual",
+    "difficulty": 1,
+    "requires_cross_lingual": false,
+    "requires_multi_jurisdiction": false,
+    "brief_answer_outline": "En España, las criptomonedas se consideran bienes (activos) a efectos fiscales. Por tanto, las ganancias obtenidas con su venta o permuta tributan como ganancias patrimoniales en el IRPF, con tipos entre el 19% y 28% según el importe. Si se mantienen más de un año, siguen sujetas a IRPF (no existe exención por tiempo, a diferencia de otros países hasta hace poco). Además, existen obligaciones informativas: hay que declarar en el impuesto sobre el patrimonio si el valor supera 700.000 €, y desde 2023, mediante el modelo 721, las tenencias de criptomonedas en el extranjero superiores a 50.000 €. En resumen: las cripto se asimilan a activos financieros, con tributación de plusvalías y obligaciones de declaración según corresponda.",
+    "gold_sources": [
+      {
+        "source_type": "guideline",
+        "citation": "Consulta Vinculante V1069-19 (DGT)",
+        "jurisdiction": "ES",
+        "language": "es",
+        "url": "http://petete.tributos.hacienda.gob.es",
+        "relevance_note": "Criterio de Hacienda: las ganancias con criptomonedas son ganancias patrimoniales sujeto IRPF."
+      },
+      {
+        "source_type": "guideline",
+        "citation": "Agencia Tributaria – Criptomonedas (2023)",
+        "jurisdiction": "ES",
+        "language": "es",
+        "url": "https://www.agenciatributaria.es/",
+        "relevance_note": "Información divulgativa de la AEAT sobre la tributación de criptoactivos."
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "Koinly Impuestos Criptomonedas España 2025",
+        "excerpt": "La Agencia Tributaria española considera las criptomonedas como activos y, por lo tanto, están sujetas a impuestos sobre la renta y el patrimonio.",
+        "high_level_location": "Guía fiscal cripto 2025"
+      },
+      {
+        "source_citation": "BBVA – criptomonedas en la renta",
+        "excerpt": "los movimientos con criptomonedas se consideran generalmente ganancias y pérdidas patrimoniales. Por lo tanto, lo novedoso no es tener que declarar las ganancias... derivadas de las compras y ventas... sino que haya un apartado específico para hacerlo.",
+        "high_level_location": "BBVA Educación Financiera"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "question_text": "¿Existe alguna ley sobre criptomonedas en Brasil?",
+    "question_language": "pt",
+    "topic_category": "virtual_currency",
+    "subtopic": "Brazil_virtual_assets_law",
+    "target_jurisdictions": [
+      "BR"
+    ],
+    "authority_ranking": null,
+    "challenge_type": "simple_monojurisdiction_monolingual",
+    "difficulty": 1,
+    "requires_cross_lingual": false,
+    "requires_multi_jurisdiction": false,
+    "brief_answer_outline": "Sim. O Brasil aprovou o Marco Legal dos Criptoativos em 2022. A Lei nº 14.478/2022 estabelece diretrizes para a prestação de serviços de ativos virtuais. Ela define “ativo virtual” como a representação digital de valor negociada eletronicamente e utilizada para pagamentos ou investimento. A lei exige que empresas que oferecem serviços com criptomoedas (como corretoras) obtenham autorização do regulador (Banco Central) e cumplan requisitos de prevenção à lavagem de dinheiro. Em resumo, o Brasil regulamentou as criptomoedas por meio desta lei, que entrou em vigor em 2023, submetendo exchanges e outros provedores a supervisão e prevendo sanções penais para fraudes em criptoativos.",
+    "gold_sources": [
+      {
+        "source_type": "statute",
+        "citation": "Lei 14.478/2022 (Marco Legal dos Criptoativos)",
+        "jurisdiction": "BR",
+        "language": "pt",
+        "url": "https://www.planalto.gov.br/ccivil_03/_Ato2021-2024/2022/Lei/L14478.htm",
+        "relevance_note": "Lei brasileira que regulamenta o mercado de criptoativos."
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "Lei 14.478/22 – Art. 3º, I",
+        "excerpt": "A lei considera ativo virtual a representação digital de valor que pode ser negociada ou transferida por meios eletrônicos e utilizada para realização de pagamentos ou com propósito de investimento.",
+        "high_level_location": "Lei 14.478/2022, definição de ativo virtual"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "question_text": "Como são tributadas as criptomoedas em Portugal?",
+    "question_language": "pt",
+    "topic_category": "tax",
+    "subtopic": "crypto_tax_portugal",
+    "target_jurisdictions": [
+      "PT"
+    ],
+    "authority_ranking": null,
+    "challenge_type": "simple_monojurisdiction_monolingual",
+    "difficulty": 2,
+    "requires_cross_lingual": false,
+    "requires_multi_jurisdiction": false,
+    "brief_answer_outline": "A partir de 1º de janeiro de 2023, Portugal passou a tributar criptoativos de forma mais abrangente. Ganhos com venda de criptomoedas detidas por menos de um ano são tributados em IRS à taxa fixa de 28% (salvo opção pelo englobamento, ou 35% se provenientes de paraíso fiscal). Se o ativo foi detido por mais de 365 dias, a mais-valia está isenta de IRS. Rendimentos de staking ou mineração, se auferidos de forma empresarial, são tributados como rendimentos profissionais (categoria B) ou de capital (categoria E) conforme o caso, geralmente também a 28%. Além disso, doações de criptos podem pagar Imposto de Selo (10%). Portanto, Portugal deixou de ser um paraíso fiscal para cripto: há imposto sobre mais-valias de curto prazo e obrigações declarativas, embora ganhos de longo prazo (ativos >1 ano) permaneçam isentos.",
+    "gold_sources": [
+      {
+        "source_type": "statute",
+        "citation": "Lei nº 19/2022 (Orçamento de Estado 2023) – Art. 5º",
+        "jurisdiction": "PT",
+        "language": "pt",
+        "url": "https://dre.pt/dre/detalhe/lei/19-2022-185464559",
+        "relevance_note": "Introduziu a tributação de criptoativos no IRS português a partir de 2023."
+      },
+      {
+        "source_type": "guideline",
+        "citation": "Portal das Finanças – Criptoativos (2023)",
+        "jurisdiction": "PT",
+        "language": "pt",
+        "url": "https://portal.fazenda.gov.pt/",
+        "relevance_note": "Informações da AT sobre as novas regras fiscais aplicáveis a criptoativos."
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "Belim – Tributação de Criptoativos 2025",
+        "excerpt": "Os rendimentos de capitais de criptoativos são geralmente tributados à taxa especial de 28% … Se os criptoativos forem detidos por mais de 365 dias, a mais-valia está isenta de IRS.",
+        "high_level_location": "Belim Advogados – Resumo fiscal 2025"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "question_text": "In what ways do U.S. and EU regulations differ for cryptocurrency exchanges?",
+    "question_language": "en",
+    "topic_category": "aml",
+    "subtopic": "exchange_regulation_US_vs_EU",
+    "target_jurisdictions": [
+      "US",
+      "EU"
+    ],
+    "authority_ranking": null,
+    "challenge_type": "multi_jurisdiction_comparison",
+    "difficulty": 2,
+    "requires_cross_lingual": false,
+    "requires_multi_jurisdiction": true,
+    "brief_answer_outline": "- **United States:** Crypto exchanges are considered money services businesses at the federal level. Under FinCEN regulations, any exchange converting crypto to fiat must register as a Money Transmitter and implement AML/KYC programs under the Bank Secrecy Act. There is no federal licensing specifically for “crypto exchanges,” but they must obtain state money transmitter licenses in most states and comply with federal AML laws. For example, FinCEN’s 2013 guidance makes exchangers subject to BSA requirements (registration, reporting, KYC).\n- **European Union:** The EU’s 5th Anti-Money Laundering Directive (AMLD5) brought crypto-fiat exchange providers under AML laws. Exchanges in EU Member States must register with national authorities and implement KYC/AML controls. Additionally, the upcoming MiCA regulation (2024) will require crypto exchanges (CASPs) to obtain authorization and meet consumer protection and prudential standards across the EU. Thus, the EU is moving toward a unified licensing regime (MiCA), whereas the US relies on existing money transmitter/MSB frameworks and state-by-state licensing.",
+    "gold_sources": [
+      {
+        "source_type": "guideline",
+        "citation": "FinCEN Guidance FIN-2013-G001 (2013)",
+        "jurisdiction": "US",
+        "language": "en",
+        "url": "https://fincen.gov/sites/default/files/shared/FIN-2013-G001.pdf",
+        "relevance_note": "Defines exchangers of virtual currency as money transmitters under U.S. BSA regulations."
+      },
+      {
+        "source_type": "directive",
+        "citation": "Directive (EU) 2018/843 (AMLD5), Art. 1(2)(d)",
+        "jurisdiction": "EU",
+        "language": "en",
+        "url": "https://eur-lex.europa.eu/eli/dir/2018/843/oj",
+        "relevance_note": "EU AMLD5 brought virtual currency exchange providers into AML regulation."
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "FinCEN Guidance FIN-2013-G001 (2013)",
+        "excerpt": "an administrator or exchanger is an MSB under FinCEN’s regulations, specifically, a money transmitter, unless a limitation or exemption applies.",
+        "high_level_location": "FinCEN Virtual Currency Guidance, p.1"
+      },
+      {
+        "source_citation": "Directive (EU) 2018/843 (AMLD5)",
+        "excerpt": "Member States shall ensure that providers of exchange services between virtual currencies and fiat currencies … are registered.",
+        "high_level_location": "AMLD5, Article 47(1) amended"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "question_text": "How do the US and EU differ in their treatment of NFTs under financial regulation?",
+    "question_language": "en",
+    "topic_category": "nft",
+    "subtopic": "NFT_regulation_US_vs_EU",
+    "target_jurisdictions": [
+      "US",
+      "EU"
+    ],
+    "authority_ranking": null,
+    "challenge_type": "multi_jurisdiction_comparison",
+    "difficulty": 2,
+    "requires_cross_lingual": false,
+    "requires_multi_jurisdiction": true,
+    "brief_answer_outline": "- **United States:** There is no specific NFT law, but NFTs can be deemed securities on a case-by-case basis if they meet the Howey test (i.e., sold as an investment with expectation of profit from others’ efforts). The SEC has taken enforcement action when NFTs were essentially investment contracts (e.g., the SEC vs. Impact Theory case in 2023 treated certain NFTs as unregistered securities). Otherwise, NFTs are generally treated as collectibles or digital assets, and their legal status depends on context (IP rights still apply, and anti-fraud laws apply).\n- **European Union:** The new MiCA regulation largely excludes genuinely unique, non-fungible tokens from its scope. MiCA’s definition of crypto-assets explicitly does not cover NFTs that are truly unique and non-interchangeable. However, if NFTs are issued in a large series or have fungible characteristics, they might fall under regulation. In summary, the EU has carved out “unique” NFTs from licensing requirements, whereas the US has no NFT-specific regime but may regulate certain NFT offerings as securities if they function like investment products.",
+    "gold_sources": [
+      {
+        "source_type": "press_release",
+        "citation": "SEC Press Release 2023-163 (Impact Theory NFTs)",
+        "jurisdiction": "US",
+        "language": "en",
+        "url": "https://www.sec.gov/news/press-release/2023-163",
+        "relevance_note": "SEC enforcement finding an NFT offering was an unregistered securities offering."
+      },
+      {
+        "source_type": "regulation",
+        "citation": "MiCA (EU 2023/1114) – Recital re: NFTs",
+        "jurisdiction": "EU",
+        "language": "en",
+        "url": "https://www.eba.europa.eu/document-library/mica-factsheet",
+        "relevance_note": "MiCA excludes crypto-assets that are unique and non-fungible from its scope."
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "SEC Press Release 2023-163 (Impact Theory NFTs)",
+        "excerpt": "The order finds that the NFTs offered and sold to investors were investment contracts and therefore securities. Accordingly, Impact Theory violated the federal securities laws by offering and selling these crypto asset securities to the public in an unregistered offering.",
+        "high_level_location": "SEC Release Aug. 28, 2023"
+      },
+      {
+        "source_citation": "ESAs Crypto-assets Factsheet (MiCA/NFT)",
+        "excerpt": "MiCA does not apply to… Crypto-assets that are unique and non-fungible. … So-called non-fungible token (NFTs) that are part of a series or collection may, however, still fall within the scope of MiCA.",
+        "high_level_location": "Joint ESAs Factsheet on MiCA (2025)"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "question_text": "Compare the approaches of the US and Singapore to regulating ICOs.",
+    "question_language": "en",
+    "topic_category": "securities",
+    "subtopic": "ICO_US_vs_SG",
+    "target_jurisdictions": [
+      "US",
+      "SG"
+    ],
+    "authority_ranking": null,
+    "challenge_type": "multi_jurisdiction_comparison",
+    "difficulty": 3,
+    "requires_cross_lingual": false,
+    "requires_multi_jurisdiction": true,
+    "brief_answer_outline": "- **United States:** The SEC treats most ICO tokens as securities if they meet the Howey test. This means ICO issuers must register the offer or qualify for an exemption. The SEC has aggressively enforced against unregistered ICOs (e.g., Telegram, Kik cases). Essentially, US law applies existing securities laws to ICOs, requiring prospectus disclosures or exemptions, and viewing many tokens as investment contracts.\n- **Singapore:** The Monetary Authority of Singapore (MAS) assesses ICO tokens to see if they fall under the definition of capital markets products (securities) under the Securities and Futures Act. In its 2017 guidance, MAS clarified that if tokens have characteristics of securities (e.g., shares, debentures, units in a collective investment), then securities laws apply (including prospectus or exemption requirements). If not, purely utility tokens are not regulated as securities. Singapore thus uses a case-by-case functional approach, similar to the US, but has been seen as relatively friendly with clear guidelines. Both jurisdictions subject security-like tokens to their securities laws, but Singapore explicitly issued guidance and allows utility token ICOs to proceed without regulation if they truly lack security features, whereas the US tends to presume many tokens are securities unless clearly otherwise.",
+    "gold_sources": [
+      {
+        "source_type": "guideline",
+        "citation": "MAS Guide to Digital Token Offerings (Nov 2017)",
+        "jurisdiction": "SG",
+        "language": "en",
+        "url": "https://www.mas.gov.sg/publications/media-releases/2017/mas-clarifies-regulatory-position-on-the-offer-of-digital-tokens",
+        "relevance_note": "MAS clarification that tokens are regulated if they are securities under Singapore law."
+      },
+      {
+        "source_type": "case_law",
+        "citation": "SEC v. Telegram (S.D.N.Y. 2020)",
+        "jurisdiction": "US",
+        "language": "en",
+        "url": "",
+        "relevance_note": "US case blocking an unregistered ICO (Gram tokens) as securities offering."
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "MAS Guide to Digital Token Offerings (2017)",
+        "excerpt": "MAS has observed that the function of digital tokens has evolved. Offers of digital tokens may be regulated by MAS if the tokens are capital markets products under the Securities and Futures Act.",
+        "high_level_location": "MAS Press Release, 2017"
+      },
+      {
+        "source_citation": "SEC v. Telegram (2020) (Opinion)",
+        "excerpt": "The Court finds that Telegram’s sale of Gram tokens was an offering of securities without a required registration statement, in violation of Section 5 of the Securities Act.",
+        "high_level_location": "SEC v. Telegram, Mar. 2020 decision"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "question_text": "Gelten Kryptowährungen in den USA als gesetzliches Zahlungsmittel oder Eigentum?",
+    "question_language": "de",
+    "topic_category": "virtual_currency",
+    "subtopic": "crypto_legal_status_US",
+    "target_jurisdictions": [
+      "US"
+    ],
+    "authority_ranking": null,
+    "challenge_type": "cross_lingual_retrieval",
+    "difficulty": 1,
+    "requires_cross_lingual": true,
+    "requires_multi_jurisdiction": false,
+    "brief_answer_outline": "In den USA sind Kryptowährungen kein gesetzliches Zahlungsmittel. Stattdessen werden sie rechtlich als Eigentum (Property) behandelt. Die IRS betrachtet virtuelle Währungen für Steuerzwecke als Vermögenswerte, nicht als Währung. Es gibt keine Bundesgesetze, die Bitcoin & Co. zum legal tender erklären. Allerdings sind Transaktionen mit Krypto erlaubt und Krypto-Vermögen genießt Eigentumsschutz. Zusammengefasst: Kryptowährungen sind in den USA legal, aber als Eigentum eingestuft, nicht als offizielles Zahlungsmittel.",
+    "gold_sources": [
+      {
+        "source_type": "guideline",
+        "citation": "IRS Notice 2014-21 (A-1)",
+        "jurisdiction": "US",
+        "language": "en",
+        "url": "https://www.irs.gov/pub/irs-drop/n-14-21.pdf",
+        "relevance_note": "Kryptowährungen werden steuerlich als 'Property' behandelt."
+      },
+      {
+        "source_type": "statute",
+        "citation": "31 U.S.C. §5103",
+        "jurisdiction": "US",
+        "language": "en",
+        "url": "https://www.law.cornell.edu/uscode/text/31/5103",
+        "relevance_note": "Definition von gesetzlichem Zahlungsmittel (nur USD)."
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "IRS Notice 2014-21 (A-1)",
+        "excerpt": "For federal tax purposes, virtual currency is treated as property. General tax principles applicable to property transactions apply.",
+        "high_level_location": "IRS Notice 2014-21, Q&A-1"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "question_text": "Les crypto-actifs sont-ils considérés comme des biens en droit anglais ?",
+    "question_language": "fr",
+    "topic_category": "virtual_currency",
+    "subtopic": "crypto_property_UK",
+    "target_jurisdictions": [
+      "UK"
+    ],
+    "authority_ranking": null,
+    "challenge_type": "cross_lingual_retrieval",
+    "difficulty": 2,
+    "requires_cross_lingual": true,
+    "requires_multi_jurisdiction": false,
+    "brief_answer_outline": "Oui. Le droit anglais reconnaît désormais les crypto-actifs (cryptomonnaies, tokens) comme des biens susceptibles de propriété. Dès 2019, le UK Jurisdiction Taskforce a déclaré que les crypto-actifs peuvent être traités comme des “biens” en common law. Cette position a été confirmée par la Law Commission en 2023, qui a recommandé de créer une troisième catégorie de biens pour les actifs numériques. En 2025, une loi (Property (Digital Assets) Act 2025) a été adoptée pour clarifier que le fait qu’un actif soit numérique n’empêche pas sa qualification de bien. Ainsi, en Angleterre et Pays de Galles, les crypto-actifs sont considérés comme des biens possédables et protégés juridiquement comme tels.",
+    "gold_sources": [
+      {
+        "source_type": "guideline",
+        "citation": "UKJT Legal Statement on Cryptoassets (2019)",
+        "jurisdiction": "UK",
+        "language": "en",
+        "url": "https://35z8e83m1ih83drye280o9d1-wpengine.netdna-ssl.com/wp-content/uploads/2019/11/LegalStatementCryptoassets.pdf",
+        "relevance_note": "Déclare que les crypto-monnaies sont des biens en common law."
+      },
+      {
+        "source_type": "report",
+        "citation": "Law Commission Report on Digital Assets (2023)",
+        "jurisdiction": "UK",
+        "language": "en",
+        "url": "https://www.lawcom.gov.uk/project/digital-assets/",
+        "relevance_note": "Confirme le statut de propriété des crypto-actifs et propose une nouvelle catégorie de biens."
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "UKJT Legal Statement (2019)",
+        "excerpt": "In principle, cryptoassets are capable of being owned and of being property under English law.",
+        "high_level_location": "UKJT Legal Statement on Cryptoassets"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "question_text": "¿La SEC considera a los NFTs como valores (securities)?",
+    "question_language": "es",
+    "topic_category": "nft",
+    "subtopic": "NFTs_securities_US",
+    "target_jurisdictions": [
+      "US"
+    ],
+    "authority_ranking": null,
+    "challenge_type": "cross_lingual_retrieval",
+    "difficulty": 2,
+    "requires_cross_lingual": true,
+    "requires_multi_jurisdiction": false,
+    "brief_answer_outline": "Depende del caso. La SEC no clasifica a todos los NFTs como valores automáticamente. Sin embargo, si un NFT se vende como inversión –prometiendo ganancias futuras gracias al esfuerzo de los emisores– la SEC puede considerarlo un valor (security) bajo el test de Howey. Un ejemplo reciente es el caso Impact Theory (2023), donde la SEC determinó que unos NFTs eran contratos de inversión, y por tanto valores, porque la empresa incentivó a compradores con expectativas de lucro. En cambio, NFTs puramente coleccionables (ej. arte digital único sin promesa de rentabilidad) normalmente no se consideran valores. En resumen: la SEC analizará la realidad económica del NFT; si parece una acción o inversión colectiva, lo tratará como valor, de lo contrario, no.",
+    "gold_sources": [
+      {
+        "source_type": "press_release",
+        "citation": "Comunicado SEC 2023-163 (Caso NFTs)",
+        "jurisdiction": "US",
+        "language": "en",
+        "url": "https://www.sec.gov/news/press-release/2023-163",
+        "relevance_note": "SEC sanciona oferta de NFTs como valores no registrados."
+      },
+      {
+        "source_type": "statement",
+        "citation": "Declaración Conjunta Comisionados SEC (28/8/2023)",
+        "jurisdiction": "US",
+        "language": "en",
+        "url": "https://www.sec.gov/news/statement/peirce-uyeda-statement-imptheory-082823",
+        "relevance_note": "Comisionados disidentes explican que no todos los NFTs deben considerarse valores."
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "SEC Comunicado 2023-163",
+        "excerpt": "la SEC... acusó a Impact Theory... por la oferta no registrada de valores en forma de tokens no fungibles (NFTs). ... la orden concluye que los NFTs ofrecidos eran contratos de inversión y por tanto valores.",
+        "high_level_location": "Nota de prensa SEC, 28 Ago 2023"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "question_text": "中国的MiCA法规如何对稳定币进行监管？",
+    "question_language": "zh",
+    "topic_category": "stablecoin",
+    "subtopic": "MiCA_stablecoin_CN",
+    "target_jurisdictions": [
+      "EU"
+    ],
+    "authority_ranking": null,
+    "challenge_type": "cross_lingual_retrieval",
+    "difficulty": 2,
+    "requires_cross_lingual": true,
+    "requires_multi_jurisdiction": false,
+    "brief_answer_outline": "欧盟的MiCA法规对稳定币设立了严格监管。MiCA将稳定币分为“资产参考代币”（锚定一篮子资产）和“电子货币代币”（锚定单一法币）。发行人需要在欧盟获得许可，保持充足的储备资产100%支持代币价值，并赋予持有人赎回权（可按面值赎回法币或参考资产）。例如，MiCA第39条明确规定持有人永久赎回权，发行人必须随时维护储备金。算法稳定币（无实际资产支持的）不受MiCA承认。总之，MiCA要求稳定币发行人持牌经营、1:1准备金和持有人赎回保障。",
+    "gold_sources": [
+      {
+        "source_type": "regulation",
+        "citation": "MiCA Regulation (EU 2023/1114), Art. 39",
+        "jurisdiction": "EU",
+        "language": "en",
+        "url": "",
+        "relevance_note": "MiCA赋予资产参考代币持有人赎回权并要求储备金。"
+      },
+      {
+        "source_type": "analysis",
+        "citation": "Kancelaria LBKP: MiCA does not cover DeFi (2025)",
+        "jurisdiction": "EU",
+        "language": "en",
+        "url": "",
+        "relevance_note": "解释MiCA对稳定币的储备和赎回要求。"
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "MiCA Article 39 (Right of Redemption)",
+        "excerpt": "Article 39 MiCA establishes a right of redemption for holders of asset-referenced tokens... the issuer must redeem the token by paying an amount in funds equivalent to the market value of the referenced assets.",
+        "high_level_location": "MiCA 第39条 摘要"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "question_text": "Os tokens vendidos em ICOs são considerados valores mobiliários nos EUA?",
+    "question_language": "pt",
+    "topic_category": "securities",
+    "subtopic": "ICO_tokens_US_securities",
+    "target_jurisdictions": [
+      "US"
+    ],
+    "authority_ranking": null,
+    "challenge_type": "cross_lingual_retrieval",
+    "difficulty": 1,
+    "requires_cross_lingual": true,
+    "requires_multi_jurisdiction": false,
+    "brief_answer_outline": "Em geral, sim. A SEC dos EUA aplica o “teste de Howey” para determinar se um token de ICO é um valor mobiliário (security). Se investidores compram o token com expectativa de lucro derivado dos esforços de terceiros (os desenvolvedores/projeto), então o token é considerado um contrato de investimento, logo um security. A maioria das ICOs se enquadrou nessa definição. Por exemplo, no caso da DAO (2017), a SEC concluiu que os tokens DAO eram valores mobiliários não registrados. Portanto, tokens de ICO normalmente são tratados como ações/valores mobiliários e devem cumprir as leis de valores mobiliários dos EUA, salvo exceções.",
+    "gold_sources": [
+      {
+        "source_type": "press_release",
+        "citation": "SEC Relatório Investigativo DAO (2017)",
+        "jurisdiction": "US",
+        "language": "en",
+        "url": "https://www.sec.gov/news/press-release/2017-131",
+        "relevance_note": "SEC concluiu que tokens de ICO (DAO) eram securities."
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "SEC Relatório DAO 2017 (comunicado)",
+        "excerpt": "A Comissão determinou que os tokens ofertados e vendidos pela “DAO” eram valores mobiliários e portanto sujeitos às leis federais de valores mobiliários.",
+        "high_level_location": "Comunicado SEC julho 2017"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "question_text": "If a U.S. person uses a cryptocurrency address sanctioned by OFAC, is that allowed?",
+    "question_language": "en",
+    "topic_category": "sanctions",
+    "subtopic": "OFAC_sanctions_crypto",
+    "target_jurisdictions": [
+      "US"
+    ],
+    "authority_ranking": null,
+    "challenge_type": "implicit_jurisdiction_authority_choice",
+    "difficulty": 2,
+    "requires_cross_lingual": false,
+    "requires_multi_jurisdiction": false,
+    "brief_answer_outline": "No – U.S. persons are prohibited from transacting with addresses or wallets on OFAC’s sanctions list (SDN List). If a crypto address is associated with a blocked person or entity (like a sanctioned exchange or mixer address), any transaction involving it must be blocked. OFAC has made clear that sanctions obligations apply equally to digital currency transactions as to fiat. Therefore, a U.S. person cannot legally send or receive crypto from an address that OFAC has designated; doing so would violate sanctions law unless a license is obtained.",
+    "gold_sources": [
+      {
+        "source_type": "guideline",
+        "citation": "OFAC FAQ 560 (2021)",
+        "jurisdiction": "US",
+        "language": "en",
+        "url": "https://ofac.treasury.gov/faqs/560",
+        "relevance_note": "OFAC clarifies that compliance obligations are the same for digital currency; must block transactions with SDNs."
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "OFAC FAQ 560",
+        "excerpt": "Yes, the obligations are the same. U.S. persons... must ensure that they block the property... of persons on OFAC’s SDN List, and that they do not engage in transactions with such persons.",
+        "high_level_location": "OFAC Virtual Currency FAQ #560"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "question_text": "Are smart contracts legally binding agreements?",
+    "question_language": "en",
+    "topic_category": "defi",
+    "subtopic": "smart_contracts_enforceable",
+    "target_jurisdictions": [
+      "UK",
+      "US"
+    ],
+    "authority_ranking": [
+      "UK",
+      "US"
+    ],
+    "challenge_type": "implicit_jurisdiction_authority_choice",
+    "difficulty": 3,
+    "requires_cross_lingual": false,
+    "requires_multi_jurisdiction": false,
+    "brief_answer_outline": "Yes, a smart contract can form a legally enforceable contract, provided it meets the usual requirements (offer, acceptance, intention, consideration). In England, the Law Commission and courts have confirmed that smart contracts are enforceable under existing law – a smart legal contract (code and/or natural language combined) will be upheld like a traditional contract. For example, the UK Jurisdiction Taskforce in 2019 stated that smart contracts can give rise to binding obligations. In the US, states like Arizona have passed laws recognizing smart contracts: Arizona’s law provides that a contract cannot be denied legal effect solely because it contains a smart contract term. In summary, in both jurisdictions smart contracts are generally valid – the fact that contractual terms are executed by code does not prevent enforceability.",
+    "gold_sources": [
+      {
+        "source_type": "guideline",
+        "citation": "UKJT Legal Statement (2019)",
+        "jurisdiction": "UK",
+        "language": "en",
+        "url": "https://legalstatement.app/",
+        "relevance_note": "Affirms smart contracts can be binding under English law."
+      },
+      {
+        "source_type": "statute",
+        "citation": "Arizona Revised Statutes §44-7061(C)",
+        "jurisdiction": "US-AZ",
+        "language": "en",
+        "url": "https://www.azleg.gov/ars/44/07061.htm",
+        "relevance_note": "Arizona law recognizing smart contract terms as valid."
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "UKJT Legal Statement (2019)",
+        "excerpt": "the UKJT... concluded that, in principle, smart contracts are capable of giving rise to binding legal obligations, enforceable in accordance with their terms.",
+        "high_level_location": "UKJT Statement on Cryptoassets and Smart Contracts"
+      },
+      {
+        "source_citation": "Arizona Statute 44-7061(C)",
+        "excerpt": "\"Smart contracts may exist in commerce. A contract... may not be denied legal effect, validity or enforceability solely because that contract contains a smart contract term.\"",
+        "high_level_location": "Arizona HB 2417 (2017), codified at A.R.S. 44-7061"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "question_text": "Is cryptocurrency legal?",
+    "question_language": "en",
+    "topic_category": "virtual_currency",
+    "subtopic": "crypto_legality_global",
+    "target_jurisdictions": [
+      "US",
+      "CN"
+    ],
+    "authority_ranking": [
+      "US",
+      "CN"
+    ],
+    "challenge_type": "implicit_jurisdiction_authority_choice",
+    "difficulty": 1,
+    "requires_cross_lingual": false,
+    "requires_multi_jurisdiction": true,
+    "brief_answer_outline": "It depends on the jurisdiction. In most countries like the United States, cryptocurrency is legal to own and use – it’s treated as property or a commodity (though not legal tender), and regulated under existing laws (tax, anti-money laundering, etc.). For example, the IRS in the US treats crypto as legal property. By contrast, in some countries like China, cryptocurrency transactions are effectively banned. In 2021, the People’s Bank of China declared all crypto trading and related services illegal. So, while crypto is lawful in many jurisdictions, a few (like China) prohibit its use. One should always check the local law: generally legal in the West, but illegal in a handful of nations.",
+    "gold_sources": [
+      {
+        "source_type": "guideline",
+        "citation": "IRS Notice 2014-21 (US)",
+        "jurisdiction": "US",
+        "language": "en",
+        "url": "https://www.irs.gov/pub/irs-drop/n-14-21.pdf",
+        "relevance_note": "Shows US treats crypto as property (implies legality)."
+      },
+      {
+        "source_type": "press_release",
+        "citation": "PBoC/Chinese Authorities Notice (Sept 24, 2021)",
+        "jurisdiction": "CN",
+        "language": "zh",
+        "url": "https://www.ndrc.gov.cn/xxgk/jd/wsd_tz/202109/t20210927_1297844.html",
+        "relevance_note": "Announcement of China's ban on cryptocurrency transactions."
+      }
+    ],
+    "gold_spans": [
+      {
+        "source_citation": "IRS Notice 2014-21",
+        "excerpt": "For federal tax purposes, virtual currency is treated as property.",
+        "high_level_location": "US IRS guidance (implies legality as asset)"
+      },
+      {
+        "source_citation": "PBoC Notice Sept 2021 (excerpt)",
+        "excerpt": "中国央行24日发布《关于进一步防范和处置虚拟货币交易炒作风险的通知》，宣布虚拟货币不具有与法定货币同等的法律地位，任何虚拟货币相关业务活动均为非法金融活动。",
+        "high_level_location": "PBoC / regulatory notice, 2021-09-24"
+      }
+    ]
+  }
+]
