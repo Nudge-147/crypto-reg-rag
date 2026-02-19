@@ -15,7 +15,8 @@ import time
 import numpy as np
 import faiss
 from pathlib import Path
-from typing import Optional, List, Dict
+from dataclasses import dataclass
+from typing import Optional, List, Dict, Tuple, Union
 from openai import OpenAI
 import openai
 import httpx
@@ -33,8 +34,27 @@ META_PATH = Path("indexes/meta.jsonl")
 
 EMBED_MODEL = os.getenv("EMBED_MODEL", "text-embedding-3-large")
 QA_MODEL = os.getenv("QA_MODEL", "gpt-4o-mini") 
-TOP_K = int(os.getenv("TOP_K", "5"))
 MAX_EMBED_RETRIES = 5
+DEFAULT_TOP_K = 5
+MAX_TOP_K = 20
+SUPPORTED_MODES = {"jurisdiction_specific", "deep_research"}
+
+
+@dataclass
+class QueryRequest:
+    question: str
+    target_jurisdictions: Optional[List[str]]
+    mode: str
+    top_k: int
+
+
+@dataclass
+class QueryResponse:
+    answer: str
+    retrieved_items: List[Dict]
+    stats: Dict
+    applied_jurisdictions: Optional[List[str]]
+    warnings: List[str]
 
 
 # >>>>>>>>>>>>>>>>>> 权威性数据模型 <<<<<<<<<<<<<<<<<<
@@ -94,6 +114,119 @@ def load_index_and_meta(index_path: Path, meta_path: Path):
         for line in f:
             metas.append(json.loads(line))
     return index, metas
+
+
+def get_available_jurisdictions(metas: list) -> List[str]:
+    vals = set()
+    for m in metas:
+        j = str(m.get("jurisdiction", "")).strip().upper()
+        if j:
+            vals.add(j)
+    return sorted(vals)
+
+
+def normalize_query_request(
+    raw_request: Dict,
+    available: List[str],
+    strict: bool = True,
+) -> Tuple[QueryRequest, Dict]:
+    """
+    统一请求协议:
+      question: str (required)
+      target_jurisdictions: list[str] | str | None
+      mode: jurisdiction_specific | deep_research
+      top_k: int (1..MAX_TOP_K)
+    """
+    warnings: List[str] = []
+    invalid_jurisdictions: List[str] = []
+
+    question = str(raw_request.get("question", "")).strip()
+    if not question:
+        raise ValueError("question 不能为空")
+
+    raw_mode = str(raw_request.get("mode", "jurisdiction_specific")).strip().lower()
+    if raw_mode in SUPPORTED_MODES:
+        mode = raw_mode
+    elif strict:
+        raise ValueError(
+            f"mode 非法: {raw_mode}. 支持值: {sorted(SUPPORTED_MODES)}"
+        )
+    else:
+        mode = "jurisdiction_specific"
+        warnings.append(f"mode 非法，已回退为 {mode}: {raw_mode}")
+
+    raw_top_k = raw_request.get("top_k", DEFAULT_TOP_K)
+    try:
+        top_k = int(raw_top_k)
+    except Exception:
+        if strict:
+            raise ValueError(f"top_k 非法: {raw_top_k}")
+        top_k = DEFAULT_TOP_K
+        warnings.append(f"top_k 非法，已回退为 {DEFAULT_TOP_K}: {raw_top_k}")
+
+    if top_k < 1 or top_k > MAX_TOP_K:
+        if strict:
+            raise ValueError(f"top_k 超出范围: {top_k}, 允许范围 1..{MAX_TOP_K}")
+        clamped = max(1, min(top_k, MAX_TOP_K))
+        warnings.append(f"top_k 超出范围，已调整为 {clamped}: {top_k}")
+        top_k = clamped
+
+    raw_targets = raw_request.get("target_jurisdictions")
+    if isinstance(raw_targets, str):
+        available_set = set(available)
+        dedup = []
+        for token in raw_targets.split(","):
+            v = token.strip().upper()
+            if not v or v in dedup:
+                continue
+            dedup.append(v)
+        targets = [v for v in dedup if v in available_set]
+        invalid_jurisdictions = [v for v in dedup if v not in available_set]
+    elif isinstance(raw_targets, list):
+        available_set = set(available)
+        dedup = []
+        for item in raw_targets:
+            v = str(item).strip().upper()
+            if not v or v in dedup:
+                continue
+            dedup.append(v)
+        targets = [v for v in dedup if v in available_set]
+        invalid_jurisdictions = [v for v in dedup if v not in available_set]
+    elif raw_targets is None:
+        targets = None
+    else:
+        if strict:
+            raise ValueError("target_jurisdictions 必须为字符串、数组或 null")
+        targets = None
+        warnings.append("target_jurisdictions 类型非法，已忽略")
+
+    targets = targets if targets else None
+
+    if invalid_jurisdictions:
+        warnings.append(f"忽略未知法域: {invalid_jurisdictions}")
+        if strict and not targets:
+            raise ValueError(
+                f"target_jurisdictions 全部无效: {invalid_jurisdictions}. "
+                f"可用法域: {available}"
+            )
+
+    # deep_research 模式默认不过滤法域
+    if mode == "deep_research" and targets:
+        warnings.append("deep_research 模式下已忽略 target_jurisdictions")
+        targets = None
+
+    request = QueryRequest(
+        question=question,
+        target_jurisdictions=targets,
+        mode=mode,
+        top_k=top_k,
+    )
+    validation = {
+        "available_jurisdictions": available,
+        "invalid_jurisdictions": invalid_jurisdictions,
+        "warnings": warnings,
+    }
+    return request, validation
 
 # >>>>>>>>>>>>>>>>>> 核心打分与检索逻辑 <<<<<<<<<<<<<<<<<<
 
@@ -156,10 +289,12 @@ def retrieve_with_authority(query: str,
                             metas: list, 
                             top_k: int, 
                             authority_matrix: AuthorityMatrix,
+                            target_jurisdictions: Optional[List[str]] = None,
                             candidate_k: int = 50, 
                             alpha: float = 0.6, 
                             beta: float = 0.3, 
-                            gamma: float = 0.1):
+                            gamma: float = 0.1,
+                            return_stats: bool = False) -> Union[List[Dict], Tuple[List[Dict], Dict]]:
     """
     权威性感知检索流程：检索 Top-N -> 重排序 -> 返回 Top-K。
     """
@@ -173,10 +308,21 @@ def retrieve_with_authority(query: str,
     query_lang = "en" # 简化：假设查询是英文
 
     scored_candidates = []
+    allowed_jurisdictions = set([j.upper() for j in (target_jurisdictions or [])])
+    valid_candidates = 0
+    filtered_candidates = 0
     # 4. 重排序阶段
     for rank, idx in enumerate(I[0]):
+        if idx < 0 or idx >= len(metas):
+            continue
+        valid_candidates += 1
+
         sim_score = float(D[0][rank]) 
-        chunk_meta = metas[idx]      
+        chunk_meta = metas[idx]
+        chunk_jur = str(chunk_meta.get("jurisdiction", "")).upper()
+        if allowed_jurisdictions and chunk_jur not in allowed_jurisdictions:
+            continue
+        filtered_candidates += 1
         
         final_score = score_chunk(
             sim_score, chunk_meta, authority_matrix, query_topics, query_lang,
@@ -193,7 +339,17 @@ def retrieve_with_authority(query: str,
             
     # 5. 按最终得分排序并返回 Top-K
     scored_candidates.sort(key=lambda x: x["final_score"], reverse=True)
-    return scored_candidates[:top_k]
+    top_results = scored_candidates[:top_k]
+
+    if return_stats:
+        stats = {
+            "candidate_k": candidate_k,
+            "retrieved_candidates": valid_candidates,
+            "after_filter": filtered_candidates,
+            "returned": len(top_results),
+        }
+        return top_results, stats
+    return top_results
 
 
 def generate_answer(question: str, retrieved_context: list, client: OpenAI):
@@ -217,6 +373,51 @@ def generate_answer(question: str, retrieved_context: list, client: OpenAI):
     )
     return resp.choices[0].message.content.strip()
 
+
+def execute_query(
+    request: QueryRequest,
+    client: OpenAI,
+    index: faiss.IndexFlatIP,
+    metas: list,
+    authority_matrix: AuthorityMatrix,
+) -> QueryResponse:
+    top_k_results, retrieve_stats = retrieve_with_authority(
+        request.question,
+        client,
+        index,
+        metas,
+        request.top_k,
+        authority_matrix,
+        target_jurisdictions=request.target_jurisdictions,
+        return_stats=True,
+    )
+
+    warnings: List[str] = []
+    if not top_k_results:
+        warnings.append("当前检索条件下无结果")
+        return QueryResponse(
+            answer="",
+            retrieved_items=[],
+            stats=retrieve_stats,
+            applied_jurisdictions=request.target_jurisdictions,
+            warnings=warnings,
+        )
+
+    context_for_llm = []
+    for r in top_k_results:
+        meta = r["chunk_meta"]
+        context_for_llm.append(
+            f"[{meta.get('jurisdiction')}/{meta.get('doc_id')}] - {meta.get('text')}"
+        )
+    answer = generate_answer(request.question, context_for_llm, client)
+    return QueryResponse(
+        answer=answer,
+        retrieved_items=top_k_results,
+        stats=retrieve_stats,
+        applied_jurisdictions=request.target_jurisdictions,
+        warnings=warnings,
+    )
+
 # ====== 主程序 ======
 def main():
     api_key = os.getenv("GPTSAPI_API_KEY")
@@ -226,38 +427,81 @@ def main():
     index, metas = load_index_and_meta(INDEX_PATH, META_PATH)
     print(f"✅ Loaded FAISS index ({index.ntotal} vectors)")
     authority_matrix = AuthorityMatrix()
+    available_jurisdictions = get_available_jurisdictions(metas)
 
+    # CLI 适配层默认值（核心逻辑不直接依赖环境变量）
+    default_mode = os.getenv("MODE", "jurisdiction_specific")
+    default_top_k = os.getenv("TOP_K", str(DEFAULT_TOP_K))
+    default_targets_raw = os.getenv("TARGET_JURISDICTIONS", "")
+    print(f"📌 可用法域: {available_jurisdictions}")
+
+    # 支持非交互式运行：优先读取环境变量 QUERY
+    preset_query = os.getenv("QUERY", "").strip()
     while True:
-        question = input("\n请输入您的法规问题（输入 exit 退出）：\n> ").strip()
-        if not question or question.lower() in ["exit", "quit"]: break
+        if preset_query:
+            question = preset_query
+            print(f"\n[non-interactive] QUERY = {question}")
+        else:
+            question = input("\n请输入您的法规问题（输入 exit 退出）：\n> ").strip()
+        if not question or question.lower() in ["exit", "quit"]:
+            break
 
         try:
-            top_k_results = retrieve_with_authority(
-                question, client, index, metas, TOP_K, authority_matrix
+            raw_request = {
+                "question": question,
+                "target_jurisdictions": default_targets_raw,
+                "mode": default_mode,
+                "top_k": default_top_k,
+            }
+            request, validation = normalize_query_request(
+                raw_request, available_jurisdictions, strict=False
             )
-            
-            # 提取 LLM 需要的原始文本和法域信息
-            context_for_llm = []
-            for r in top_k_results:
-                 meta = r['chunk_meta']
-                 # LLM QA 只需要原始文本 (text)
-                 context_for_llm.append(f"[{meta.get('jurisdiction')}/{meta.get('doc_id')}] - {meta.get('text')}") 
+            response = execute_query(
+                request,
+                client,
+                index,
+                metas,
+                authority_matrix,
+            )
+            if validation["warnings"]:
+                print(f"⚠️ 输入告警: {validation['warnings']}")
+            top_k_results = response.retrieved_items
+            retrieve_stats = response.stats
+            print(
+                f"🎯 请求参数: mode={request.mode} | "
+                f"target_jurisdictions={request.target_jurisdictions if request.target_jurisdictions else 'None'} | "
+                f"top_k={request.top_k}"
+            )
+            print(
+                "🔎 检索统计: "
+                f"candidate_k={retrieve_stats['candidate_k']} | "
+                f"valid={retrieve_stats['retrieved_candidates']} | "
+                f"after_filter={retrieve_stats['after_filter']} | "
+                f"top_k={retrieve_stats['returned']}"
+            )
 
-            # 2️⃣ 生成回答
-            answer = generate_answer(question, context_for_llm, client)
-            
+            if not top_k_results:
+                print("⚠️ 当前法域过滤下无检索结果。请调整问题或放宽法域过滤。")
+                if preset_query:
+                    break
+                continue
+
         except Exception as e:
             print(f"❌ 无法解析或生成回答，请检查网络/代理/密钥配置。详细信息：{e}")
             continue
 
         # 4️⃣ 结构化输出
         print("\n=== 💬 回答 ===")
-        print(answer)
+        print(response.answer)
         
-        print("\n=== 📄 重排序结果 (Top 5) ===")
+        print(f"\n=== 📄 重排序结果 (Top {request.top_k}) ===")
         for i, r in enumerate(top_k_results, start=1):
             meta = r['chunk_meta']
             print(f"  {i}. Final={r['final_score']:.4f} | Sim={r['original_sim']:.4f} | Juri={meta.get('jurisdiction')} | Doc={meta.get('doc_id')} | {meta.get('text')[:40]}...")
+
+        # 非交互模式仅跑一次
+        if preset_query:
+            break
 
     if http_client:
         http_client.close()
