@@ -156,11 +156,11 @@ def compute_jurisdiction_accuracy(retrieved_items: List[Dict], target_jurisdicti
 
 # ====== 5. 变体运行器 (Executor) ======
 
-def run_system_variant(name: str, test_set: List[Dict], alpha, beta, gamma):
+def run_system_variant(name: str, test_set: List[Dict], alpha, beta, gamma, delta):
     """
     [涉及测试集] 遍历测试集并运行指定变体的评估。
     """
-    print(f"\n--- 🧪 Running Variant: {name} (α={alpha}, β={beta}, γ={gamma}) ---")
+    print(f"\n--- 🧪 Running Variant: {name} (α={alpha}, β={beta}, γ={gamma}, δ={delta}) ---")
     all_results = collections.defaultdict(list)
     authority_matrix = AuthorityMatrix()
     case_rows = []
@@ -173,7 +173,7 @@ def run_system_variant(name: str, test_set: List[Dict], alpha, beta, gamma):
             # retrieve_with_authority 需要 AuthorityMatrix 实例
             retrieved = retrieve_with_authority(
                 query, client, index, metas, TOP_K, authority_matrix,
-                alpha=alpha, beta=beta, gamma=gamma 
+                alpha=alpha, beta=beta, gamma=gamma, delta=delta
             )
         except Exception as e:
             print(f"⚠️ Retrieval error for q_id {case['id']}: {e}")
@@ -261,7 +261,7 @@ def main():
     agg1, rows1 = run_system_variant(
         name="RAG_SAC_Multi (Vector Sim Only)", 
         test_set=test_data, 
-        alpha=1.0, beta=0.0, gamma=0.0
+        alpha=1.0, beta=0.0, gamma=0.0, delta=0.0
     )
     all_case_rows.extend(rows1)
     summary_rows.append(
@@ -277,7 +277,7 @@ def main():
     agg2, rows2 = run_system_variant(
         name="RAG_SAC_Auth (Full System)", 
         test_set=test_data, 
-        alpha=DEFAULT_ALPHA, beta=DEFAULT_BETA, gamma=DEFAULT_GAMMA
+        alpha=DEFAULT_ALPHA, beta=DEFAULT_BETA, gamma=DEFAULT_GAMMA, delta=0.12
     )
     all_case_rows.extend(rows2)
     summary_rows.append(

@@ -1,0 +1,41 @@
+variant,case_id,question_text,target_jurisdictions,drm,jur_acc,top1_doc_id,top1_jurisdiction
+RAG_SAC_Multi (Vector Sim Only),CORE_Q01,What are key supervisory expectations for licensed stablecoin issuers in Hong Kong?,HK,0.600000,1.000000,HK_Conclusion_of_Discussion_Paper_on_Crypto-assets_and_Stablecoins_2023,HK
+RAG_SAC_Multi (Vector Sim Only),CORE_Q02,What AML/CFT requirements apply to licensed stablecoin issuers in Hong Kong?,HK,0.800000,1.000000,HK_Consultation_Paper_on_the_Proposed_AML_CFT_Requirements_for_Regulated_Stablecoin_Activities_2025,HK
+RAG_SAC_Multi (Vector Sim Only),CORE_Q03,"According to HKMA's 2025 explanatory note, what licensing conditions are highlighted for stablecoin issuers?",HK,0.800000,1.000000,HK_Explanatory_Note_on_Licensing_of_Stablecoin_Issuers_2025,HK
+RAG_SAC_Multi (Vector Sim Only),CORE_Q04,What transitional arrangements exist for pre-existing stablecoin issuers in Hong Kong?,HK,0.400000,1.000000,HK_Explanatory_Note_on_Transitional_Provisions_for_Pre-existing_Stablecoin_Issuers_2025,HK
+RAG_SAC_Multi (Vector Sim Only),CORE_Q05,How does MAS describe the core elements of Singapore's stablecoin regulatory framework?,SG,0.400000,1.000000,SG_MAS_Stablecoin_Framework_Infographic_2023,SG
+RAG_SAC_Multi (Vector Sim Only),CORE_Q06,What investor protection measures were announced by MAS for DPT services in 2023?,SG,0.000000,1.000000,SG_MAS_Media_Release_DPT_Investor_Protection_2023,SG
+RAG_SAC_Multi (Vector Sim Only),CORE_Q07,What user protection updates did MAS publish for digital token service providers in 2024?,SG,0.000000,1.000000,SG_MAS_Media_Release_DPT_User_Protection_2024,SG
+RAG_SAC_Multi (Vector Sim Only),CORE_Q08,What does the Payment Services Regulations 2025 (SLS 342) cover for Singapore payment token activities?,SG,1.000000,1.000000,SG_Payment_Services_Amendment_Bill_41_2020,SG
+RAG_SAC_Multi (Vector Sim Only),CORE_Q09,What policy direction is set in FCA CP25-14 on UK cryptoasset regulation?,UK,1.000000,1.000000,UK_cp25-15_2025,UK
+RAG_SAC_Multi (Vector Sim Only),CORE_Q10,What conduct and market integrity themes are discussed in UK CP25-15?,UK,0.800000,1.000000,UK_cp25-40_2025,UK
+RAG_SAC_Multi (Vector Sim Only),CORE_Q11,What consumer duty and promotion obligations are emphasized in UK PS23-6 for crypto firms?,UK,0.200000,1.000000,UK_ps23-6_2023,UK
+RAG_SAC_Multi (Vector Sim Only),CORE_Q12,How does UK PS19-22 describe FCA expectations for cryptoasset firms and market participants?,UK,0.000000,1.000000,UK_ps19-22_2019,UK
+RAG_SAC_Multi (Vector Sim Only),CORE_Q13,What key controls are required under ADGM guidance for regulation of virtual asset activities?,UAE,0.000000,1.000000,UAE_Guidance - Regulation of Virtual Asset Activities in ADGM (VER07.100625)_2023,UAE
+RAG_SAC_Multi (Vector Sim Only),CORE_Q14,What are the main provisions in VARA rulebook document VARA_EN_18_VER992_2_2025?,UAE,1.000000,1.000000,UAE_VARA_EN_293_VER20250519,UAE
+RAG_SAC_Multi (Vector Sim Only),CORE_Q15,What changes are proposed in UAE Consultation Paper No. 11 of 2024 for digital asset regulation?,UAE,0.000000,1.000000,UAE_Consultation+Paper+No.+11+of+2024+-+Proposed+Amendments+to+the+Digital+Asset+Regulatory+Framework,UAE
+RAG_SAC_Multi (Vector Sim Only),CORE_Q16,What policy issues are raised in UAE Consultation Paper No. 7 of 2024 on FRTs?,UAE,0.000000,1.000000,UAE_Consultation+Paper+No+7+of+2024+FRTs,UAE
+RAG_SAC_Multi (Vector Sim Only),CORE_Q17,Compare Hong Kong and Singapore stablecoin licensing approaches in 2025.,"HK,SG",1.000000,1.000000,HK_Conclusion_of_Discussion_Paper_on_Crypto-assets_and_Stablecoins_2023,HK
+RAG_SAC_Multi (Vector Sim Only),CORE_Q18,Compare UK and UAE approaches to crypto market conduct and investor protection.,"UK,UAE",1.000000,0.800000,UK_cp25-41_2025,UK
+RAG_SAC_Multi (Vector Sim Only),CORE_Q19,What are the AML-focused differences between Hong Kong and UAE crypto regulatory guidance?,"HK,UAE",0.400000,1.000000,HK_Guideline_on_Anti-Money_Laundering_and_Counter-Financing_of_Terrorism_(For_Licensed_Stablecoin_Issuers)_2025,HK
+RAG_SAC_Multi (Vector Sim Only),CORE_Q20,Compare how Singapore and UK address retail consumer risks in cryptoasset activities.,"SG,UK",1.000000,0.600000,HK_Discussion_Paper_on_Crypto-assets_and_Stablecoins_2022,HK
+RAG_SAC_Auth (Full System),CORE_Q01,What are key supervisory expectations for licensed stablecoin issuers in Hong Kong?,HK,0.200000,1.000000,HK_Explanatory_Note_on_Licensing_of_Stablecoin_Issuers_2025,HK
+RAG_SAC_Auth (Full System),CORE_Q02,What AML/CFT requirements apply to licensed stablecoin issuers in Hong Kong?,HK,0.800000,1.000000,HK_Consultation_Paper_on_the_Proposed_AML_CFT_Requirements_for_Regulated_Stablecoin_Activities_2025,HK
+RAG_SAC_Auth (Full System),CORE_Q03,"According to HKMA's 2025 explanatory note, what licensing conditions are highlighted for stablecoin issuers?",HK,0.000000,1.000000,HK_Explanatory_Note_on_Licensing_of_Stablecoin_Issuers_2025,HK
+RAG_SAC_Auth (Full System),CORE_Q04,What transitional arrangements exist for pre-existing stablecoin issuers in Hong Kong?,HK,0.000000,1.000000,HK_Explanatory_Note_on_Transitional_Provisions_for_Pre-existing_Stablecoin_Issuers_2025,HK
+RAG_SAC_Auth (Full System),CORE_Q05,How does MAS describe the core elements of Singapore's stablecoin regulatory framework?,SG,0.400000,1.000000,SG_MAS_Stablecoin_Framework_Infographic_2023,SG
+RAG_SAC_Auth (Full System),CORE_Q06,What investor protection measures were announced by MAS for DPT services in 2023?,SG,0.000000,1.000000,SG_MAS_Media_Release_DPT_Investor_Protection_2023,SG
+RAG_SAC_Auth (Full System),CORE_Q07,What user protection updates did MAS publish for digital token service providers in 2024?,SG,0.000000,1.000000,SG_MAS_Media_Release_DPT_User_Protection_2024,SG
+RAG_SAC_Auth (Full System),CORE_Q08,What does the Payment Services Regulations 2025 (SLS 342) cover for Singapore payment token activities?,SG,1.000000,1.000000,SG_Payment_Services_Amendment_Bill_41_2020,SG
+RAG_SAC_Auth (Full System),CORE_Q09,What policy direction is set in FCA CP25-14 on UK cryptoasset regulation?,UK,1.000000,1.000000,UK_cp25-15_2025,UK
+RAG_SAC_Auth (Full System),CORE_Q10,What conduct and market integrity themes are discussed in UK CP25-15?,UK,0.800000,1.000000,UK_cp25-40_2025,UK
+RAG_SAC_Auth (Full System),CORE_Q11,What consumer duty and promotion obligations are emphasized in UK PS23-6 for crypto firms?,UK,0.000000,1.000000,UK_ps23-6_2023,UK
+RAG_SAC_Auth (Full System),CORE_Q12,How does UK PS19-22 describe FCA expectations for cryptoasset firms and market participants?,UK,0.000000,1.000000,UK_ps19-22_2019,UK
+RAG_SAC_Auth (Full System),CORE_Q13,What key controls are required under ADGM guidance for regulation of virtual asset activities?,UAE,0.000000,1.000000,UAE_Guidance - Regulation of Virtual Asset Activities in ADGM (VER07.100625)_2023,UAE
+RAG_SAC_Auth (Full System),CORE_Q14,What are the main provisions in VARA rulebook document VARA_EN_18_VER992_2_2025?,UAE,1.000000,1.000000,UAE_VARA_EN_293_VER20250519,UAE
+RAG_SAC_Auth (Full System),CORE_Q15,What changes are proposed in UAE Consultation Paper No. 11 of 2024 for digital asset regulation?,UAE,0.000000,1.000000,UAE_Consultation+Paper+No.+11+of+2024+-+Proposed+Amendments+to+the+Digital+Asset+Regulatory+Framework,UAE
+RAG_SAC_Auth (Full System),CORE_Q16,What policy issues are raised in UAE Consultation Paper No. 7 of 2024 on FRTs?,UAE,0.000000,1.000000,UAE_Consultation+Paper+No+7+of+2024+FRTs,UAE
+RAG_SAC_Auth (Full System),CORE_Q17,Compare Hong Kong and Singapore stablecoin licensing approaches in 2025.,"HK,SG",1.000000,1.000000,HK_Legislative_Proposal_to_Implement_the_Regulatory_Regime_for_Stablecoin_Issuers_in_Hong_Kong_(Consultation_Paper)_2023,HK
+RAG_SAC_Auth (Full System),CORE_Q18,Compare UK and UAE approaches to crypto market conduct and investor protection.,"UK,UAE",1.000000,0.800000,UK_cp25-41_2025,UK
+RAG_SAC_Auth (Full System),CORE_Q19,What are the AML-focused differences between Hong Kong and UAE crypto regulatory guidance?,"HK,UAE",0.400000,1.000000,UAE_cbuae-guidance-for-lfis-on-risks-related-to-virtual-assets-and-virtual-assets-providers_final-clean-version1_2023,UAE
+RAG_SAC_Auth (Full System),CORE_Q20,Compare how Singapore and UK address retail consumer risks in cryptoasset activities.,"SG,UK",0.600000,1.000000,SG_MAS_Media_Release_DPT_Investor_Protection_2023,SG

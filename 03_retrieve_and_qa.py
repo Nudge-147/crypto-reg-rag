@@ -12,6 +12,7 @@
 import os
 import json
 import time
+import re
 import numpy as np
 import faiss
 from pathlib import Path
@@ -39,6 +40,7 @@ DEFAULT_TOP_K = 5
 TOP_K = DEFAULT_TOP_K  # backward compatibility for benchmark scripts
 MAX_TOP_K = 20
 SUPPORTED_MODES = {"jurisdiction_specific", "deep_research"}
+LEXICAL_DOC_BONUS = float(os.getenv("LEXICAL_DOC_BONUS", "0.12"))
 
 
 @dataclass
@@ -261,10 +263,12 @@ def score_chunk(sim_score: float,
                 authority_matrix: AuthorityMatrix, 
                 query_topics: List[str], 
                 query_lang: str,
+                query_tokens: set,
                 # 传入可调权重
                 alpha: float,  # 语义相似度权重
                 beta: float,   # 法域权威性权重
-                gamma: float   # 语言匹配奖励权重
+                gamma: float,  # 语言匹配奖励权重
+                delta: float   # 文档词法匹配加权
                ) -> float:
     """多维打分函数"""
     jurisdiction = chunk_meta.get("jurisdiction", "EU") 
@@ -277,9 +281,25 @@ def score_chunk(sim_score: float,
     
     # 2. 语言匹配奖励 (Language Bonus)
     lang_bonus = 1.0 if chunk_lang == query_lang else 0.0
+
+    # 3. 文档名词法匹配奖励 (Doc ID Lexical Bonus)
+    doc_id = str(chunk_meta.get("doc_id", ""))
+    doc_tokens = {
+        tok for tok in re.findall(r"[a-z0-9]+", doc_id.lower()) if len(tok) >= 2
+    }
+    if query_tokens and doc_tokens:
+        overlap = len(query_tokens & doc_tokens) / max(1, len(query_tokens))
+        lexical_bonus = min(1.0, overlap * 4.0)
+    else:
+        lexical_bonus = 0.0
     
-    # 3. 综合加权公式 (Authority-Aware Score)
-    final_score = (alpha * sim_score) + (beta * authority_val) + (gamma * lang_bonus)
+    # 4. 综合加权公式 (Authority-Aware Score)
+    final_score = (
+        (alpha * sim_score)
+        + (beta * authority_val)
+        + (gamma * lang_bonus)
+        + (delta * lexical_bonus)
+    )
     
     return final_score
 
@@ -295,6 +315,7 @@ def retrieve_with_authority(query: str,
                             alpha: float = 0.6, 
                             beta: float = 0.3, 
                             gamma: float = 0.1,
+                            delta: float = LEXICAL_DOC_BONUS,
                             return_stats: bool = False) -> Union[List[Dict], Tuple[List[Dict], Dict]]:
     """
     权威性感知检索流程：检索 Top-N -> 重排序 -> 返回 Top-K。
@@ -304,6 +325,14 @@ def retrieve_with_authority(query: str,
     # 2. 解析查询主题和语言
     query_topics = classify_query_topics(query)
     query_lang = "en" # 简化：假设查询是英文
+    stopwords = {
+        "the", "and", "for", "with", "what", "how", "are", "is", "in", "on",
+        "of", "to", "does", "under", "according", "compare", "between"
+    }
+    query_tokens = {
+        tok for tok in re.findall(r"[a-z0-9]+", query.lower())
+        if len(tok) >= 2 and tok not in stopwords
+    }
 
     allowed_jurisdictions = set([j.upper() for j in (target_jurisdictions or [])])
     target_count = len(allowed_jurisdictions)
@@ -339,8 +368,8 @@ def retrieve_with_authority(query: str,
             filtered_candidates += 1
 
             final_score = score_chunk(
-                sim_score, chunk_meta, authority_matrix, query_topics, query_lang,
-                alpha=alpha, beta=beta, gamma=gamma
+                sim_score, chunk_meta, authority_matrix, query_topics, query_lang, query_tokens,
+                alpha=alpha, beta=beta, gamma=gamma, delta=delta
             )
 
             result_item = {
