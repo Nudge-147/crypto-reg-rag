@@ -1,0 +1,134 @@
+[
+  {
+    "id": "CORE_Q01",
+    "question_text": "What are key supervisory expectations for licensed stablecoin issuers in Hong Kong?",
+    "target_jurisdictions": ["HK"],
+    "gold_sources": [{"citation": "HK_Guideline_on_Supervision_of_Licensed_Stablecoin_Issuers_2025", "jurisdiction": "HK"}]
+  },
+  {
+    "id": "CORE_Q02",
+    "question_text": "What AML/CFT requirements apply to licensed stablecoin issuers in Hong Kong?",
+    "target_jurisdictions": ["HK"],
+    "gold_sources": [{"citation": "HK_Guideline_on_Anti-Money_Laundering_and_Counter-Financing_of_Terrorism_(For_Licensed_Stablecoin_Issuers)_2025", "jurisdiction": "HK"}]
+  },
+  {
+    "id": "CORE_Q03",
+    "question_text": "According to HKMA's 2025 explanatory note, what licensing conditions are highlighted for stablecoin issuers?",
+    "target_jurisdictions": ["HK"],
+    "gold_sources": [{"citation": "HK_Explanatory_Note_on_Licensing_of_Stablecoin_Issuers_2025", "jurisdiction": "HK"}]
+  },
+  {
+    "id": "CORE_Q04",
+    "question_text": "What transitional arrangements exist for pre-existing stablecoin issuers in Hong Kong?",
+    "target_jurisdictions": ["HK"],
+    "gold_sources": [{"citation": "HK_Explanatory_Note_on_Transitional_Provisions_for_Pre-existing_Stablecoin_Issuers_2025", "jurisdiction": "HK"}]
+  },
+  {
+    "id": "CORE_Q05",
+    "question_text": "How does MAS describe the core elements of Singapore's stablecoin regulatory framework?",
+    "target_jurisdictions": ["SG"],
+    "gold_sources": [{"citation": "SG_MAS_Media_Release_Stablecoin_Framework_2023", "jurisdiction": "SG"}]
+  },
+  {
+    "id": "CORE_Q06",
+    "question_text": "What investor protection measures were announced by MAS for DPT services in 2023?",
+    "target_jurisdictions": ["SG"],
+    "gold_sources": [{"citation": "SG_MAS_Media_Release_DPT_Investor_Protection_2023", "jurisdiction": "SG"}]
+  },
+  {
+    "id": "CORE_Q07",
+    "question_text": "What user protection updates did MAS publish for digital token service providers in 2024?",
+    "target_jurisdictions": ["SG"],
+    "gold_sources": [{"citation": "SG_MAS_Media_Release_DPT_User_Protection_2024", "jurisdiction": "SG"}]
+  },
+  {
+    "id": "CORE_Q08",
+    "question_text": "What does the Payment Services Regulations 2025 (SLS 342) cover for Singapore payment token activities?",
+    "target_jurisdictions": ["SG"],
+    "gold_sources": [{"citation": "SG_Payment_Services_Regulations_2025_SLS_342", "jurisdiction": "SG"}]
+  },
+  {
+    "id": "CORE_Q09",
+    "question_text": "What policy direction is set in FCA CP25-14 on UK cryptoasset regulation?",
+    "target_jurisdictions": ["UK"],
+    "gold_sources": [{"citation": "UK_cp25-14_2025", "jurisdiction": "UK"}]
+  },
+  {
+    "id": "CORE_Q10",
+    "question_text": "What conduct and market integrity themes are discussed in UK CP25-15?",
+    "target_jurisdictions": ["UK"],
+    "gold_sources": [{"citation": "UK_cp25-15_2025", "jurisdiction": "UK"}]
+  },
+  {
+    "id": "CORE_Q11",
+    "question_text": "What consumer duty and promotion obligations are emphasized in UK PS23-6 for crypto firms?",
+    "target_jurisdictions": ["UK"],
+    "gold_sources": [{"citation": "UK_ps23-6_2023", "jurisdiction": "UK"}]
+  },
+  {
+    "id": "CORE_Q12",
+    "question_text": "How does UK PS19-22 describe FCA expectations for cryptoasset firms and market participants?",
+    "target_jurisdictions": ["UK"],
+    "gold_sources": [{"citation": "UK_ps19-22_2019", "jurisdiction": "UK"}]
+  },
+  {
+    "id": "CORE_Q13",
+    "question_text": "What key controls are required under ADGM guidance for regulation of virtual asset activities?",
+    "target_jurisdictions": ["UAE"],
+    "gold_sources": [{"citation": "UAE_Guidance - Regulation of Virtual Asset Activities in ADGM (VER07.100625)_2023", "jurisdiction": "UAE"}]
+  },
+  {
+    "id": "CORE_Q14",
+    "question_text": "What are the main provisions in VARA rulebook document VARA_EN_18_VER992_2_2025?",
+    "target_jurisdictions": ["UAE"],
+    "gold_sources": [{"citation": "UAE_VARA_EN_18_VER992_2_2025", "jurisdiction": "UAE"}]
+  },
+  {
+    "id": "CORE_Q15",
+    "question_text": "What changes are proposed in UAE Consultation Paper No. 11 of 2024 for digital asset regulation?",
+    "target_jurisdictions": ["UAE"],
+    "gold_sources": [{"citation": "UAE_Consultation+Paper+No.+11+of+2024+-+Proposed+Amendments+to+the+Digital+Asset+Regulatory+Framework", "jurisdiction": "UAE"}]
+  },
+  {
+    "id": "CORE_Q16",
+    "question_text": "What policy issues are raised in UAE Consultation Paper No. 7 of 2024 on FRTs?",
+    "target_jurisdictions": ["UAE"],
+    "gold_sources": [{"citation": "UAE_Consultation+Paper+No+7+of+2024+FRTs", "jurisdiction": "UAE"}]
+  },
+  {
+    "id": "CORE_Q17",
+    "question_text": "Compare Hong Kong and Singapore stablecoin licensing approaches in 2025.",
+    "target_jurisdictions": ["HK", "SG"],
+    "gold_sources": [
+      {"citation": "HK_Guideline_on_Supervision_of_Licensed_Stablecoin_Issuers_2025", "jurisdiction": "HK"},
+      {"citation": "SG_MAS_Media_Release_Stablecoin_Framework_2023", "jurisdiction": "SG"}
+    ]
+  },
+  {
+    "id": "CORE_Q18",
+    "question_text": "Compare UK and UAE approaches to crypto market conduct and investor protection.",
+    "target_jurisdictions": ["UK", "UAE"],
+    "gold_sources": [
+      {"citation": "UK_ps23-6_2023", "jurisdiction": "UK"},
+      {"citation": "UAE_Guidance - Regulation of Virtual Asset Activities in ADGM (VER07.100625)_2023", "jurisdiction": "UAE"}
+    ]
+  },
+  {
+    "id": "CORE_Q19",
+    "question_text": "What are the AML-focused differences between Hong Kong and UAE crypto regulatory guidance?",
+    "target_jurisdictions": ["HK", "UAE"],
+    "gold_sources": [
+      {"citation": "HK_Guideline_on_Anti-Money_Laundering_and_Counter-Financing_of_Terrorism_(For_Licensed_Stablecoin_Issuers)_2025", "jurisdiction": "HK"},
+      {"citation": "UAE_cbuae-guidance-for-lfis-on-risks-related-to-virtual-assets-and-virtual-assets-providers_final-clean-version1_2023", "jurisdiction": "UAE"}
+    ]
+  },
+  {
+    "id": "CORE_Q20",
+    "question_text": "Compare how Singapore and UK address retail consumer risks in cryptoasset activities.",
+    "target_jurisdictions": ["SG", "UK"],
+    "gold_sources": [
+      {"citation": "SG_MAS_Media_Release_DPT_Investor_Protection_2023", "jurisdiction": "SG"},
+      {"citation": "UK_ps23-6_2023", "jurisdiction": "UK"}
+    ]
+  }
+]

@@ -52,6 +52,8 @@ This repository compares **baseline retrieval** vs **SAC (Summary-Augmented Chun
   - `python3 04_baseline_benchmark.py --test-set tests/manual/test_set_us_manual.json`
 - Export regression CSV (per-case + summary):
   - `python3 04_benchmark.py --test-set tests/batches/test_set_B01_fixed.json --out-csv reports/B01_cases.csv --out-summary-csv reports/B01_summary.csv`
+- Core in-corpus benchmark (HK/SG/UK/UAE):
+  - `python3 04_benchmark.py --test-set tests/manual/test_set_core_hk_sg_uk_uae.json --out-csv reports/core_hk_sg_uk_uae_cases.csv --out-summary-csv reports/core_hk_sg_uk_uae_summary.csv`
 
 ## Incremental Refresh
 
@@ -59,6 +61,11 @@ This repository compares **baseline retrieval** vs **SAC (Summary-Augmented Chun
   - `python3 tools/refresh_from_manifest.py --jurisdictions sg,uk,uae`
 - If JSONL already exists and you only want append-embedding:
   - `python3 tools/refresh_from_manifest.py --jurisdictions sg,uk,uae --skip-clean`
+
+## API Smoke Regression
+
+- Run 4 key API checks (`/jurisdictions`, HK only, HK+SG mixed, invalid XX=400):
+  - `bash tools/api_smoke_regression.sh`
 
 ## Runtime Environment
 

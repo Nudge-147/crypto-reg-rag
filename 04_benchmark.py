@@ -54,6 +54,7 @@ try:
 except Exception as e:
     print(f"❌ FATAL: Index loading failed. Check 'indexes/' directory. Error: {e}")
     exit(1)
+DOC_ID_SET = {str(m.get("doc_id", "")).strip() for m in metas}
 
 
 # 权重配置
@@ -81,6 +82,8 @@ CITATION_TO_DOC_ID = {
 
 def resolve_doc_id(citation: str) -> str:
     """尝试将引用映射到系统中的 Doc ID"""
+    if citation in DOC_ID_SET:
+        return citation
     for key, val in CITATION_TO_DOC_ID.items():
         if key in citation:
             return val

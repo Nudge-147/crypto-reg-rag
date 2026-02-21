@@ -1,0 +1,3 @@
+variant,avg_drm,avg_jur_acc,cases
+RAG_SAC_Multi (Vector Sim Only),0.520000,0.970000,20
+RAG_SAC_Auth (Full System),0.500000,0.970000,20
