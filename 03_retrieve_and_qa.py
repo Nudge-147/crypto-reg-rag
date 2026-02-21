@@ -36,6 +36,7 @@ EMBED_MODEL = os.getenv("EMBED_MODEL", "text-embedding-3-large")
 QA_MODEL = os.getenv("QA_MODEL", "gpt-4o-mini") 
 MAX_EMBED_RETRIES = 5
 DEFAULT_TOP_K = 5
+TOP_K = DEFAULT_TOP_K  # backward compatibility for benchmark scripts
 MAX_TOP_K = 20
 SUPPORTED_MODES = {"jurisdiction_specific", "deep_research"}
 
@@ -300,53 +301,125 @@ def retrieve_with_authority(query: str,
     """
     query_vec = embed_query(query, client)
 
-    # 2. 向量检索 (召回阶段): 检索 Top-N 个候选
-    D, I = index.search(query_vec, candidate_k) 
-    
-    # 3. 解析查询主题和语言
+    # 2. 解析查询主题和语言
     query_topics = classify_query_topics(query)
     query_lang = "en" # 简化：假设查询是英文
 
-    scored_candidates = []
     allowed_jurisdictions = set([j.upper() for j in (target_jurisdictions or [])])
+    target_count = len(allowed_jurisdictions)
+    needs_bucket_merge = target_count > 1
+    min_per_jur = max(1, int(np.ceil(top_k / target_count))) if needs_bucket_merge else 0
+
+    search_rounds = 0
+    search_k = max(candidate_k, top_k)
     valid_candidates = 0
     filtered_candidates = 0
-    # 4. 重排序阶段
-    for rank, idx in enumerate(I[0]):
-        if idx < 0 or idx >= len(metas):
-            continue
-        valid_candidates += 1
+    scored_candidates: List[Dict] = []
+    bucketed_candidates: Dict[str, List[Dict]] = {}
 
-        sim_score = float(D[0][rank]) 
-        chunk_meta = metas[idx]
-        chunk_jur = str(chunk_meta.get("jurisdiction", "")).upper()
-        if allowed_jurisdictions and chunk_jur not in allowed_jurisdictions:
-            continue
-        filtered_candidates += 1
-        
-        final_score = score_chunk(
-            sim_score, chunk_meta, authority_matrix, query_topics, query_lang,
-            alpha=alpha, beta=beta, gamma=gamma
-        )
-        
-        # 准备输出结果
-        result_item = {
-            "final_score": final_score,
-            "original_sim": sim_score,
-            "chunk_meta": chunk_meta # 包含 jurisdiction, augmented_text, summary 等
+    while True:
+        search_rounds += 1
+        D, I = index.search(query_vec, min(search_k, index.ntotal))
+
+        valid_candidates = 0
+        filtered_candidates = 0
+        scored_candidates = []
+        bucketed_candidates = {}
+
+        for rank, idx in enumerate(I[0]):
+            if idx < 0 or idx >= len(metas):
+                continue
+            valid_candidates += 1
+
+            sim_score = float(D[0][rank])
+            chunk_meta = metas[idx]
+            chunk_jur = str(chunk_meta.get("jurisdiction", "")).upper()
+            if allowed_jurisdictions and chunk_jur not in allowed_jurisdictions:
+                continue
+            filtered_candidates += 1
+
+            final_score = score_chunk(
+                sim_score, chunk_meta, authority_matrix, query_topics, query_lang,
+                alpha=alpha, beta=beta, gamma=gamma
+            )
+
+            result_item = {
+                "final_score": final_score,
+                "original_sim": sim_score,
+                "chunk_meta": chunk_meta,
+                "_meta_idx": int(idx),
+            }
+            scored_candidates.append(result_item)
+            if needs_bucket_merge:
+                bucketed_candidates.setdefault(chunk_jur, []).append(result_item)
+
+        if not needs_bucket_merge:
+            break
+
+        bucket_counts = {
+            j: len(bucketed_candidates.get(j, []))
+            for j in sorted(allowed_jurisdictions)
         }
-        scored_candidates.append(result_item)
-            
-    # 5. 按最终得分排序并返回 Top-K
+        enough_per_bucket = all(v >= min_per_jur for v in bucket_counts.values())
+        reached_index_limit = search_k >= index.ntotal
+        reached_round_limit = search_rounds >= 5
+        if enough_per_bucket or reached_index_limit or reached_round_limit:
+            break
+
+        next_search_k = max(int(search_k * 1.8), search_k + (top_k * target_count * 4))
+        search_k = min(next_search_k, index.ntotal)
+
     scored_candidates.sort(key=lambda x: x["final_score"], reverse=True)
-    top_results = scored_candidates[:top_k]
+
+    if not needs_bucket_merge:
+        top_results = scored_candidates[:top_k]
+    else:
+        for jur_list in bucketed_candidates.values():
+            jur_list.sort(key=lambda x: x["final_score"], reverse=True)
+
+        selected = []
+        selected_ids = set()
+
+        for jur in sorted(allowed_jurisdictions):
+            picks = 0
+            for item in bucketed_candidates.get(jur, []):
+                key = item["_meta_idx"]
+                if key in selected_ids:
+                    continue
+                selected.append(item)
+                selected_ids.add(key)
+                picks += 1
+                if picks >= min_per_jur or len(selected) >= top_k:
+                    break
+            if len(selected) >= top_k:
+                break
+
+        if len(selected) < top_k:
+            for item in scored_candidates:
+                key = item["_meta_idx"]
+                if key in selected_ids:
+                    continue
+                selected.append(item)
+                selected_ids.add(key)
+                if len(selected) >= top_k:
+                    break
+        top_results = selected[:top_k]
 
     if return_stats:
+        bucket_counts = {}
+        if needs_bucket_merge:
+            bucket_counts = {
+                j: len(bucketed_candidates.get(j, []))
+                for j in sorted(allowed_jurisdictions)
+            }
         stats = {
             "candidate_k": candidate_k,
+            "search_k_final": min(search_k, index.ntotal),
+            "search_rounds": search_rounds,
             "retrieved_candidates": valid_candidates,
             "after_filter": filtered_candidates,
             "returned": len(top_results),
+            "bucket_counts": bucket_counts,
         }
         return top_results, stats
     return top_results

@@ -13,6 +13,8 @@ import json
 import numpy as np
 import collections
 import os
+import argparse
+import csv
 from typing import List, Dict
 from pathlib import Path
 import statistics # 用于求平均数
@@ -30,7 +32,7 @@ try:
     load_index_and_meta = retrieve_mod.load_index_and_meta
     retrieve_with_authority = retrieve_mod.retrieve_with_authority
     create_gptsapi_client = retrieve_mod.create_gptsapi_client
-    TOP_K = retrieve_mod.TOP_K
+    TOP_K = getattr(retrieve_mod, "TOP_K", getattr(retrieve_mod, "DEFAULT_TOP_K", 5))
     AuthorityMatrix = retrieve_mod.AuthorityMatrix
     embed_query = retrieve_mod.embed_query
 except Exception as e:
@@ -87,10 +89,10 @@ def resolve_doc_id(citation: str) -> str:
 
 # ====== 3. 测试集加载 (涉及测试集) ======
 
-def load_golden_dataset(path: str = "test_set_B01_fixed.json") -> List[Dict]:
+def load_golden_dataset(path: str = "tests/batches/test_set_B01_fixed.json") -> List[Dict]:
     """
     [涉及测试集] 加载 JSON 测试集。
-    我们使用 fix_test_ids.py 生成的 test_set_B01_fixed.json 文件。
+    我们使用 fix_test_ids.py 生成的 tests/batches/test_set_B01_fixed.json 文件。
     """
     if not os.path.exists(path):
         print(f"❌ Error: Test set file {path} not found. Please ensure it exists.")
@@ -158,6 +160,7 @@ def run_system_variant(name: str, test_set: List[Dict], alpha, beta, gamma):
     print(f"\n--- 🧪 Running Variant: {name} (α={alpha}, β={beta}, γ={gamma}) ---")
     all_results = collections.defaultdict(list)
     authority_matrix = AuthorityMatrix()
+    case_rows = []
 
     for case in test_set:
         query = case["question_text"]
@@ -187,6 +190,20 @@ def run_system_variant(name: str, test_set: List[Dict], alpha, beta, gamma):
         
         all_results["drm"].append(drm)
         all_results["jur_acc"].append(jur_acc)
+        top1_doc = retrieved[0]["chunk_meta"]["doc_id"] if retrieved else ""
+        top1_jur = retrieved[0]["chunk_meta"]["jurisdiction"] if retrieved else ""
+        case_rows.append(
+            {
+                "variant": name,
+                "case_id": case.get("id", ""),
+                "question_text": query,
+                "target_jurisdictions": ",".join(case.get("target_jurisdictions", [])),
+                "drm": f"{drm:.6f}",
+                "jur_acc": f"{jur_acc:.6f}",
+                "top1_doc_id": top1_doc,
+                "top1_jurisdiction": top1_jur,
+            }
+        )
         
         # (Debug info)
         # print(f"  Q: {case['id']} | DRM: {drm:.4f} | J_Acc: {jur_acc:.4f} | Top Juri: {retrieved[0]['chunk_meta']['jurisdiction']}")
@@ -196,31 +213,100 @@ def run_system_variant(name: str, test_set: List[Dict], alpha, beta, gamma):
     avg_results = {k: statistics.mean(v) for k, v in all_results.items() if v}
     print(f"✅ Aggregate Results for {name}:")
     print(json.dumps(avg_results, indent=2))
-    return avg_results
+    return avg_results, case_rows
+
+
+def write_csv(path: Path, rows: List[Dict], fieldnames: List[str]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "w", encoding="utf-8", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        for row in rows:
+            writer.writerow(row)
+    print(f"💾 CSV exported: {path}")
 
 # ====== 6. 主程序入口 ======
 
 def main():
-    # 加载刚才生成的美国深度测试集
-    # 如果你跑了 fix 脚本，就加载 test_set_B01_fixed.json (看 fix 脚本把它重命名成啥了)
-    # 如果没跑 fix，直接加载 test_set_us_manual.json 也可以
-    test_data = load_golden_dataset("test_set_us_manual.json") 
+    parser = argparse.ArgumentParser(description="Run SAC/authority benchmark.")
+    parser.add_argument(
+        "--test-set",
+        default="tests/manual/test_set_us_manual.json",
+        help="Path to benchmark dataset JSON.",
+    )
+    parser.add_argument(
+        "--out-csv",
+        default="",
+        help="Optional per-case CSV output path.",
+    )
+    parser.add_argument(
+        "--out-summary-csv",
+        default="",
+        help="Optional summary CSV output path.",
+    )
+    args = parser.parse_args()
+
+    # 加载指定测试集
+    test_data = load_golden_dataset(args.test_set)
     
     if not test_data: return
 
+    all_case_rows = []
+    summary_rows = []
+
     # 变体 1: RAG_SAC_Multi (SAC 基础效果，仅依赖向量相似度)
-    run_system_variant(
+    agg1, rows1 = run_system_variant(
         name="RAG_SAC_Multi (Vector Sim Only)", 
         test_set=test_data, 
         alpha=1.0, beta=0.0, gamma=0.0
     )
+    all_case_rows.extend(rows1)
+    summary_rows.append(
+        {
+            "variant": "RAG_SAC_Multi (Vector Sim Only)",
+            "avg_drm": f"{agg1.get('drm', 0.0):.6f}",
+            "avg_jur_acc": f"{agg1.get('jur_acc', 0.0):.6f}",
+            "cases": len(rows1),
+        }
+    )
 
     # 变体 2: RAG_SAC_Auth (启用权威性重排序)
-    run_system_variant(
+    agg2, rows2 = run_system_variant(
         name="RAG_SAC_Auth (Full System)", 
         test_set=test_data, 
         alpha=DEFAULT_ALPHA, beta=DEFAULT_BETA, gamma=DEFAULT_GAMMA
     )
+    all_case_rows.extend(rows2)
+    summary_rows.append(
+        {
+            "variant": "RAG_SAC_Auth (Full System)",
+            "avg_drm": f"{agg2.get('drm', 0.0):.6f}",
+            "avg_jur_acc": f"{agg2.get('jur_acc', 0.0):.6f}",
+            "cases": len(rows2),
+        }
+    )
+
+    if args.out_csv:
+        write_csv(
+            Path(args.out_csv),
+            all_case_rows,
+            [
+                "variant",
+                "case_id",
+                "question_text",
+                "target_jurisdictions",
+                "drm",
+                "jur_acc",
+                "top1_doc_id",
+                "top1_jurisdiction",
+            ],
+        )
+    if args.out_summary_csv:
+        write_csv(
+            Path(args.out_summary_csv),
+            summary_rows,
+            ["variant", "avg_drm", "avg_jur_acc", "cases"],
+        )
     
     # ... (可以添加其他权重变体进行对比)
     print("\n--- Benchmark Complete ---")
