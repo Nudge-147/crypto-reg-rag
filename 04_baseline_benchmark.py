@@ -8,6 +8,8 @@
 
 import json
 import os
+import argparse
+import csv
 from pathlib import Path
 from typing import List, Dict, Tuple
 
@@ -28,7 +30,7 @@ INDEX_PATH = INDEX_DIR / "faiss.index"
 META_PATH = INDEX_DIR / "meta.jsonl"
 
 # 2. 使用同一套测试集 (控制变量)
-TEST_SET_FILE = Path("test_set_us_manual.json")
+DEFAULT_TEST_SET_FILE = Path("tests/manual/test_set_us_manual.json")
 
 # 3. 映射表 (保持与 SAC 评测一致，确保公平)
 CITATION_TO_DOC_ID = {
@@ -66,23 +68,28 @@ def embed_query(text: str, client: OpenAI) -> np.ndarray:
     return vec.reshape(1, -1)
 
 
-def load_data() -> Tuple[faiss.Index, List[Dict], List[Dict]]:
+def load_data(test_set_file: Path) -> Tuple[faiss.Index, List[Dict], List[Dict]]:
     index = faiss.read_index(str(INDEX_PATH))
     chunks_meta: List[Dict] = []
     with open(META_PATH, "r", encoding="utf-8") as f:
         for line in f:
             chunks_meta.append(json.loads(line))
-    with open(TEST_SET_FILE, "r", encoding="utf-8") as f:
+    with open(test_set_file, "r", encoding="utf-8") as f:
         test_data = json.load(f)
     return index, chunks_meta, test_data
 
+def resolve_doc_id(citation: str, doc_id_set: set) -> str:
+    if citation in doc_id_set:
+        return citation
+    return CITATION_TO_DOC_ID.get(citation, "")
 
-def compute_drm(retrieved_chunks: List[Dict], gold_sources: List[Dict], top_k: int = TOP_K) -> float:
+
+def compute_drm(retrieved_chunks: List[Dict], gold_sources: List[Dict], doc_id_set: set, top_k: int = TOP_K) -> float:
     if not gold_sources:
         return 0.0
     gold_ids = set()
     for gs in gold_sources:
-        mapped_id = CITATION_TO_DOC_ID.get(gs.get("citation"))
+        mapped_id = resolve_doc_id(gs.get("citation", ""), doc_id_set)
         if mapped_id:
             gold_ids.add(mapped_id)
 
@@ -95,17 +102,54 @@ def compute_drm(retrieved_chunks: List[Dict], gold_sources: List[Dict], top_k: i
             wrong_count += 1
     return wrong_count / top_k
 
+def compute_jurisdiction_accuracy(retrieved_chunks: List[Dict], target_jurisdictions: List[str], top_k: int = TOP_K) -> float:
+    if not retrieved_chunks:
+        return 0.0
+    targets = set([str(j).upper() for j in (target_jurisdictions or [])])
+    if not targets:
+        return 0.0
+    hits = 0
+    for r in retrieved_chunks[:top_k]:
+        if str(r["chunk_meta"].get("jurisdiction", "")).upper() in targets:
+            hits += 1
+    return hits / top_k
+
+def write_csv(path: Path, rows: List[Dict], fieldnames: List[str]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "w", encoding="utf-8", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        for row in rows:
+            writer.writerow(row)
+
 
 def main():
+    parser = argparse.ArgumentParser(description="Run baseline benchmark.")
+    parser.add_argument(
+        "--test-set",
+        default=str(DEFAULT_TEST_SET_FILE),
+        help=f"Path to benchmark dataset JSON (default: {DEFAULT_TEST_SET_FILE})",
+    )
+    parser.add_argument("--out-csv", default="", help="Optional per-case CSV output path.")
+    parser.add_argument("--out-summary-csv", default="", help="Optional summary CSV output path.")
+    args = parser.parse_args()
+    test_set_file = Path(args.test_set)
+
     print("--- Running Baseline Benchmark (Naive RAG) ---")
     if not INDEX_PATH.exists():
         print(f"索引文件不存在: {INDEX_PATH}。请先运行 01 和 02 脚本。")
         return
+    if not test_set_file.exists():
+        print(f"测试集文件不存在: {test_set_file}")
+        return
 
     client = get_client()
-    index, chunks_meta, test_set = load_data()
+    index, chunks_meta, test_set = load_data(test_set_file)
+    corpus_doc_ids = {str(m.get("doc_id", "")).strip() for m in chunks_meta}
 
     total_drm = 0.0
+    total_jur_acc = 0.0
+    rows = []
     print(f"Evaluating {len(test_set)} cases...")
 
     for case in test_set:
@@ -126,8 +170,20 @@ def main():
                 )
 
         # 3. Compute DRM
-        drm = compute_drm(retrieved, case.get("gold_sources", []))
+        drm = compute_drm(retrieved, case.get("gold_sources", []), corpus_doc_ids)
+        jur_acc = compute_jurisdiction_accuracy(retrieved, case.get("target_jurisdictions", []))
         total_drm += drm
+        total_jur_acc += jur_acc
+        rows.append(
+            {
+                "case_id": case.get("id", ""),
+                "question_text": case.get("question_text", ""),
+                "drm": f"{drm:.6f}",
+                "jur_acc": f"{jur_acc:.6f}",
+                "top1_doc_id": retrieved[0]["chunk_meta"]["doc_id"] if retrieved else "",
+                "top1_jurisdiction": retrieved[0]["chunk_meta"]["jurisdiction"] if retrieved else "",
+            }
+        )
 
         # 调试输出错误案例
         if drm > 0:
@@ -137,9 +193,24 @@ def main():
                 print(f"   Got Top1: {retrieved[0]['chunk_meta']['doc_id']}")
 
     avg_drm = total_drm / len(test_set) if test_set else 0.0
+    avg_jur_acc = total_jur_acc / len(test_set) if test_set else 0.0
     print("\nBaseline Results:")
     print(f"   Average DRM: {avg_drm:.4f} (Lower is better)")
-    print("   (Compare this with SAC DRM: 0.0455)")
+    print(f"   Average JurAcc: {avg_jur_acc:.4f} (Higher is better)")
+    if args.out_csv:
+        write_csv(
+            Path(args.out_csv),
+            rows,
+            ["case_id", "question_text", "drm", "jur_acc", "top1_doc_id", "top1_jurisdiction"],
+        )
+        print(f"   Case CSV: {args.out_csv}")
+    if args.out_summary_csv:
+        write_csv(
+            Path(args.out_summary_csv),
+            [{"variant": "Baseline_Naive_RAG", "avg_drm": f"{avg_drm:.6f}", "avg_jur_acc": f"{avg_jur_acc:.6f}", "cases": len(test_set)}],
+            ["variant", "avg_drm", "avg_jur_acc", "cases"],
+        )
+        print(f"   Summary CSV: {args.out_summary_csv}")
 
 
 if __name__ == "__main__":

@@ -12,6 +12,7 @@
 
 import json
 import re
+import os
 from pathlib import Path
 import fitz  # PyMuPDF
 
@@ -21,8 +22,14 @@ RAW_ROOT = Path("raw")
 OUTPUT_DIR = Path("baseline_data/cleaned")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-# 包含所有法域
-JURISDICTIONS = ["eu", "us", "sg", "cn", "br", "sv", "jp", "uk", "hk", "kr", "ch", "uae"]
+# 包含所有法域（可通过 BASELINE_JURISDICTIONS 覆盖）
+DEFAULT_JURISDICTIONS = ["eu", "us", "sg", "cn", "br", "sv", "jp", "uk", "hk", "kr", "ch", "uae"]
+env_jurs = os.getenv("BASELINE_JURISDICTIONS", "").strip()
+JURISDICTIONS = (
+    [x.strip().lower() for x in env_jurs.split(",") if x.strip()]
+    if env_jurs
+    else DEFAULT_JURISDICTIONS
+)
 
 CHUNK_SIZE = 500
 CHUNK_OVERLAP = 0
@@ -100,6 +107,7 @@ def process_file_baseline(pdf_path: Path):
 
 def main():
     print("Start Baseline (Naive RAG) pipeline...")
+    print(f"Jurisdictions: {JURISDICTIONS}")
     for jur in JURISDICTIONS:
         folder = RAW_ROOT / jur
         if not folder.exists():

@@ -10,6 +10,7 @@
 import json
 import os
 import time
+import re
 from pathlib import Path
 
 import faiss
@@ -30,7 +31,9 @@ META_PATH = INDEX_DIR / "meta.jsonl"
 
 # 保持与 SAC 一致的模型配置，确保公平
 EMBED_MODEL = "text-embedding-3-large"
-BATCH_SIZE = 16
+BATCH_SIZE = int(os.getenv("BATCH_SIZE", "16"))
+MAX_RETRIES = int(os.getenv("MAX_RETRIES", "8"))
+DELAY_BETWEEN_BATCHES = float(os.getenv("DELAY_BETWEEN_BATCHES", "0"))
 GPTS_BASE_URL = os.getenv("GPTS_BASE_URL", "https://api.gptsapi.net/v1")
 PROXY_URL = os.getenv("PROXY_URL", "")
 
@@ -48,13 +51,20 @@ def create_client():
 
 def embed_batch(texts, client: OpenAI):
     """调用嵌入接口，带简单重试。"""
-    for _ in range(3):
+    for attempt in range(1, MAX_RETRIES + 1):
         try:
             resp = client.embeddings.create(model=EMBED_MODEL, input=texts)
             return np.array([d.embedding for d in resp.data], dtype="float32")
         except Exception as e:
-            print(f"Error: {e}, retrying...")
-            time.sleep(2)
+            msg = str(e)
+            wait = min(60, 2 * attempt)
+            m = re.search(r"retry after (\d+) seconds", msg, re.IGNORECASE)
+            if m:
+                wait = max(wait, int(m.group(1)))
+            print(f"Error: {e}, retrying in {wait}s... (attempt {attempt}/{MAX_RETRIES})")
+            if attempt == MAX_RETRIES:
+                raise RuntimeError("Embedding failed after retries")
+            time.sleep(wait)
     raise RuntimeError("Embedding failed after retries")
 
 
@@ -77,27 +87,41 @@ def main():
         print("未找到数据，请先运行 01_baseline_pipeline.py")
         return
 
-    print(f"开始向量化 {len(texts)} 个切片 (Baseline)...")
-    all_vecs = []
-    for i in range(0, len(texts), BATCH_SIZE):
-        batch = texts[i : i + BATCH_SIZE]
-        vecs = embed_batch(batch, client)
-        all_vecs.append(vecs)
-        print(f"   Processed {min(i + BATCH_SIZE, len(texts))}/{len(texts)}")
+    total = len(texts)
+    print(f"开始向量化 {total} 个切片 (Baseline)...")
 
-    X = np.vstack(all_vecs)
-    X = X / (np.linalg.norm(X, axis=1, keepdims=True) + 1e-12)  # 归一化
+    if INDEX_PATH.exists() and META_PATH.exists():
+        index = faiss.read_index(str(INDEX_PATH))
+        with open(META_PATH, "r", encoding="utf-8") as f:
+            done = sum(1 for _ in f)
+        done = min(done, total)
+        print(f"检测到断点，继续从 {done}/{total} 开始...")
+    else:
+        index = None
+        done = 0
 
-    dim = X.shape[1]
-    index = faiss.IndexFlatIP(dim)
-    index.add(X)
+    append_mode = "a" if done > 0 else "w"
+    with open(META_PATH, append_mode, encoding="utf-8") as meta_out:
+        for i in range(done, total, BATCH_SIZE):
+            batch_texts = texts[i : i + BATCH_SIZE]
+            batch_metas = metas[i : i + BATCH_SIZE]
+            vecs = embed_batch(batch_texts, client)
+            vecs = vecs / (np.linalg.norm(vecs, axis=1, keepdims=True) + 1e-12)
 
-    faiss.write_index(index, str(INDEX_PATH))
-    with open(META_PATH, "w", encoding="utf-8") as f:
-        for m in metas:
-            f.write(json.dumps(m, ensure_ascii=False) + "\n")
+            if index is None:
+                dim = vecs.shape[1]
+                index = faiss.IndexFlatIP(dim)
+            index.add(vecs.astype("float32"))
 
-    print(f"Baseline 索引构建完成，保存在: {INDEX_DIR}")
+            for m in batch_metas:
+                meta_out.write(json.dumps(m, ensure_ascii=False) + "\n")
+            meta_out.flush()
+            faiss.write_index(index, str(INDEX_PATH))
+            print(f"   Processed {min(i + BATCH_SIZE, total)}/{total}")
+            if DELAY_BETWEEN_BATCHES > 0:
+                time.sleep(DELAY_BETWEEN_BATCHES)
+
+    print(f"Baseline 索引构建完成，保存在: {INDEX_DIR} | ntotal={index.ntotal if index else 0}")
 
 
 if __name__ == "__main__":
