@@ -1,0 +1,2 @@
+jurisdiction,source_domain,url,reason,fallback_status,next_action
+UK,www.fca.org.uk,https://www.fca.org.uk/publication/consultation/cp25-14.pdf,Cloudflare challenge 403 in current environment,Existing local file raw/uk/UK_cp25-14_2025.pdf already indexed,Manual browser download from FCA then hash-compare with local file

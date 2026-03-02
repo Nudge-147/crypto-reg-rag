@@ -21,23 +21,16 @@ This repository compares **baseline retrieval** vs **SAC (Summary-Augmented Chun
 
 - `raw/`
   - Source PDFs by jurisdiction (`ch`, `hk`, `jp`, `sg`, `kr`, `uk`, `uae`, `us`, `eu`)
-- `cleaned/`
-  - Baseline chunks
-- `cleaned_sac/`
-  - SAC chunks (main retrieval source)
 - `indexes/`
   - Active FAISS index + metadata (generated artifact)
-- `manifests/`
-  - Curated source manifests (e.g., SG PDF list)
 - `tools/`
-  - Utility scripts (e.g., SG downloader)
-- `docs/`
-  - Project organization and operational notes
+  - Runtime scripts (e.g., API smoke regression)
 - `tests/`
-  - `tests/manual/`: hand-curated sets
-  - `tests/batches/`: batch-generated sets
+  - `tests/manual/`: active hand-curated sets (current core benchmark)
 - `baseline_data/`
-  - Legacy baseline experiment artifacts
+  - Baseline indexes/artifacts for A/B comparison
+- `dev_support/`
+  - Development support / process materials (manifests, legacy batch tests, helper scripts, historical reports)
 
 ## Practical Rule
 
@@ -47,20 +40,20 @@ This repository compares **baseline retrieval** vs **SAC (Summary-Augmented Chun
 ## Benchmark Quick Usage
 
 - SAC benchmark:
-  - `python3 04_benchmark.py --test-set tests/manual/test_set_us_manual.json`
+  - `python3 04_benchmark.py --test-set tests/manual/test_set_core_hk_sg_uk_uae.json`
 - Baseline benchmark:
-  - `python3 04_baseline_benchmark.py --test-set tests/manual/test_set_us_manual.json`
+  - `python3 04_baseline_benchmark.py --test-set tests/manual/test_set_core_hk_sg_uk_uae.json`
 - Export regression CSV (per-case + summary):
-  - `python3 04_benchmark.py --test-set tests/batches/test_set_B01_fixed.json --out-csv reports/B01_cases.csv --out-summary-csv reports/B01_summary.csv`
+  - `python3 04_benchmark.py --test-set dev_support/tests/batches_legacy/test_set_B01_fixed.json --out-csv dev_support/reports/benchmark_B01_cases.csv --out-summary-csv dev_support/reports/benchmark_B01_summary.csv`
 - Core in-corpus benchmark (HK/SG/UK/UAE):
   - `python3 04_benchmark.py --test-set tests/manual/test_set_core_hk_sg_uk_uae.json --out-csv reports/core_hk_sg_uk_uae_cases.csv --out-summary-csv reports/core_hk_sg_uk_uae_summary.csv`
 
 ## Incremental Refresh
 
 - Incrementally process new PDFs and append only new chunks to FAISS:
-  - `python3 tools/refresh_from_manifest.py --jurisdictions sg,uk,uae`
+  - `python3 dev_support/scripts/refresh_sac_index_from_raw.py --jurisdictions sg,uk,uae`
 - If JSONL already exists and you only want append-embedding:
-  - `python3 tools/refresh_from_manifest.py --jurisdictions sg,uk,uae --skip-clean`
+  - `python3 dev_support/scripts/refresh_sac_index_from_raw.py --jurisdictions sg,uk,uae --skip-clean`
 
 ## API Smoke Regression
 
@@ -96,7 +89,7 @@ This repository compares **baseline retrieval** vs **SAC (Summary-Augmented Chun
 3. Start API server:
    - `/Users/chenzheyang/anaconda3/envs/crypto_reg/bin/python 06_api_server.py`
 4. Run SAC benchmark:
-   - `/Users/chenzheyang/anaconda3/envs/crypto_reg/bin/python 04_benchmark.py --test-set tests/manual/test_set_us_manual.json`
-   - `/Users/chenzheyang/anaconda3/envs/crypto_reg/bin/python 04_benchmark.py --test-set tests/batches/test_set_B01_fixed.json`
+   - `/Users/chenzheyang/anaconda3/envs/crypto_reg/bin/python 04_benchmark.py --test-set tests/manual/test_set_core_hk_sg_uk_uae.json`
+   - `/Users/chenzheyang/anaconda3/envs/crypto_reg/bin/python 04_benchmark.py --test-set dev_support/tests/batches_legacy/test_set_B01_fixed.json`
 5. Run baseline benchmark:
-   - `/Users/chenzheyang/anaconda3/envs/crypto_reg/bin/python 04_baseline_benchmark.py --test-set tests/manual/test_set_us_manual.json`
+   - `/Users/chenzheyang/anaconda3/envs/crypto_reg/bin/python 04_baseline_benchmark.py --test-set tests/manual/test_set_core_hk_sg_uk_uae.json`

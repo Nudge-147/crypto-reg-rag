@@ -92,10 +92,11 @@ def resolve_doc_id(citation: str) -> str:
 
 # ====== 3. 测试集加载 (涉及测试集) ======
 
-def load_golden_dataset(path: str = "tests/batches/test_set_B01_fixed.json") -> List[Dict]:
+def load_golden_dataset(path: str = "dev_support/tests/batches_legacy/test_set_B01_fixed.json") -> List[Dict]:
     """
     [涉及测试集] 加载 JSON 测试集。
-    我们使用 fix_test_ids.py 生成的 tests/batches/test_set_B01_fixed.json 文件。
+    我们使用 dev_support/scripts/fix_batch_test_ids.py 生成的
+    dev_support/tests/batches_legacy/test_set_B01_fixed.json 文件。
     """
     if not os.path.exists(path):
         print(f"❌ Error: Test set file {path} not found. Please ensure it exists.")
@@ -234,7 +235,7 @@ def main():
     parser = argparse.ArgumentParser(description="Run SAC/authority benchmark.")
     parser.add_argument(
         "--test-set",
-        default="tests/manual/test_set_us_manual.json",
+        default="tests/manual/test_set_core_hk_sg_uk_uae.json",
         help="Path to benchmark dataset JSON.",
     )
     parser.add_argument(

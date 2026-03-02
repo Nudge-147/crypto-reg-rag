@@ -30,7 +30,7 @@ INDEX_PATH = INDEX_DIR / "faiss.index"
 META_PATH = INDEX_DIR / "meta.jsonl"
 
 # 2. 使用同一套测试集 (控制变量)
-DEFAULT_TEST_SET_FILE = Path("tests/manual/test_set_us_manual.json")
+DEFAULT_TEST_SET_FILE = Path("tests/manual/test_set_core_hk_sg_uk_uae.json")
 
 # 3. 映射表 (保持与 SAC 评测一致，确保公平)
 CITATION_TO_DOC_ID = {
