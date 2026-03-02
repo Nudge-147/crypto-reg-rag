@@ -4,6 +4,24 @@
 # Python cache
 __pycache__/
 *.py[cod]
+.venv/
+.env
+.env.local
 
 # Vector indexes (large generated artifacts)
 indexes/
+baseline_data/indexes/
+
+# Generated intermediates
+cleaned/
+cleaned_sac/
+baseline_data/cleaned/
+
+# Raw source PDFs (large)
+raw/
+
+# Local packaging
+final_submission/
+
+# Local installers
+Miniforge3-MacOSX-arm64.sh

@@ -1,0 +1,49 @@
+variant,case_id,question_text,target_jurisdictions,drm,jur_acc,top1_doc_id,top1_jurisdiction
+RAG_SAC_Multi (Vector Sim Only),B01_Q01,How does the IRS treat cryptocurrency for tax purposes?,US,1.000000,0.000000,CH_FINMA_Guidance_03_2025_Disclosure_of_cryptobased_assets_in_banks’_annual_financial_statements_2025,CH
+RAG_SAC_Multi (Vector Sim Only),B01_Q02,Does the U.S. SEC consider tokens sold in ICOs to be securities?,US,1.000000,0.800000,SEC_v_Ripple_2024_Final_Judgment,US
+RAG_SAC_Multi (Vector Sim Only),B01_Q03,Are UK crypto exchange customers protected if the exchange goes bankrupt?,UK,1.000000,1.000000,UK_ps23-6_2023,UK
+RAG_SAC_Multi (Vector Sim Only),B01_Q04,Are stablecoin issuers required to hold reserves in the U.S.?,US,1.000000,0.600000,HK_Guideline_on_Supervision_of_Licensed_Stablecoin_Issuers_2025,HK
+RAG_SAC_Multi (Vector Sim Only),B01_Q05,"Under the EU MiCA regulation, what are 'asset-referenced tokens'?",EU,1.000000,1.000000,EU_MiCA_2023,EU
+RAG_SAC_Multi (Vector Sim Only),B01_Q06,Que prévoit le règlement MiCA de l’UE concernant les jetons stables algorithmiques ?,EU,1.000000,1.000000,EU_MiCA_2023,EU
+RAG_SAC_Multi (Vector Sim Only),B01_Q07,Un NFT peut-il violer le droit d’auteur selon la loi française ?,FR,1.000000,0.000000,CH_Federal_Council_report_Legal_framework_for_distributed_ledger_technology_and_blockchain_in_Switzerland_2018,CH
+RAG_SAC_Multi (Vector Sim Only),B01_Q08,Les plateformes DeFi sont-elles soumises à la réglementation financière en France ?,FR,1.000000,0.000000,UK_cp25-40_2025,UK
+RAG_SAC_Multi (Vector Sim Only),B01_Q09,"Was versteht das deutsche Recht unter ""Kryptowert""?",DE,1.000000,0.000000,CH_Explanatory_report_Amendment_to_the_Financial_Institutions_Act_(FinIA)_on_Payment_instrument_institutions_and_Crypto-institutions_2025,CH
+RAG_SAC_Multi (Vector Sim Only),B01_Q10,Sind Stablecoins in Deutschland als E-Geld einzustufen?,DE,1.000000,0.000000,CH_Explanatory_report_Amendment_to_the_Financial_Institutions_Act_(FinIA)_on_Payment_instrument_institutions_and_Crypto-institutions_2025,CH
+RAG_SAC_Multi (Vector Sim Only),B01_Q11,¿Cómo tributan las criptomonedas en España?,ES,1.000000,0.000000,EU_2025_298_ART_EMT_RTS,EU
+RAG_SAC_Multi (Vector Sim Only),B01_Q12,¿Existe alguna ley sobre criptomonedas en Brasil?,BR,1.000000,0.000000,JP_Analysis_for_the_Healthy_Development_of_Stablecoins_(Research_Paper)_2025,JP
+RAG_SAC_Multi (Vector Sim Only),B01_Q13,Como são tributadas as criptomoedas em Portugal?,PT,1.000000,0.000000,EU_2025_298_ART_EMT_RTS,EU
+RAG_SAC_Multi (Vector Sim Only),B01_Q14,In what ways do U.S. and EU regulations differ for cryptocurrency exchanges?,"US,EU",1.000000,0.400000,EU_MiCA_2023,EU
+RAG_SAC_Multi (Vector Sim Only),B01_Q15,How do the US and EU differ in their treatment of NFTs under financial regulation?,"US,EU",1.000000,0.200000,JP_Discussion_Paper_Examination_of_the_Regulatory_Systems_Related_to_Cryptoassets_2025,JP
+RAG_SAC_Multi (Vector Sim Only),B01_Q16,Compare the approaches of the US and Singapore to regulating ICOs.,"US,SG",1.000000,0.000000,HK_Discussion_Paper_on_Crypto-assets_and_Stablecoins_2022,HK
+RAG_SAC_Multi (Vector Sim Only),B01_Q17,Gelten Kryptowährungen in den USA als gesetzliches Zahlungsmittel oder Eigentum?,US,1.000000,0.000000,CH_Explanatory_report_Amendment_to_the_Financial_Institutions_Act_(FinIA)_on_Payment_instrument_institutions_and_Crypto-institutions_2025,CH
+RAG_SAC_Multi (Vector Sim Only),B01_Q18,Les crypto-actifs sont-ils considérés comme des biens en droit anglais ?,UK,1.000000,1.000000,UK_ps19-22_2019,UK
+RAG_SAC_Multi (Vector Sim Only),B01_Q19,¿La SEC considera a los NFTs como valores (securities)?,US,1.000000,0.000000,JP_Discussion_Paper_Examination_of_the_Regulatory_Systems_Related_to_Cryptoassets_2025,JP
+RAG_SAC_Multi (Vector Sim Only),B01_Q20,中国的MiCA法规如何对稳定币进行监管？,EU,1.000000,0.000000,HK_Discussion_Paper_on_Crypto-assets_and_Stablecoins_2022,HK
+RAG_SAC_Multi (Vector Sim Only),B01_Q21,Os tokens vendidos em ICOs são considerados valores mobiliários nos EUA?,US,1.000000,0.000000,CH_Guidelines_for_enquiries_regarding_the_regulatory_framework_for_initial_coin_offerings_(ICOs)_2018,CH
+RAG_SAC_Multi (Vector Sim Only),B01_Q22,"If a U.S. person uses a cryptocurrency address sanctioned by OFAC, is that allowed?",US,1.000000,0.000000,JP_Analysis_for_the_Healthy_Development_of_Stablecoins_(Research_Paper)_2025,JP
+RAG_SAC_Multi (Vector Sim Only),B01_Q23,Are smart contracts legally binding agreements?,"UK,US",1.000000,0.000000,CH_Federal_Council_report_Legal_framework_for_distributed_ledger_technology_and_blockchain_in_Switzerland_2018,CH
+RAG_SAC_Multi (Vector Sim Only),B01_Q24,Is cryptocurrency legal?,"US,CN",1.000000,0.000000,CH_Federal_Council_report_Legal_framework_for_distributed_ledger_technology_and_blockchain_in_Switzerland_2018,CH
+RAG_SAC_Auth (Full System),B01_Q01,How does the IRS treat cryptocurrency for tax purposes?,US,1.000000,0.000000,EU_2025_298_ART_EMT_RTS,EU
+RAG_SAC_Auth (Full System),B01_Q02,Does the U.S. SEC consider tokens sold in ICOs to be securities?,US,1.000000,1.000000,SEC_v_Ripple_2024_Final_Judgment,US
+RAG_SAC_Auth (Full System),B01_Q03,Are UK crypto exchange customers protected if the exchange goes bankrupt?,UK,1.000000,1.000000,UK_ps23-6_2023,UK
+RAG_SAC_Auth (Full System),B01_Q04,Are stablecoin issuers required to hold reserves in the U.S.?,US,1.000000,1.000000,US_BILL_S394_2025,US
+RAG_SAC_Auth (Full System),B01_Q05,"Under the EU MiCA regulation, what are 'asset-referenced tokens'?",EU,1.000000,1.000000,EU_MiCA_2023,EU
+RAG_SAC_Auth (Full System),B01_Q06,Que prévoit le règlement MiCA de l’UE concernant les jetons stables algorithmiques ?,EU,1.000000,1.000000,EU_MiCA_2023,EU
+RAG_SAC_Auth (Full System),B01_Q07,Un NFT peut-il violer le droit d’auteur selon la loi française ?,FR,1.000000,0.000000,CH_Federal_Council_report_Legal_framework_for_distributed_ledger_technology_and_blockchain_in_Switzerland_2018,CH
+RAG_SAC_Auth (Full System),B01_Q08,Les plateformes DeFi sont-elles soumises à la réglementation financière en France ?,FR,1.000000,0.000000,EU_MiCA_2023,EU
+RAG_SAC_Auth (Full System),B01_Q09,"Was versteht das deutsche Recht unter ""Kryptowert""?",DE,1.000000,0.000000,EU_MiCA_2023,EU
+RAG_SAC_Auth (Full System),B01_Q10,Sind Stablecoins in Deutschland als E-Geld einzustufen?,DE,1.000000,0.000000,CH_Explanatory_report_Amendment_to_the_Financial_Institutions_Act_(FinIA)_on_Payment_instrument_institutions_and_Crypto-institutions_2025,CH
+RAG_SAC_Auth (Full System),B01_Q11,¿Cómo tributan las criptomonedas en España?,ES,1.000000,0.000000,EU_2025_298_ART_EMT_RTS,EU
+RAG_SAC_Auth (Full System),B01_Q12,¿Existe alguna ley sobre criptomonedas en Brasil?,BR,1.000000,0.000000,EU_MiCA_2023,EU
+RAG_SAC_Auth (Full System),B01_Q13,Como são tributadas as criptomoedas em Portugal?,PT,1.000000,0.000000,EU_2025_298_ART_EMT_RTS,EU
+RAG_SAC_Auth (Full System),B01_Q14,In what ways do U.S. and EU regulations differ for cryptocurrency exchanges?,"US,EU",1.000000,1.000000,EU_MiCA_2023,EU
+RAG_SAC_Auth (Full System),B01_Q15,How do the US and EU differ in their treatment of NFTs under financial regulation?,"US,EU",1.000000,1.000000,EU_MiCA_2023,EU
+RAG_SAC_Auth (Full System),B01_Q16,Compare the approaches of the US and Singapore to regulating ICOs.,"US,SG",1.000000,1.000000,SG_MAS_Media_Release_DPT_Investor_Protection_2023,SG
+RAG_SAC_Auth (Full System),B01_Q17,Gelten Kryptowährungen in den USA als gesetzliches Zahlungsmittel oder Eigentum?,US,1.000000,0.200000,US_PL119-27_GENIUS_Act_2025,US
+RAG_SAC_Auth (Full System),B01_Q18,Les crypto-actifs sont-ils considérés comme des biens en droit anglais ?,UK,1.000000,1.000000,UK_ps19-22_2019,UK
+RAG_SAC_Auth (Full System),B01_Q19,¿La SEC considera a los NFTs como valores (securities)?,US,1.000000,1.000000,SEC_v_Ripple_2024_Final_Judgment,US
+RAG_SAC_Auth (Full System),B01_Q20,中国的MiCA法规如何对稳定币进行监管？,EU,1.000000,0.000000,HK_Discussion_Paper_on_Crypto-assets_and_Stablecoins_2022,HK
+RAG_SAC_Auth (Full System),B01_Q21,Os tokens vendidos em ICOs são considerados valores mobiliários nos EUA?,US,1.000000,0.200000,SEC_v_Ripple_2024_Final_Judgment,US
+RAG_SAC_Auth (Full System),B01_Q22,"If a U.S. person uses a cryptocurrency address sanctioned by OFAC, is that allowed?",US,1.000000,0.000000,JP_Analysis_for_the_Healthy_Development_of_Stablecoins_(Research_Paper)_2025,JP
+RAG_SAC_Auth (Full System),B01_Q23,Are smart contracts legally binding agreements?,"UK,US",1.000000,0.000000,CH_Federal_Council_report_Legal_framework_for_distributed_ledger_technology_and_blockchain_in_Switzerland_2018,CH
+RAG_SAC_Auth (Full System),B01_Q24,Is cryptocurrency legal?,"US,CN",1.000000,0.000000,CH_Federal_Council_report_Legal_framework_for_distributed_ledger_technology_and_blockchain_in_Switzerland_2018,CH
